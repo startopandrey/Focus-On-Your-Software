@@ -1,0 +1,73 @@
+{
+  "home": {
+    "hero": {
+      "title": {
+        "Unlock": "Freischalten",
+        "main": "Das volle Potenzial Ihres Unternehmens."
+      },
+      "description": "Für kleine bis mittlere Unternehmen"
+    },
+    "gap": {
+      "title": "Sehen Sie sich die Kunden an, für die wir Erlebnisse geliefert haben, und wie wir das gemacht haben.",
+      "description": "Diese Liste enthält keine Kunden, die anonym bleiben möchten"
+    },
+    "services": {
+      "left": {
+        "header1": {
+          "title": "Was wir tun?",
+          "text": "Digitalisierung für kleine und mittelständische Unternehmen"
+        },
+        "header2": {
+          "title": "Brauchen Sie Hilfe bei Ihrem digitalen Marketing?",
+          "text": "Lassen Sie uns das tun, was wir am besten können, damit Sie sich auf Ihr Geschäft konzentrieren können. Unser Admin-Panel hilft Ihnen bei der Analyse und Verwaltung Ihres Unternehmens, um den Umsatz zu steigern."
+        }
+      },
+      "right": {
+        "header1": {
+          "title": "Schnell. Garantiert. Fokussiert.",
+          "text": "Web Development & Mobile App Development, UX / UI Design"
+        },
+        "header2": {
+          "title": "Wie lange wird es dauern, die Website zu erstellen?",
+          "text": "Natürlich hängt es von der Größe des Unternehmens ab, aber wir haben alles getan, um es so schnell wie möglich zu machen, wir haben viele Vorlagen, wir arbeiten nur an einem Projekt und wir haben flexiblen Code. Damit dauert die Seitenentwicklung durchschnittlich 1-2 Wochen"
+        },
+        "header3": {
+          "title": "Welche Garantien geben Sie?",
+          "text": "Unser Ruf und die Qualität unseres Produkts sind uns sehr wichtig, deshalb arbeiten wir zuerst, und nur wenn es Ihnen gefällt, zahlen Sie den ersten Teil des Geldes, außerdem nehmen wir nur die Hälfte des deklarierten Betrags des Projekts Der andere Teil ist eine Anzahlung für ein halbes Jahr. Wenn Sie also einen Fehler finden, werden wir ihn beheben und Sie können den anderen Teil als Entschädigung behalten"
+        }
+      }
+    },
+    "steps": {
+      "header": {
+        "title": "Wie es funktioniert?",
+        "description": "Focus-On-Your-Business-Digitalagentur."
+      },
+      "step1": {
+        "title": "Senden Sie Ihre Designanfrage",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+      },
+      "step2": {
+        "title": "Wir beginnen mit der Arbeit",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+      },
+      "step3": {
+        "title": "Bringen Sie Ihr Projekt zum Abschluss!",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+      }
+    },
+    "reviews": {
+      "header": {
+        "title": "Warum mit uns zusammenarbeiten?",
+        "description": "Was unsere Kunden über FOYS sagen"
+      }
+    },
+    "contact": {
+      "header": {
+        "title": "In Kontakt kommen",
+        "description": "Starten Sie jetzt Ihr fantastisches Projekt!"
+      }
+    }
+  },
+
+  "button_more_services": "Mehr Dienstleistungen"
+}

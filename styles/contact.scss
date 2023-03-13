@@ -1,0 +1,30 @@
+.contact {
+  margin-top: 6rem;
+  .contact_container {
+    margin-bottom: 6rem;
+
+    .header {
+      h3 {
+        color: $primary !important;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        color: $dark;
+      }
+      margin-bottom: 3rem;
+    }
+    .home_contact_address {
+      .address_item {
+        .address_item_title {
+          margin-bottom: 1rem;
+        }
+        .address_item_content {
+          color: $light-gray;
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+

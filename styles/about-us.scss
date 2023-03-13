@@ -1,0 +1,289 @@
+@import "../styles/theme.scss";
+.about_us {
+  .hero_section {
+    margin-bottom: 5rem;
+    height: 500px;
+    position: relative;
+    margin-top: 1rem;
+    .hero__left {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      height: 500px;
+
+      .hero__left_description {
+        text-align: left;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        color: $light-gray;
+      }
+      .hero__left_title {
+        font-size: 50px;
+        line-height: 60px;
+      }
+    }
+    .hero__right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      // height: 500px !important;
+      width: 100% !important;
+      display: flex;
+      .home_img {
+        vertical-align: middle;
+        width: 50vw !important;
+        right: 0;
+        position: absolute;
+        object-fit: cover;
+        height: 500px !important;
+      }
+    }
+  }
+}
+.value {
+  background: $bg-light-gray;
+  padding: 5rem 0;
+  .header {
+    h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    p {
+      color: $light-gray;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    margin-bottom: 3rem;
+  }
+  .value_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 1.5rem;
+    .value_card {
+      // height: 30%;
+
+      .icon {
+        color: $primary;
+        width: 30px;
+        height: 30px;
+      }
+      padding: 1.5rem;
+      background: $white;
+      .value_card_p {
+        color: $dark;
+        text-transform: inherit;
+      }
+      h4 {
+        text-align: left;
+        margin: 1.5rem 0;
+      }
+      p {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: $light-gray;
+      }
+    }
+  }
+}
+.team {
+  margin: 7rem;
+  .team_items {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem  ;
+    grid-template-areas:
+      "block1 block3"
+      "block2 block3";
+    align-items: center;
+    grid-auto-flow: dense;
+    width: 100%;
+    .team_item {
+      justify-self: center;
+      width: 350px;
+      height: 350px;
+      img {
+        object-fit: cover;
+        width: 350px;
+        height: 350px;
+      }
+    }
+    margin-right:0rem;
+  }
+.team_text{
+  color: $gray;
+  margin-top: 2rem;
+  line-height: 1.6rem;
+}
+  .header {
+    h3 {
+      color: $primary !important;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      color: $dark;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    padding-bottom: 1.5rem;
+    border-bottom: 1px $lightest-gray solid;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about_us {
+    .hero_section {
+      margin-bottom: 5rem;
+      height: 500px;
+      position: relative;
+      margin-top: 1rem;
+      .hero__left {
+        display: flex;
+        flex-direction: column;
+  
+        justify-content: center;
+        height: 500px;
+  
+        .hero__left_description {
+          text-align: left;
+          margin: 1rem 0;
+          font-size: 1.2rem;
+          color: $light-gray;
+        }
+        .hero__left_title {
+          font-size: 50px;
+          line-height: 60px;
+        }
+      }
+      .hero__right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        // height: 500px !important;
+        width: 100% !important;
+        display: flex;
+        .home_img {
+          vertical-align: middle;
+          width: 50vw !important;
+          right: 0;
+          position: absolute;
+          object-fit: cover;
+          height: 500px !important;
+        }
+      }
+    }
+  }
+  .value {
+    background: $bg-light-gray;
+    padding: 5rem 0;
+    .header {
+      h2 {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      p {
+        color: $light-gray;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      margin-bottom: 3rem;
+    }
+    .value_cards {
+      display: grid;
+      grid-template-columns: 1fr;
+  
+      gap: 1.5rem;
+      .value_card {
+        // height: 30%;
+  
+        .icon {
+          color: $primary;
+          width: 30px;
+          height: 30px;
+        }
+        padding: 1.5rem;
+        background: $white;
+        .value_card_p {
+          color: $dark;
+          text-transform: inherit;
+        }
+        h4 {
+          text-align: left;
+          margin: 1.5rem 0;
+        }
+        p {
+          text-align: left;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          color: $light-gray;
+        }
+      }
+    }
+  }
+  .team {
+    margin: 2rem;
+    .team_items {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      gap: 1rem  ;
+      grid-template-areas:
+        "block1 block3"
+        "block2 block3";
+      align-items: center;
+      grid-auto-flow: dense;
+      width: 100%;
+      .team_item {
+        justify-self: center;
+        width: 180px;
+        height: 180px;
+        img {
+          object-fit: cover;
+          width: 180px;
+          height: 180px;
+        }
+      }
+      margin-right:0rem;
+    }
+  .team_text{
+    color: $gray;
+    margin-top: 2rem;
+    line-height: 1.6rem;
+  }
+    .header {
+      h3 {
+        color: $primary !important;
+        font-size: 1rem;
+        margin-bottom: 0rem;
+      }
+      h1 {
+        color: $dark;
+        font-weight: 700;
+        font-size: 3rem;
+      }
+      padding-bottom: 0.5rem;
+      border-bottom: 1px $lightest-gray solid;
+    }
+    .header_bottom{
+      margin-bottom: 0;
+    }
+  }
+ 
+}

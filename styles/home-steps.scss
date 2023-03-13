@@ -1,0 +1,44 @@
+.home_steps {
+  margin: 5rem 0;
+  background-color: $bg-light-gray;
+  padding: 5rem 0;
+  padding-bottom: 10rem;
+  .header {
+    h3 {
+      color: $primary !important;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      color: $dark;
+    }
+    margin-bottom: 3rem;
+  }
+  .home_steps__container {
+    .step {
+      position: relative;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+
+      .step_number {
+        top: 0;
+        left: 0;
+        position: absolute;
+        font-size: 7rem;
+        color: $lightest-gray;
+        z-index: 0;
+      }
+      .step_text {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        line-height: 1.5rem;
+        h3 {
+          margin: 3rem 0;
+          height: 50%;
+        }
+      }
+    }
+  }
+}

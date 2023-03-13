@@ -1,0 +1,12 @@
+{
+  "header": {
+    "home": "Heim",
+    "about us": "Über uns",
+    "services": "Dienstleistungen",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "button_more_services": "Mehr Dienstleistungen",
+  "button_active_demo": "Active Demo",
+  "button_contact": "Contact"
+}

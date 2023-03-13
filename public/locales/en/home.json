@@ -1,0 +1,73 @@
+{
+  "home": {
+    "hero": {
+      "title": {
+        "Unlock": "Unlock",
+        "main": "The Full Potential Of Your Business."
+      },
+      "description": "For Small-To-Medium Sized Businesses"
+    },
+    "gap": {
+      "title": "See the clients we've delivered experiences for and how we did it.",
+      "description": "This list doesn't include clients that want to stay anonymously"
+    },
+    "services": {
+      "left": {
+        "header1": {
+          "title": "What We Do?",
+          "text": "Digitization for Small and Medium-sized companies"
+        },
+        "header2": {
+          "title": "Need help with your Digital Marketing?",
+          "text": "Let us do what we do best so you can focus on running your business. Our admin panel will help you to analyse and manage your business to increase sales."
+        }
+      },
+      "right": {
+        "header1": {
+          "title": "Quick. Ruaranteed. Focused.",
+          "text": " Web Development & Mobile App Development, UX / UI Design"
+        },
+        "header2": {
+          "title": "How long will it take to make the site?",
+          "text": " Of course, it depends on the scale of the business, but we did everything to make it happen in the fastest way, we have many templates, we work on only one project and we have flexible code. Using this, site development takes an average of 1-2 weeks"
+        },
+        "header3": {
+          "title": "What guarantees do you give me?",
+          "text": "Our reputation and the quality of our product are very important to us, that's why we work first, and only if you like it, you pay the first part of the money, also we only take half of the declared amount of the project, the other part is a deposit for half a year, so if you find a bug, we will fix it and you can keep the other part as compensation"
+        }
+      }
+    },
+    "steps": {
+      "header": {
+        "title": "How It Works?",
+        "description": "Focus-On-Your-Business Digital Agency."
+      },
+      "step1": {
+        "title": "Submit Your Design Request",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+      },
+      "step2": {
+        "title": "We Start Workin",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+      },
+      "step3": {
+        "title": "Get Your Project Done!",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+      }
+    },
+    "reviews": {
+      "header": {
+        "title": "Why Partner With Us?",
+        "description": "What Our Clients Said About FOYS"
+      }
+    },
+    "contact": {
+      "header": {
+        "title": "Get In Touch",
+        "description": "Kick Start Your Awesome Project Now!"
+      }
+    }
+   
+  },
+  "button_more_services": "More Services"
+}

@@ -1,0 +1,53 @@
+.hero_section {
+  margin-bottom: 5rem;
+  // height: 500px;
+  position: relative;
+  margin-top: 1rem;
+  .hero__left {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    height: 500px;
+
+    .hero__left_description {
+      text-align: left;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      color: $light-gray;
+    }
+    .hero__left_title {
+      font-size: 50px;
+      line-height: 60px;
+      span {
+        display: block;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          background-image: url("https://bslthemes.com/html/terio/assets/img/text-line-blu.png");
+          background-repeat: no-repeat;
+          width: 40%;
+          height: 100%;
+          bottom: -80%;
+        }
+      }
+    }
+  }
+  .hero__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    // height: 500px !important;
+    width: 100% !important;
+    display: flex;
+    .home_img {
+      vertical-align: middle;
+      width: 50vw !important;
+      right: 0;
+      position: absolute;
+      object-fit: cover;
+      height: 500px !important;
+    }
+  }
+}

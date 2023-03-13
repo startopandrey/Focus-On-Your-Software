@@ -1,0 +1,34 @@
+@import "../styles/theme.scss";
+.home_services {
+  .services__left {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .header {
+    h3 {
+      color: $primary !important;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      color: $dark;
+    }
+    padding-bottom: 1.5rem;
+    border-bottom: 1px $lightest-gray solid;
+  }
+  .header_bottom {
+    margin: 1.5rem 0;
+    h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    p{
+        color: $gray;
+        line-height: 1.5rem;
+    }
+  }
+}
