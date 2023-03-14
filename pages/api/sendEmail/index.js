@@ -8,15 +8,15 @@ console.log(message)
       port: 465,
       host: "smtp.gmail.com",
       auth: {
-        user: process.env.AUTH_EMAIL,
-        pass: process.env.AUTH_PASS,
+        user: "andrey01test@gmail.com",
+        pass: "tlgxijzzuddutrjy",
       },
     });
 
     if (message) {
       try {
         const emailOptions = {
-          from: process.env.AUTH_EMAIL,
+          from: "andrey01test@gmail.com",
           to: "focusonyoursoftware@gmail.com",
           subject: "NEW PROJECT HAVE BEEN SUBMITED, WAKE UP, BRO ;)",
           html: `<p>Name:${message.name}, Email: ${message.email}, Company: ${message.company}, Message: ${message.message} </p>`,
