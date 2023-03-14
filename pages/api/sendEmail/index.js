@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 export default async function handler(req, res) {
   if (req.method == "POST") {
     const message = req.body;
-console.log(message)
+    console.log(message);
     const transporter = nodemailer.createTransport({
       service: "gmail",
       port: 465,
@@ -24,18 +24,19 @@ console.log(message)
 
         const data = await transporter.sendMail(emailOptions);
         if (data) {
-          res.status(200).json({
+          return  res.status(200).json({
             status: "SUCCESS",
             message: "Email Has Been Sent",
             data,
           });
-        }else{
-            res.status(400);
+          
+        } else {
+          return   res.status(400);
         }
       } catch (error) {
-        res.status(400);
+        return res.status(400);
       }
     }
-    res.status(200).json({ message: message });
+    return  res.status(200).json({ message: message });
   }
 }
