@@ -11,6 +11,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import { useTranslation, Trans } from "next-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Image from "next/image";
 const Header = (props) => {
   const headerRef = useRef(null);
   const [languageToggle, setlanguageToggle] = useState(false);
@@ -72,7 +73,7 @@ const Header = (props) => {
           <div className={`${style.nav__wrapper}`}>
             {/* ======== navigation logo ======== */}
             <div className={`${style.logo}`}>
-              <h1>FOYS</h1>
+            <Image height={"50"} width="120"  src="/foys_logo.png"></Image>
             </div>
 
             {/* ========= nav menu =========== */}

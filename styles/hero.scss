@@ -38,16 +38,20 @@
     position: absolute;
     right: 0;
     top: 0;
-    // height: 500px !important;
-    width: 100% !important;
+    height: 500px !important;
+    // width: 504 !important;
     display: flex;
     .home_img {
+      object-fit: cover !important;
+      // width: 100% !important;
+      // position: relative !important;
+      // height: unset !important;
       vertical-align: middle;
       width: 50vw !important;
       right: 0;
       position: absolute;
-      object-fit: cover;
-      height: 500px !important;
+      // object-fit: cover;
+      // height: 500px !important;
     }
   }
 }

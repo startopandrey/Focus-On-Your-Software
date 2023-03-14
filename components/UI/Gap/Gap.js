@@ -20,16 +20,18 @@ const Gap = () => {
   return (
     <section className="gap">
       <Container className="gap_container">
-        <h3 className="gap__title">
-        {translate("home.gap.title")}
-        </h3>
-        <p className="gap_description">
-        {translate("home.gap.description")}
-        </p>
+        <h3 className="gap__title">{translate("home.gap.title")}</h3>
+        <p className="gap_description">{translate("home.gap.description")}</p>
         <ul className="clients">
           {clientsList.map((el, i) => (
             <li key={i} className="client_item">
-              <Image className="client_img" src={el.img} alt="" />
+              <Image
+                className="client_img"
+                height={100}
+                width="100%"
+                src={el.img}
+                alt=""
+              />
             </li>
           ))}
         </ul>

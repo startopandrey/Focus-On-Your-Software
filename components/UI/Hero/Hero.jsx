@@ -32,7 +32,7 @@ const Hero = (props) => {
       {" "}
       <Container maxWidth="lg">
         <Grid sx={{ height: "100%" }} container spacing={2}>
-          <Grid sx={{ height: "100%" }} item lg={6} >
+          <Grid sx={{ height: "100%" }} item lg={6}>
             <Box className="hero__left">
               <h1 className="hero__left_title">
                 <span>{translate("home.hero.title.Unlock")}</span>{" "}
@@ -50,26 +50,26 @@ const Hero = (props) => {
               </Button>
             </Box>
           </Grid>
-          <Grid item lg={6} >
+          <Grid item lg={6}>
             {" "}
-            {matchesMedium && (
-              <Box className="hero__right">
-                <Image
-                  layout="fill"
-                  // width={1000}
-                  // height={1000}
-                  alt="home_1"
-                  src={"/home_1.jpg"}
-                  className={"home_img"}
-                ></Image>
-              </Box>
-            )}
           </Grid>
         </Grid>{" "}
+        {matchesMedium && (
+          <Box className="hero__right">
+            <Image
+              width={700}
+              height={380}
+    
+              alt="home_1"
+              src={"/home_1.jpg"}
+              className={"home_img"}
+            ></Image>
+          </Box>
+        )}{" "}
       </Container>
       {/* {!matchesMedium && (
         <Box className="hero__right">
-          <img
+          // <img
             layout="fill"
             // width={1000}
             // height={1000}
