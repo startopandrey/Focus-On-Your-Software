@@ -3,6 +3,7 @@ import React from "react";
 import { Button, Grid, InputAdornment, TextField } from "@mui/material";
 import { Box, Container, width } from "@mui/system";
 import { AccountCircle } from "@mui/icons-material";
+import { useRouter } from "next/router";
 
 const navLinks = [
   {
@@ -28,6 +29,7 @@ const navLinks = [
 ];
 
 const Footer = () => {
+  const router = useRouter()
   return (
     <footer className="footer">
       <Container>
@@ -42,10 +44,20 @@ const Footer = () => {
                 size={"large"}
                 sx={{ width: 150, mr: 2 }}
                 variant="contained"
+                onClick={() => {
+                  router.push("demo");
+                }}
               >
                 Active Demo
               </Button>
-              <Button size={"large"} sx={{ width: 150 }} variant="outlined">
+              <Button
+                size={"large"}
+                sx={{ width: 150 }}
+                onClick={() => {
+                  router.push("contact");
+                }}
+                variant="outlined"
+              >
                 Contact
               </Button>
             </Box>
@@ -67,7 +79,11 @@ const Footer = () => {
             <div className="subscribe_textfield_container">
               <input className="subscribe_textfield" placeholder="Your Email" />
 
-              <Button variant="contained" className="subscribe_button">
+              <Button
+                variant="contained"
+                sx={{ m: 0 }}
+                className="subscribe_button"
+              >
                 GO
               </Button>
             </div>

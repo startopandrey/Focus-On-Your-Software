@@ -57,7 +57,7 @@ const matchesMedium = useMediaQuery(
               }}
             >
               <Box className="demo_modal_img_container">
-                <Image alt="modal_img" className="modal_img" src="404.png"></Image>
+                <Image width={500} height="500" alt="modal_img" className="modal_img" src="/404.png"></Image>
               </Box>
               <Typography sx={matchesMedium ? {fontWeight: 700} : {
                 fontWeight: 700,
@@ -81,13 +81,13 @@ const matchesMedium = useMediaQuery(
                 {translate("hero.header.description")}
               </p>
               <Box sx={{ display: "flex", gap: "1rem" }}>
-                <Button
-                  style={{ width: 220, marginTop: "2rem" }}
-                  size="large"
-                  variant="contained"
-                >
-                  {translateCommon("button_more_services")}
-                </Button>
+              <Button
+                style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }} 
+                size="large"
+                variant="contained"
+              >
+                {translateCommon("button_more_services")}
+              </Button>
                 <Button
                   style={{ width: 220, marginTop: "2rem" }}
                   size="large"

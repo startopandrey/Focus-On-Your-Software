@@ -11,8 +11,15 @@ import CheckIcon from "@mui/icons-material/Check";
 import { useTranslation, Trans } from "next-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import json2mq from "json2mq";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
 const Header = (props) => {
+  const matchesMedium = useMediaQuery(
+    json2mq({
+      minWidth: 768,
+    })
+  );
   const headerRef = useRef(null);
   const [languageToggle, setlanguageToggle] = useState(false);
   const menuRef = useRef(null);
@@ -73,7 +80,7 @@ const Header = (props) => {
           <div className={`${style.nav__wrapper}`}>
             {/* ======== navigation logo ======== */}
             <div className={`${style.logo}`}>
-            <Image height={"50"} width="120"  src="/foys_logo.png"></Image>
+            <Image height={"50"} width={matchesMedium ? "120" : "70" } src="/foys_logo.png"></Image>
             </div>
 
             {/* ========= nav menu =========== */}
@@ -132,7 +139,7 @@ const Header = (props) => {
                   </ul>
                 </div>
                 <p className=" d-flex align-items-center gap-2 mb-0">
-                  <Button size="large" variant="outlined">
+                  <Button size={matchesMedium ? "large" : "small"} variant="outlined">
                     Get Started
                   </Button>
                 </p>

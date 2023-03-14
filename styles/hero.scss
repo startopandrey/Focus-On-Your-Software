@@ -55,3 +55,62 @@
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .hero_section {
+    margin-bottom: 5rem;
+    // height: 500px;
+    position: relative;
+    margin-top: 2rem;
+    .hero__left {
+      display: flex;
+      flex-direction: column;
+  
+      justify-content: center;
+      height: 350px;
+  
+      .hero__left_description {
+        text-align: left;
+        margin: 0rem 0;
+        font-size: 1rem;
+        color: $light-gray;
+      }
+      .hero__left_title {
+        font-size: 40px;
+        line-height: 55px;
+        span {
+          display: block;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            background-image: url("https://bslthemes.com/html/terio/assets/img/text-line-blu.png");
+            background-repeat: no-repeat;
+            width: 40%;
+            height: 100%;
+            bottom: -80%;
+          }
+        }
+      }
+    }
+    .hero__right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 500px !important;
+      // width: 504 !important;
+      display: flex;
+      .home_img {
+        object-fit: cover !important;
+        // width: 100% !important;
+        // position: relative !important;
+        // height: unset !important;
+        vertical-align: middle;
+        width: 50vw !important;
+        right: 0;
+        position: absolute;
+        // object-fit: cover;
+        // height: 500px !important;
+      }
+    }
+  }
+}

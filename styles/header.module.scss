@@ -18,7 +18,7 @@
 }
 .header_language {
   position: relative;
-
+display: flex;
   button {
     font-weight: 500;
     margin: 0 0.5rem;
@@ -207,7 +207,8 @@ img{
   }
   .mobile__menu {
     cursor: pointer;
-    display: block !important;
+    display: flex !important;
+    align-items: center;
   }
 
   .menu__active {

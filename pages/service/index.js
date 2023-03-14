@@ -14,29 +14,29 @@ const Service = (props) => {
   );
   const serviceList = [
     {
-      icon: "icons/web-development.png",
+      icon: "/icons/web-development.png",
       title: "Web Development",
       description: "",
     },
-    { icon: "icons/design.png", title: "Web Design", description: "" },
+    { icon: "/icons/design.png", title: "Web Design", description: "" },
     {
-      icon: "icons/app-development.png",
+      icon: "/icons/app-development.png",
       title: "Mobile App Development",
       description: "",
     },
     {
-      icon: "icons/data-managment.png",
+      icon: "/icons/data-managment.png",
       title: "Data Management",
       description: "",
     },
     {
-      icon: "icons/search-op.png",
+      icon: "/icons/search-op.png",
       title: "Search Engine Optimization",
       description: "",
     },
-    { icon: "icons/search-opt.png", title: "Data Scraping", description: "" },
+    { icon: "/icons/search-opt.png", title: "Data Scraping", description: "" },
     {
-      icon: "icons/custom-solution.png",
+      icon: "/icons/custom-solution.png",
       title: "Custom IT Solution",
       description: "",
     },
@@ -47,12 +47,7 @@ const Service = (props) => {
       <section className={"hero_section"}>
         {" "}
         <Container>
-          <Grid
-
-            sx={{ height: "100%" }}
-            container
-            spacing={2}
-          >
+          <Grid sx={{ height: "100%" }} container spacing={2}>
             <Grid sx={{ height: "100%" }} item lg={6}>
               <Box className="hero__left">
                 <h1 className="hero__left_title">
@@ -63,7 +58,11 @@ const Service = (props) => {
                   {translate("home.hero.description")}
                 </p>
                 <Button
-                  style={{ width: 220, marginTop: "2rem" }}
+                  style={
+                    matchesMedium
+                      ? { width: 220, marginTop: "2rem" }
+                      : { width: 180, marginTop: "2rem" }
+                  }
                   size="large"
                   variant="contained"
                 >
@@ -72,17 +71,17 @@ const Service = (props) => {
               </Box>
             </Grid>
             <Grid item lg={6}>
-             { matchesMedium &&
-              <Box className="hero__right">
-                <Image
-                  layout="fill"
-                  // width={1000}
-                  alt="service_img"
-                  // height={1000}
-                  src={"/service.png"}
-                  className={"home_img"}
-                ></Image>
-              </Box>}
+              {matchesMedium && (
+                <Box className="hero__right">
+                  <Image
+                    alt="service_img"
+                    width={500}
+                    height={500}
+                    src={"/service.png"}
+                    className={"home_img"}
+                  ></Image>
+                </Box>
+              )}
             </Grid>
           </Grid>{" "}
         </Container>
@@ -97,7 +96,13 @@ const Service = (props) => {
             {serviceList.map((el, i) => (
               <li key={i} className="service_item">
                 {" "}
-                <Image  alt="service_img" className="service__img" src={el.icon} />
+                <Image
+                  alt="service_img"
+                  className="service__img"
+                  src={el.icon}
+                  width={matchesMedium ? 100 : 70}
+                  height={matchesMedium ? 100 : 70}
+                />
                 <Typography
                   sx={{ fontWeight: 600 }}
                   variant="h5"
@@ -118,10 +123,9 @@ const Service = (props) => {
             sx={{ height: "100%" }}
             className="services_info_block"
             container
-            
             spacing={matchesMedium ? 4 : 8}
           >
-            <Grid   md="6" sx={{ height: "100%" }} item lg={6}>
+            <Grid md="6" sx={{ height: "100%" }} item lg={6}>
               {" "}
               <Box className="header">
                 <h1>Web Development</h1>
@@ -130,15 +134,20 @@ const Service = (props) => {
               <Box className="header_bottom">
                 <h2>What do you use to build web application?</h2>
                 <p>
-                  We&apos;re using the newest technologies such as React, Next js,
-                  MUI, TailWind and bunch of others to rite code.
+                  We&apos;re using the newest technologies such as React, Next
+                  js, MUI, TailWind and bunch of others to rite code.
                 </p>
               </Box>
             </Grid>
-            <Grid   md="6" className="services_info_img" item lg={6}>
+            <Grid md="6" className="services_info_img" item lg={6}>
               {" "}
               <Box className="services__left">
-                <Image  alt="service_img" src={"/web-development.png"}></Image>
+                <Image
+                  alt="service_img"
+                  width={500}
+                  height={500}
+                  src={"/web-development.png"}
+                ></Image>
               </Box>
             </Grid>{" "}
           </Grid>
@@ -159,10 +168,21 @@ const Service = (props) => {
             >
               {" "}
               <Box className="services__left">
-                <Image  alt="service_img" src={"/service-design.png"}></Image>
+                <Image
+                  width={500}
+                  height={500}
+                  alt="service_img"
+                  src={"/service-design.png"}
+                ></Image>
               </Box>
             </Grid>
-            <Grid   md="6" order={{ xs: 1, sm: 2 }} sx={{ height: "100%" }} item lg={6}>
+            <Grid
+              md="6"
+              order={{ xs: 1, sm: 2 }}
+              sx={{ height: "100%" }}
+              item
+              lg={6}
+            >
               {" "}
               <Box className="header">
                 <h1>Web Design</h1>
@@ -185,7 +205,7 @@ const Service = (props) => {
             sx={{ height: "100%" }}
             container
           >
-            <Grid   md="6" sx={{ height: "100%" }} item lg={6}>
+            <Grid md="6" sx={{ height: "100%" }} item lg={6}>
               {" "}
               <Box className="header">
                 <h1>Mobile App Development</h1>
@@ -196,18 +216,23 @@ const Service = (props) => {
                 <p>
                   {" "}
                   Making Mobile Application is a pritty complicatied thing, but
-                  we&apos;ve all tools to make it real. We&apos;re using live server such
-                  as expo to be sure that App is working correctly on all type
-                  of devices. Also React Native is making code that will work on
-                  Android and IPhone as well, it will make app much cheaper
-                  because your don&apos;t need to do 2 separated apps.
+                  we&apos;ve all tools to make it real. We&apos;re using live
+                  server such as expo to be sure that App is working correctly
+                  on all type of devices. Also React Native is making code that
+                  will work on Android and IPhone as well, it will make app much
+                  cheaper because your don&apos;t need to do 2 separated apps.
                 </p>
               </Box>
             </Grid>
-            <Grid   md="6" className="services_info_img" item lg={6}>
+            <Grid md="6" className="services_info_img" item lg={6}>
               {" "}
               <Box className="services__left">
-                <Image  alt="service_img" src={"/app-development.png"}></Image>
+                <Image
+                  width={500}
+                  height={500}
+                  alt="service_img"
+                  src={"/app-development.png"}
+                ></Image>
               </Box>
             </Grid>{" "}
           </Grid>
@@ -216,7 +241,6 @@ const Service = (props) => {
             alignItems="center"
             spacing={matchesMedium ? 4 : 8}
             sx={{ height: "100%" }}
-            
             container
           >
             <Grid
@@ -228,7 +252,12 @@ const Service = (props) => {
             >
               {" "}
               <Box className="services__left">
-                <Image alt="data-managment" src={"/data-managment.png"}></Image>
+                <Image
+                  width={500}
+                  height={500}
+                  alt="data-managment"
+                  src={"/data-managment.png"}
+                ></Image>
               </Box>
             </Grid>
             <Grid
@@ -261,7 +290,7 @@ const Service = (props) => {
             container
             spacing={matchesMedium ? 0 : 0}
           >
-            <Grid  md="6" sx={{ height: "100%" }} item lg={6}>
+            <Grid md="6" sx={{ height: "100%" }} item lg={6}>
               {" "}
               <Box className="header">
                 <h1>Data Scraping</h1>
@@ -277,10 +306,15 @@ const Service = (props) => {
                 </p>
               </Box>
             </Grid>
-            <Grid className="services_info_img" item  md="6" lg={6}>
+            <Grid className="services_info_img" item md="6" lg={6}>
               {" "}
               <Box className="services__left">
-                <Image  alt="app-development" src={"/app-development.png"}></Image>
+                <Image
+                  width={500}
+                  height={500}
+                  alt="app-development"
+                  src={"/app-development.png"}
+                ></Image>
               </Box>
             </Grid>{" "}
           </Grid>

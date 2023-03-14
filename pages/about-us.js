@@ -65,12 +65,12 @@ export default function AboutUs(props) {
                   {translate("hero.header.description")}
                 </p>
                 <Button
-                  style={{ width: 220, marginTop: "2rem" }}
-                  size="large"
-                  variant="contained"
-                >
-                  {translateCommon("button_more_services")}
-                </Button>
+                style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }} 
+                size="large"
+                variant="contained"
+              >
+                {translateCommon("button_more_services")}
+              </Button>
               </Box>
             </Grid>
             <Grid item lg={6}>

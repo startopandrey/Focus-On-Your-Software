@@ -4,16 +4,29 @@ import React from "react";
 import Slider from "react-slick";
 import { lightBlue } from "@mui/material/colors";
 import { useTranslation } from "next-i18next";
-
+import json2mq from "json2mq";
+import useMediaQuery from "@mui/material/useMediaQuery";
 const ReviewsSlider = () => {
   const { t: translate } = useTranslation("home");
+  const matchesMedium = useMediaQuery(
+    json2mq({
+      minWidth: 768,
+    })
+  );
+  const matchesSmall = useMediaQuery(
+    json2mq({
+      minWidth: 480,
+    })
+  );
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     width: 1500,
-    slidesToShow: 3,
+    centerMode: true,
+    slidesToShow: !matchesSmall ? 1 : !matchesMedium ? 2 : 3,
     slidesToScroll: 1,
+    
   };
   const clientsReviews = [
     {

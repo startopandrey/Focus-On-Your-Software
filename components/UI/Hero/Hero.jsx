@@ -41,8 +41,9 @@ const Hero = (props) => {
               <p className="hero__left_description">
                 {translate("home.hero.description")}
               </p>
+              
               <Button
-                style={{ width: 220, marginTop: "2rem" }}
+                style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }} 
                 size="large"
                 variant="contained"
               >

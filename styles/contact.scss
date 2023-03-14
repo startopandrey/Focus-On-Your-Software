@@ -28,3 +28,35 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .contact {
+    margin-top: 3rem;
+    .contact_container {
+      margin-bottom: 3rem;
+  
+      .header {
+        h3 {
+          color: $primary !important;
+          margin-bottom: 1rem;
+        }
+        h1 {
+          color: $dark;
+        }
+        margin-bottom: 3rem;
+      }
+      .home_contact_address {
+        .address_item {
+          .address_item_title {
+            margin-bottom: 1rem;
+          }
+          .address_item_content {
+            color: $light-gray;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
