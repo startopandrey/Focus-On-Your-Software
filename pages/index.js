@@ -5,12 +5,13 @@ import { Fragment } from "react";
 // import Portfolio from "../components/UI/Portfolio";
 // import Testimonial from "../components/UI/Testimonial";
 // import Contact from "../components/UI/Contact";
-import Hero from "../components/UI/Hero/Hero.jsx";
+
 import Gap from "../components/UI/Gap/Gap.js";
 import HomeServices from "../components/UI/HomeServices/HomeServices.js";
-import HomeSteps from "../components/UI/HomeSteps/HomeSteps.jsx";
+import Hero from "../components/UI/Hero/Hero.jsx";
+import HomeSteps from "../components/UI/HomeSteps/HomeSteps";
 import HomeContact from "../components/UI/HomeContact/HomeContact";
-import ReviewsSlider from "../components/UI/ReviewsSlider/ReviewsSlider.js";
+import ReviewsSlider from "../components/UI/ReviewsSlider/ReviewsSlider";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }) {
