@@ -28,7 +28,7 @@ const Gap = () => {
               <Image
                 className="client_img"
                 height={100}
-                width="100%"
+                width={150}
                 src={el.img}
                 alt=""
               />

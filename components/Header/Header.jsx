@@ -79,8 +79,13 @@ const Header = (props) => {
         <Container>
           <div className={`${style.nav__wrapper}`}>
             {/* ======== navigation logo ======== */}
-            <div className={`${style.logo}`}>
-            <Image height={"50"} width={matchesMedium ? "120" : "70" } src="/foys_logo.png"></Image>
+            <div className={`${style.logo}`} onClick={() => router.push("/")}>
+              <Image
+                height={"50"}
+                width={matchesMedium ? "120" : "70"}
+                style={{ cursor: "pointer" }}
+                src="/foys_logo.png"
+              ></Image>
             </div>
 
             {/* ========= nav menu =========== */}
@@ -139,7 +144,10 @@ const Header = (props) => {
                   </ul>
                 </div>
                 <p className=" d-flex align-items-center gap-2 mb-0">
-                  <Button size={matchesMedium ? "large" : "small"} variant="outlined">
+                  <Button
+                    size={matchesMedium ? "large" : "small"}
+                    variant="outlined"
+                  >
                     Get Started
                   </Button>
                 </p>

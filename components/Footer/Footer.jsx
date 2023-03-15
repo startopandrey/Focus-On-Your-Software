@@ -75,7 +75,7 @@ const Footer = () => {
           <Grid className="footer_subscribe_container" lg={3} item>
             {" "}
             <h3 className="header">Subscribe</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <p>Get more information about FOYS</p>
             <div className="subscribe_textfield_container">
               <input className="subscribe_textfield" placeholder="Your Email" />
 

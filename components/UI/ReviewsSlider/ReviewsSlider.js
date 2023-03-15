@@ -28,43 +28,45 @@ const ReviewsSlider = () => {
     slidesToScroll: 1,
     
   };
-  const clientsReviews = [
-    {
-      key: "1", 
-      name: "Eilema Ilaif",
-      role: "Manager",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      key: "2", 
-      name: "Eilema Ilaif",
-      role: "Manager",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      key: "3", 
-      name: "Eilema Ilaif",
-      role: "Manager",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      key: "4", 
-      name: "Eilema Ilaif",
-      role: "Manager",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      key: "5", 
-      name: "Eilema Ilaif",
-      role: "Manager",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    },
-  ];
+  const clientsReviews = translate('home.reviews.clientsReviews', { returnObjects: true });
+
+  // const clientsReviews = [
+  //   {
+  //     key: "1", 
+  //     name: "Eilema Ilaif",
+  //     role: "Manager",
+  //     review:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  //   },
+  //   {
+  //     key: "2", 
+  //     name: "Eilema Ilaif",
+  //     role: "Manager",
+  //     review:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  //   },
+  //   {
+  //     key: "3", 
+  //     name: "Eilema Ilaif",
+  //     role: "Manager",
+  //     review:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  //   },
+  //   {
+  //     key: "4", 
+  //     name: "Eilema Ilaif",
+  //     role: "Manager",
+  //     review:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  //   },
+  //   {
+  //     key: "5", 
+  //     name: "Eilema Ilaif",
+  //     role: "Manager",
+  //     review:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+  //   },
+  // ];
   return (
     <section className="reviews_slider">
       <Container>

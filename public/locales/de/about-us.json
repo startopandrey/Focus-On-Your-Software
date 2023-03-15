@@ -9,6 +9,33 @@
     "header": {
       "title": "Die Werte, nach denen wir leben",
       "description": "Unsere Kunden und deren Kunden stehen immer an erster Stelle."
-    }
+    },
+    "valuesBlocks": [
+      {
+        "key": "1",
+        "title": "Tägliche harte Arbeit",
+        "desctiption": "Wir arbeiten jeden Tag hart",
+        "text": "Wir halten unsere Versprechen, klare Fristen und Funktionalität"
+      },
+      {
+        "key": "2",
+        "title": "Leidenschaft vor Geld",
+        "desctiption": "Erstes Prinzip arbeiten",
+        "text": "Absolut kostenlos, Design, nur wenn es Ihnen gefällt, arbeiten wir weiter."
+      },
+      {
+        "key": "3",
+        "title": "Kaution",
+        "desctiption": "Projektsicherung",
+        "text": "Nach Projektende hast du die Hälfte des Geldes für 1 Monat als Kaution, falls etwas schief geht."
+      }
+    ]
+  },
+  "team": {
+    "header": {
+      "title": "DAS TEAM",
+      "description": "EINFÜHRUNG"
+    },
+    "text": "Focus On Your Software - Agentur mit Sitz in Österreich (Südtirol), wurde 2022 von 3 Enthusiasten aus der Ukraine gegründet, die bei großen Unternehmen gearbeitet haben und ihre eigene Agentur tun, um kleinen und mittleren Unternehmen dabei zu helfen, Digitalisierung und IT-Lösungen für weniger Geld zu betreiben Preis als bei großen Unternehmen."
   }
 }

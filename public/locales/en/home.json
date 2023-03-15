@@ -8,7 +8,7 @@
       "description": "For Small-To-Medium Sized Businesses"
     },
     "gap": {
-      "title": "See the clients we've delivered experiences for and how we did it.",
+      "title": "See the customers for whom we have gained experience and how we have implemented it.",
       "description": "This list doesn't include clients that want to stay anonymously"
     },
     "services": {
@@ -19,7 +19,7 @@
         },
         "header2": {
           "title": "Need help with your Digital Marketing?",
-          "text": "Let us do what we do best so you can focus on running your business. Our admin panel will help you to analyse and manage your business to increase sales."
+          "text": "Let us do what we do best so you can focus on your business. Our admin panel will help you analyse and manage your business to increase your revenue."
         }
       },
       "right": {
@@ -29,11 +29,11 @@
         },
         "header2": {
           "title": "How long will it take to make the site?",
-          "text": " Of course, it depends on the scale of the business, but we did everything to make it happen in the fastest way, we have many templates, we work on only one project and we have flexible code. Using this, site development takes an average of 1-2 weeks"
+          "text": " Of course, it depends on the size of the company, but we did everything we could to do it the fastest way, we have many templates, we only work on one project and we have flexible code. In this way, the development of a website takes 2-3 weeks on average."
         },
         "header3": {
           "title": "What guarantees do you give me?",
-          "text": "Our reputation and the quality of our product are very important to us, that's why we work first, and only if you like it, you pay the first part of the money, also we only take half of the declared amount of the project, the other part is a deposit for half a year, so if you find a bug, we will fix it and you can keep the other part as compensation"
+          "text": "Our reputation and the quality of our product are very important to us, so we work first, and only if you like it, you pay the first part of the money, also we take only half of the specified amount of the project, the other part is a deposit for 1 month, so if you find a mistake, we will fix it and you can keep the other part as compensation"
         }
       }
     },
@@ -44,22 +44,55 @@
       },
       "step1": {
         "title": "Submit Your Design Request",
-        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+        "text": "We need information about your business and your preferred design style so we can create the best design for you"
       },
       "step2": {
-        "title": "We Start Workin",
-        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+        "title": "We Start Working",
+        "text": "After you agree with the design, we start developing the website. You will be able to see the changes every day, so you will be up to date with the progress."
       },
       "step3": {
         "title": "Get Your Project Done!",
-        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+        "text": "We publish your site on the previous domain or on a new domain. You will receive all permissions for the site and ... Congratulation !"
       }
     },
     "reviews": {
       "header": {
         "title": "Why Partner With Us?",
         "description": "What Our Clients Said About FOYS"
-      }
+      },
+      "clientsReviews": [
+       
+        {
+          "key": "1",
+          "name": "Joe Preston",
+          "role": "Manager",
+          "review": "Realy nice agengcy that was online all day during development, the price is fantatic, GL foys."
+        },
+        {
+          "key": "2",
+          "name": "Ivonette Schäfer",
+          "role": "CEO",
+          "review": "Can't say much, will keep on working. "
+        },
+        {
+          "key": "3",
+          "name": "Kühn",
+          "role": "Director of Springer",
+          "review": "We had problems on the client side and thought that scraping was not possible, but they surprised us with the brilliant idea of splitting the server into several smaller servers, so they managed the task successfully."
+        },
+        {
+          "key": "4",
+          "name": "Anonymous",
+          "role": "Anonymous",
+          "review": "Nice design, thanx for great work!"
+        },
+        {
+          "key": "5",
+          "name": "Zimmermann Fritz ",
+          "role": "Administrator of Publishersglobal",
+          "review": "They really helped us with data management, everything was done on the agreed date and at a reasonable price. I was very taken with Andrew running the company at such a young age, incredible."
+        }
+      ]
     },
     "contact": {
       "header": {
@@ -67,7 +100,6 @@
         "description": "Kick Start Your Awesome Project Now!"
       }
     }
-   
   },
   "button_more_services": "More Services"
 }

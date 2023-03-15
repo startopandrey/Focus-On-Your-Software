@@ -1,0 +1,82 @@
+{
+  "header": {
+    "title": {
+      "text1": "Digital Agency",
+      "text2": "That Provides",
+      "text3": "Solutions",
+      "text4": "to Your Problems."
+    },
+    "description": "We offer solutions that make your business better."
+  },
+  "ourServices": {
+    "header": {
+      "title": "Our Services",
+      "description": "What Services Do We Provide?"
+    },
+    "serviceList": [
+      {
+        "icon": "/icons/web-development.png",
+        "title": "Web Development",
+        "description": ""
+      },
+      { "icon": "/icons/design.png", "title": "Web Design", "description": "" },
+      {
+        "icon": "/icons/app-development.png",
+        "title": "Mobile App Development",
+        "description": ""
+      },
+      {
+        "icon": "/icons/data-managment.png",
+        "title": "Data Management",
+        "description": ""
+      },
+      {
+        "icon": "/icons/search-op.png",
+        "title": "Search Engine Optimization",
+        "description": ""
+      },
+      {
+        "icon": "/icons/search-opt.png",
+        "title": "Data Scraping",
+        "description": ""
+      },
+      {
+        "icon": "/icons/custom-solution.png",
+        "title": "Custom IT Solution",
+        "description": ""
+      }
+    ]
+  },
+  "services": [
+    {
+      "title": "Web Development",
+      "introducton": "INTRODUCTION",
+      "question": "What do you use to build web applications?",
+      "anwser": "We use the latest technologies like React, Next js, MUI, Tailwind and a number of others to write code."
+    },
+    {
+      "title": "Web Design",
+      "introducton": "INTRODUCTION",
+      "question": "Where do you create design?",
+      "anwser": "Figma - the software for creating UI x UX design with live stream, so you will be able to see all the process of creating design in live."
+    },
+    {
+      "title": "Mobile App Development",
+      "introducton": "INTRODUCTION",
+      "question": "How do you create mobile apps?",
+      "anwser": "Creating a mobile application is quite a complicated thing, but we have all the tools to make it happen. We use live servers like Expo to make sure the app works on all devices . Also React Native makes code that works on Android and IPhone which makes the app much cheaper because you do not have to develop 2 separate apps."
+    },
+    {
+      "title": "Data Management",
+      "introducton": "INTRODUCTION",
+      "question": "How can I manage my data?",
+      "anwser": "We provide a custom dashboard that uses your Excel file or our software as a reference and stores your data in a Mongo database. You will be able to analyse and modify your data in a beautiful dashboard it."
+    },
+    {
+      "title": "Data Scraping",
+      "introducton": "INTRODUCTION",
+      "question": "What is scraping used for?",
+      "anwser": "Data scraping is used to collect large amounts of data from another website or software. We write spectial bot that can do it for you instead of people that takes a lot of time."
+    }
+  ]
+}

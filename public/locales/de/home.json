@@ -8,7 +8,7 @@
       "description": "Für kleine bis mittlere Unternehmen"
     },
     "gap": {
-      "title": "Sehen Sie sich die Kunden an, für die wir Erlebnisse geliefert haben, und wie wir das gemacht haben.",
+      "title": "Sehen Sie die Kunden, für die wir Erfahrungen gesammelt haben und wie wir diese umgesetzt haben.",
       "description": "Diese Liste enthält keine Kunden, die anonym bleiben möchten"
     },
     "services": {
@@ -19,7 +19,7 @@
         },
         "header2": {
           "title": "Brauchen Sie Hilfe bei Ihrem digitalen Marketing?",
-          "text": "Lassen Sie uns das tun, was wir am besten können, damit Sie sich auf Ihr Geschäft konzentrieren können. Unser Admin-Panel hilft Ihnen bei der Analyse und Verwaltung Ihres Unternehmens, um den Umsatz zu steigern."
+          "text": "Lassen Sie uns das tun, was wir am besten können, damit Sie sich auf Ihr Geschäft konzentrieren können. Unser Admin-Panel hilft Ihnen bei der Analyse und Verwaltung Ihres Unternehmens, um Ihren Umsatz zu steigern."
         }
       },
       "right": {
@@ -29,11 +29,11 @@
         },
         "header2": {
           "title": "Wie lange wird es dauern, die Website zu erstellen?",
-          "text": "Natürlich hängt es von der Größe des Unternehmens ab, aber wir haben alles getan, um es so schnell wie möglich zu machen, wir haben viele Vorlagen, wir arbeiten nur an einem Projekt und wir haben flexiblen Code. Damit dauert die Seitenentwicklung durchschnittlich 1-2 Wochen"
+          "text": "Natürlich hängt es von der Größe des Unternehmens ab, aber wir haben alles getan, um es so schnell wie möglich zu machen, wir haben viele Vorlagen, wir arbeiten nur an einem Projekt und wir haben flexiblen Code. Auf diese Weise dauert die Entwicklung einer Website im Durchschnitt 2-3 Wochen."
         },
         "header3": {
           "title": "Welche Garantien geben Sie?",
-          "text": "Unser Ruf und die Qualität unseres Produkts sind uns sehr wichtig, deshalb arbeiten wir zuerst, und nur wenn es Ihnen gefällt, zahlen Sie den ersten Teil des Geldes, außerdem nehmen wir nur die Hälfte des deklarierten Betrags des Projekts Der andere Teil ist eine Anzahlung für ein halbes Jahr. Wenn Sie also einen Fehler finden, werden wir ihn beheben und Sie können den anderen Teil als Entschädigung behalten"
+          "text": "Unser Ruf und die Qualität unseres Produkts sind uns sehr wichtig, deshalb arbeiten wir zuerst, und nur wenn es Ihnen gefällt, zahlen Sie den ersten Teil des Geldes, außerdem übernehmen wir nur die Hälfte des angegebenen Betrags des Projekts, den anderen Ein Teil ist eine Anzahlung für 1 Monat. Wenn Sie also einen Fehler finden, werden wir ihn beheben und Sie können den anderen Teil als Entschädigung behalten."
         }
       }
     },
@@ -44,23 +44,57 @@
       },
       "step1": {
         "title": "Senden Sie Ihre Designanfrage",
-        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+        "text": "Wir benötigen Informationen über Ihr Unternehmen und Ihren bevorzugten Designstil, damit wir das beste Design für Sie erstellen können"
       },
       "step2": {
         "title": "Wir beginnen mit der Arbeit",
-        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+        "text": "Nachdem Sie mit dem Design einverstanden sind, beginnen wir mit der Entwicklung der Website. Sie können die Änderungen jeden Tag sehen, sodass Sie über den Fortschritt auf dem Laufenden bleiben."
       },
       "step3": {
         "title": "Bringen Sie Ihr Projekt zum Abschluss!",
-        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+        "text": "Wir veröffentlichen Ihre Seite auf der bisherigen Domain oder auf einer neuen Domain. Sie erhalten alle Berechtigungen für die Site und ... Herzlichen Glückwunsch!"
       }
     },
     "reviews": {
       "header": {
         "title": "Warum mit uns zusammenarbeiten?",
         "description": "Was unsere Kunden über FOYS sagen"
-      }
+      },
+      "clientsReviews": [
+       
+        {
+          "key": "1",
+          "name": "Joe Preston",
+          "role": "Manager",
+          "review": "Wirklich nette Agentur, die während der Entwicklung den ganzen Tag online war, der Preis ist fantastisch, GL Foys."
+        },
+        {
+          "key": "2",
+          "name": "Ivonette Schäfer",
+          "role": "CEO",
+          "review": "Kann nicht viel sagen, werde weiter arbeiten. "
+        },
+        {
+          "key": "3",
+          "name": "Kühn",
+          "role": "Director of Springer",
+          "review": "Wir hatten Probleme auf der Client-Seite und dachten, dass Scraping nicht möglich sei, aber sie überraschten uns mit der genialen Idee, den Server in mehrere kleinere Server aufzuteilen, sodass sie die Aufgabe erfolgreich bewältigten."
+        },
+        {
+          "key": "4",
+          "name": "Anonymous",
+          "role": "Anonymous",
+          "review": "Schönes Design, danke für die tolle Arbeit!"
+        },
+        {
+          "key": "5",
+          "name": "Zimmermann Fritz ",
+          "role": "Administrator of Publishersglobal",
+          "review": "Sie haben uns beim Datenmanagement sehr geholfen, alles wurde zum vereinbarten Termin und zu einem vernünftigen Preis erledigt. Ich war sehr angetan davon, dass Andrew das Unternehmen in so jungen Jahren leitete, unglaublich."
+        }
+      ]
     },
+    
     "contact": {
       "header": {
         "title": "In Kontakt kommen",
@@ -69,5 +103,5 @@
     }
   },
 
-  "button_more_services": "Mehr Dienstleistungen"
+  "button_more_services": "Dienstleistungen"
 }

@@ -18,13 +18,13 @@ export async function getStaticProps({ locale }) {
   console.log(locale);
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["home"])),
+      ...(await serverSideTranslations(locale, ["home"], null, ['en', 'de'])),
       // Will be passed to the page component as props
     },
   };
 }
 export default function Home(props) {
-  console.log(props);
+
   return (
     <Fragment>
       <Hero></Hero>

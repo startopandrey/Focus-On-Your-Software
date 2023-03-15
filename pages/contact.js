@@ -14,7 +14,7 @@ import SaveIcon from "@mui/icons-material/Save";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const Contact = (props) => {
-  const { t: translate } = useTranslation("home");
+  const { t: translate } = useTranslation("contact");
   const [open, setOpen] = React.useState(false);
   const [loading, setLoading] = useState(false);
   const handleClick = () => {
@@ -101,8 +101,8 @@ const Contact = (props) => {
                 spacing={4}
               >
                 <Box className="header">
-                  <h3>Start Your Project With Us.</h3>
-                  <h1>Let&apos;s Talk</h1>
+                  <h3>{translate("header.desctiption")}</h3>
+                  <h1>{translate("header.title")}</h1>
                 </Box>
 
                 <Grid container spacing={2}>
@@ -242,7 +242,7 @@ export async function getStaticProps({ locale }) {
   console.log(locale);
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["home"])),
+      ...(await serverSideTranslations(locale, ["contact"])),
       // Will be passed to the page component as props
     },
   };

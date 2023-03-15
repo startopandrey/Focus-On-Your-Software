@@ -1,0 +1,82 @@
+{
+  "header": {
+    "title": {
+      "text1": "Digitale Agentur",
+      "text2": "Das bietet",
+      "text3": "Lösung",
+      "text4": "zu Ihren Problemen."
+    },
+    "description": "Wir bieten Lösungen, die Ihr Unternehmen verbessern."
+  },
+  "ourServices": {
+    "header": {
+      "title": "Unsere Dienstleistungen",
+      "description": "Welche Dienstleistungen bieten wir an?"
+    },
+    "serviceList": [
+      {
+        "icon": "/icons/web-development.png",
+        "title": "Web Development",
+        "description": ""
+      },
+      { "icon": "/icons/design.png", "title": "Web Design", "description": "" },
+      {
+        "icon": "/icons/app-development.png",
+        "title": "Mobile App Development",
+        "description": ""
+      },
+      {
+        "icon": "/icons/data-managment.png",
+        "title": "Data Management",
+        "description": ""
+      },
+      {
+        "icon": "/icons/search-op.png",
+        "title": "Search Engine Optimization",
+        "description": ""
+      },
+      {
+        "icon": "/icons/search-opt.png",
+        "title": "Data Scraping",
+        "description": ""
+      },
+      {
+        "icon": "/icons/custom-solution.png",
+        "title": "Custom IT Solution",
+        "description": ""
+      }
+    ]
+  },
+  "services": [
+    {
+      "title": "Web Development",
+      "introducton": "INTRODUCTION",
+      "question": "Was verwenden Sie, um Webanwendungen zu erstellen?",
+      "anwser": "Wir verwenden die neuesten Technologien wie React, Next js, MUI, Tailwind und eine Reihe anderer, um Code zu schreiben."
+    },
+    {
+      "title": "Web Design",
+      "introducton": "INTRODUCTION",
+      "question": "Wo entsteht Design?",
+      "anwser": "Figma - die Software zum Erstellen von UI x UX-Design mit Live-Stream, sodass Sie den gesamten Prozess der Designerstellung live verfolgen können."
+    },
+    {
+      "title": "Mobile App Development",
+      "introducton": "INTRODUCTION",
+      "question": "Wie erstellt man mobile Apps?",
+      "anwser": "Das Erstellen einer mobilen Anwendung ist eine ziemlich komplizierte Sache, aber wir haben alle Tools, um dies zu ermöglichen. Wir verwenden Live-Server wie Expo, um sicherzustellen, dass die App auf allen Geräten funktioniert. Außerdem erstellt React Native Code, der auf Android und IPhone funktioniert, was die App viel billiger macht, da Sie nicht 2 separate Apps entwickeln müssen."
+    },
+    {
+      "title": "Data Management",
+      "introducton": "INTRODUCTION",
+      "question": "Wie kann ich meine Daten verwalten?",
+      "anwser": "Wir bieten ein benutzerdefiniertes Dashboard, das Ihre Excel-Datei oder unsere Software als Referenz verwendet und Ihre Daten in einer Mongo-Datenbank speichert. Sie können Ihre Daten in einem schönen Dashboard analysieren und ändern."
+    },
+    {
+      "title": "Data Scraping",
+      "introducton": "INTRODUCTION",
+      "question": "Wofür wird Schaben verwendet?",
+      "anwser": "Data Scraping wird verwendet, um große Datenmengen von einer anderen Website oder Software zu sammeln. Wir schreiben spezielle Bots, die das für Sie erledigen können, anstatt Leute, die viel Zeit in Anspruch nehmen."
+    }
+  ]
+}

@@ -40,6 +40,13 @@ bottom: -45px;
    .review_text{
     margin-top: 1.5rem;
    }
+   .reviews_name{
+    font-size: 1rem;
+    color: $gray;
+   }
+   .reviews_company{
+
+   }
     position: relative;
     display: flex !important;
     flex-direction: column;
@@ -64,6 +71,7 @@ bottom: -45px;
     h4{
         text-align: center;
         font-weight: 500;
+        line-height: 1.3rem;
         line-height: 1.5rem;
     }
   }

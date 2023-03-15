@@ -8,20 +8,20 @@ export default async function handler(req, res) {
       port: 465,
       host: "smtp.gmail.com",
       auth: {
-        user: "andrey01test@gmail.com",
-        pass: "tlgxijzzuddutrjy",
+        user: "foyb.development@gmail.com",
+        pass: "npqdkjreveutxjcb",
       },
     });
 
     if (message) {
       try {
         const emailOptions = {
-          from: "andrey01test@gmail.com",
+          from: "foyb.development@gmail.com",
           to: "focusonyoursoftware@gmail.com",
           subject: "NEW PROJECT HAVE BEEN SUBMITED, WAKE UP, BRO ;)",
           html: `<p>Name:${message.name}, Email: ${message.email}, Company: ${message.company}, Message: ${message.message} </p>`,
         };
-
+console.log("hi")
         const data = await transporter.sendMail(emailOptions);
         if (data) {
           return  res.status(200).json({

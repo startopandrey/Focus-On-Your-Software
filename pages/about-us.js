@@ -25,31 +25,13 @@ export async function getStaticProps({ locale }) {
 export default function AboutUs(props) {
   const { t: translate } = useTranslation("about-us");
   const { t: translateCommon } = useTranslation("common");
+  
   const matchesMedium = useMediaQuery(
     json2mq({
       minWidth: 768,
     })
   );
-  const valuesBlocks = [
-    {
-      key: "1",
-      title: "Daily Hard Work",
-      desctiption: "We work hard everyday",
-      text: "We keep our promises, clear deadlines & functionality",
-    },
-    {
-      key: "2",
-      title: "Passion before money",
-      desctiption: "Work first principle",
-      text: "Absolutely free, design, only if you like it we continue working",
-    },
-    {
-      key: "3",
-      title: "Guarantees",
-      desctiption: "Project Assurance",
-      text: "After the end of the project, you will have half of the money for 1 month as a deposit if something goes wrong.",
-    },
-  ];
+  const valuesBlocks =  translate('value.valuesBlocks', { returnObjects: true });
   return (
     <Fragment className="about_us">
       <section className={"hero_section"}>
@@ -152,15 +134,11 @@ export default function AboutUs(props) {
             <Grid order={{ xs: 1, sm: 2 }} md="12" xs={12} item lg="4">
               {" "}
               <Box className="header">
-                <h1>THE TEAM</h1>
-                <h3>INTRODUCTION</h3>
+                <h1>{translate("team.header.title")}</h1>
+                <h3>{translate("team.header.description")}</h3>
               </Box>
               <p className="team_text">
-                Focus On Your Software - Agency based in Austia (South Tirol),
-                has been created in 2022 by 3 enthusiasts from Ukraine that
-                worked at big companies and what to do there own agency to help
-                small-medium sized businesses effort digitalization and IT
-                solution for less price than at big companies.
+              {translate("team.text")}
               </p>
             </Grid>
           </Grid>

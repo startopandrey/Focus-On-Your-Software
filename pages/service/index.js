@@ -6,41 +6,17 @@ import json2mq from "json2mq";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
 const Service = (props) => {
-  const { t: translate } = useTranslation("home");
+  const { t: translate } = useTranslation("service");
+  const { t: translateCommon } = useTranslation("common");
   const matchesMedium = useMediaQuery(
     json2mq({
       minWidth: 768,
     })
   );
-  const serviceList = [
-    {
-      icon: "/icons/web-development.png",
-      title: "Web Development",
-      description: "",
-    },
-    { icon: "/icons/design.png", title: "Web Design", description: "" },
-    {
-      icon: "/icons/app-development.png",
-      title: "Mobile App Development",
-      description: "",
-    },
-    {
-      icon: "/icons/data-managment.png",
-      title: "Data Management",
-      description: "",
-    },
-    {
-      icon: "/icons/search-op.png",
-      title: "Search Engine Optimization",
-      description: "",
-    },
-    { icon: "/icons/search-opt.png", title: "Data Scraping", description: "" },
-    {
-      icon: "/icons/custom-solution.png",
-      title: "Custom IT Solution",
-      description: "",
-    },
-  ];
+  const serviceList = translate("ourServices.serviceList", {
+    returnObjects: true,
+  });
+  const services = translate("services", { returnObjects: true });
   return (
     <div className="service">
       {" "}
@@ -51,11 +27,13 @@ const Service = (props) => {
             <Grid sx={{ height: "100%" }} item lg={6}>
               <Box className="hero__left">
                 <h1 className="hero__left_title">
-                  Digital Agency <br></br> That Provides
-                  <span>Solutions</span> to Your Problems.
+                  {translate("header.title.text1")} <br></br>{" "}
+                  {translate("header.title.text2")}
+                  <span> {translate("header.title.text3")}</span>{" "}
+                  {translate("header.title.text4")}
                 </h1>
                 <p className="hero__left_description">
-                  {translate("home.hero.description")}
+                  {translate("header.description")}
                 </p>
                 <Button
                   style={
@@ -66,7 +44,7 @@ const Service = (props) => {
                   size="large"
                   variant="contained"
                 >
-                  {translate("button_more_services")}
+                  {translateCommon("button_more_services")}
                 </Button>
               </Box>
             </Grid>
@@ -75,7 +53,7 @@ const Service = (props) => {
                 <Box className="hero__right">
                   <Image
                     alt="service_img"
-                    width={500}
+                    width={650}
                     height={500}
                     src={"/service.png"}
                     className={"home_img"}
@@ -89,8 +67,8 @@ const Service = (props) => {
       <section className="gap">
         <Container className="gap_container">
           <Box className="header">
-            <h3>Our Services</h3>
-            <h1>What Services Do We Provide?</h1>
+            <h3> {translate("ourServices.header.title")}</h3>
+            <h1>{translate("ourServices.header.description")}</h1>
           </Box>
           <ul className="service_items">
             {serviceList.map((el, i) => (
@@ -128,15 +106,12 @@ const Service = (props) => {
             <Grid md="6" sx={{ height: "100%" }} item lg={6}>
               {" "}
               <Box className="header">
-                <h1>Web Development</h1>
-                <h3>INTRODUCTION</h3>
+                <h1>{services[0].title}</h1>
+                <h3>{services[0].introducton}</h3>
               </Box>
               <Box className="header_bottom">
-                <h2>What do you use to build web application?</h2>
-                <p>
-                  We&apos;re using the newest technologies such as React, Next
-                  js, MUI, TailWind and bunch of others to rite code.
-                </p>
+                <h2>{services[0].question}</h2>
+                <p>{services[0].anwser}</p>
               </Box>
             </Grid>
             <Grid md="6" className="services_info_img" item lg={6}>
@@ -185,16 +160,12 @@ const Service = (props) => {
             >
               {" "}
               <Box className="header">
-                <h1>Web Design</h1>
-                <h3>INTRODUCTION</h3>
+                <h1>{services[1].title}</h1>
+                <h3>{services[1].introducton}</h3>
               </Box>
               <Box className="header_bottom">
-                <h2>Where do you create design?</h2>
-                <p>
-                  Figma - the software that you can see on the photo. This is
-                  perfect environment for creating modern web design for Your
-                  product
-                </p>
+                <h2>{services[1].question}</h2>
+                <p>{services[1].anwser}</p>
               </Box>
             </Grid>{" "}
           </Grid>
@@ -208,20 +179,12 @@ const Service = (props) => {
             <Grid md="6" sx={{ height: "100%" }} item lg={6}>
               {" "}
               <Box className="header">
-                <h1>Mobile App Development</h1>
-                <h3>INTRODUCTION</h3>
+                <h1>{services[2].title}</h1>
+                <h3>{services[2].introducton}</h3>
               </Box>
               <Box className="header_bottom">
-                <h2></h2>
-                <p>
-                  {" "}
-                  Making Mobile Application is a pritty complicatied thing, but
-                  we&apos;ve all tools to make it real. We&apos;re using live
-                  server such as expo to be sure that App is working correctly
-                  on all type of devices. Also React Native is making code that
-                  will work on Android and IPhone as well, it will make app much
-                  cheaper because your don&apos;t need to do 2 separated apps.
-                </p>
+                <h2>{services[2].question}</h2>
+                <p>{services[2].anwser}</p>
               </Box>
             </Grid>
             <Grid md="6" className="services_info_img" item lg={6}>
@@ -269,17 +232,12 @@ const Service = (props) => {
             >
               {" "}
               <Box className="header">
-                <h1>Data Management</h1>
-                <h3>INTRODUCTION</h3>
+                <h1>{services[3].title}</h1>
+                <h3>{services[3].introducton}</h3>
               </Box>
               <Box className="header_bottom">
-                <h2>How can I manage my data?</h2>
-                <p>
-                  We offer custom dashboard that can take your excel file as a
-                  reference and stores your data in mongo database. You will be
-                  able to analize your data in beautiful dashboard and change
-                  it.
-                </p>
+                <h2>{services[3].question}</h2>
+                <p>{services[3].anwser}</p>
               </Box>
             </Grid>{" "}
           </Grid>
@@ -293,17 +251,12 @@ const Service = (props) => {
             <Grid md="6" sx={{ height: "100%" }} item lg={6}>
               {" "}
               <Box className="header">
-                <h1>Data Scraping</h1>
-                <h3>INTRODUCTION</h3>
+                <h1>{services[4].title}</h1>
+                <h3>{services[4].introducton}</h3>
               </Box>
               <Box className="header_bottom">
-                <h2>What is Scraping used for ?</h2>
-                <p>
-                  Data Scraping used for getting huge amount of data from
-                  another site or software. We rite spectial bot that can
-                  provide that for you instead of human that will take a lot of
-                  time to do.
-                </p>
+                <h2>{services[4].question}</h2>
+                <p>{services[4].anwser}</p>
               </Box>
             </Grid>
             <Grid className="services_info_img" item md="6" lg={6}>
@@ -312,8 +265,8 @@ const Service = (props) => {
                 <Image
                   width={500}
                   height={500}
-                  alt="app-development"
-                  src={"/app-development.png"}
+                  alt="data-development"
+                  src={"/data scraping.png"}
                 ></Image>
               </Box>
             </Grid>{" "}
@@ -328,7 +281,7 @@ export async function getStaticProps({ locale }) {
   console.log(locale);
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["home"])),
+      ...(await serverSideTranslations(locale, ["service", "common"])),
       // Will be passed to the page component as props
     },
   };
