@@ -147,6 +147,9 @@ const Header = (props) => {
                   <Button
                     size={matchesMedium ? "large" : "small"}
                     variant="outlined"
+                    onClick={()=> {
+                      router.push("/contact")
+                    }}
                   >
                     Get Started
                   </Button>
