@@ -59,18 +59,13 @@ const Contact = (props) => {
       company: "",
     });
     console.log("hi andrey");
-    const data = await fetch(
-      "https://foys.herokuapp.com/send/sendEmail",
-      {
-        body: message,
-        headers: {
-
-          'Content-Type': 'application/json',
-        },
-        method: 'POST'
-      }
-
-    );
+    const data = fetch("https://foys.herokuapp.com/send/sendEmail", {
+      body: message,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    }).then((res) => res);
     if (data) {
       setOpen(true);
       setLoading(false);
