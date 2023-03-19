@@ -58,8 +58,12 @@ const Contact = (props) => {
       message: "",
       company: "",
     });
-    const data = await axios.post('https://foys.herokuapp.com/send/sendEmail', message)
-
+    console.log("hi andrey");
+    const data = await axios.post(
+      "https://foys.herokuapp.com/send/sendEmail",
+      message
+    );
+console.log(data)
     if (data) {
       setOpen(true);
       setLoading(false);
