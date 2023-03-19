@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import LoadingButton from "@mui/lab/LoadingButton";
-import axios from "axios";
 import SaveIcon from "@mui/icons-material/Save";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -58,14 +57,13 @@ const Contact = (props) => {
       message: "",
       company: "",
     });
-    console.log("hi andrey");
-    const data = fetch("https://foys.herokuapp.com/send/sendEmail", {
-      body: message,
-      headers: {
-        "Content-Type": "application/json",
-      },
+    const response = await fetch("/api/sendEmail", {
       method: "POST",
-    }).then((res) => res);
+      body: JSON.stringify(message)
+    });
+
+    const data = await response.json();
+
     if (data) {
       setOpen(true);
       setLoading(false);
