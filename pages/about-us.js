@@ -118,8 +118,8 @@ export default function AboutUs(props) {
                 ></Image>
                 <Box className="team_item_overlay">
                   {" "}
-                  <h3 class="title">Max Demeduk</h3>
-                  <span class="post">Back end Developer</span>
+                  <h3 className="title">Max Demeduk</h3>
+                  <span className="post">Back end Developer</span>
                 </Box>
               </Box>
               <Box sx={{ gridArea: "block2" }} className="team_item">
@@ -130,8 +130,8 @@ export default function AboutUs(props) {
                   src="/team/design.jpeg"
                 ></Image>
                 <Box className="team_item_overlay">
-                  <h3 class="title">Arthur Dubinskiy</h3>
-                  <span class="post">Web designer</span>
+                  <h3 className="title">Arthur Dubinskiy</h3>
+                  <span className="post">Web designer</span>
                 </Box>
               </Box>
               <Box sx={{ gridArea: "block3" }} className="team_item">
@@ -143,8 +143,8 @@ export default function AboutUs(props) {
                 ></Image>
                 <Box className="team_item_overlay">
                   {" "}
-                  <h3 class="title">Andrey Ilyukhin</h3>
-                  <span class="post">Frond end Developer</span>
+                  <h3 className="title">Andrey Ilyukhin</h3>
+                  <span className="post">Frond end Developer</span>
                 </Box>
               </Box>
             </Grid>
