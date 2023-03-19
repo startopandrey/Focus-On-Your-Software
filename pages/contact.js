@@ -59,11 +59,18 @@ const Contact = (props) => {
       company: "",
     });
     console.log("hi andrey");
-    const data = await axios.post(
+    const data = await fetch(
       "https://foys.herokuapp.com/send/sendEmail",
-      message
+      {
+        body: message,
+        headers: {
+
+          'Content-Type': 'application/json',
+        },
+        method: 'POST'
+      }
+
     );
-console.log(data)
     if (data) {
       setOpen(true);
       setLoading(false);
