@@ -113,13 +113,75 @@
     grid-auto-flow: dense;
     width: 100%;
     .team_item {
+      background: rgba(#000, $alpha: 0.7);
       justify-self: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
       width: 350px;
       height: 350px;
       img {
         object-fit: cover;
         width: 350px;
         height: 350px;
+        transition: all 0.5s;
+      }
+      .team_item_overlay {
+        color: #fff;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transition: all 0.4s ease 0s;
+        .post {
+          font-size: 13px;
+          font-weight: 400;
+          letter-spacing: 2px;
+          text-transform: capitalize;
+          display: block;
+        }
+        .title {
+          font-size: 23px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+
+          margin: 0 0 8px;
+          &:after {
+            content: "";
+            height: 7px;
+            width: 130px;
+            margin: 8px auto 0;
+            border: 2px solid #fff;
+            border-left: none;
+            border-right: none;
+            clear: both;
+            display: block;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.4s ease 0s;
+          }
+          &:hover {
+          }
+        }
+      }
+      &:hover {
+        img {
+          opacity: 0.2;
+          filter: blur(3px);
+          transform: scale(1.1);
+        }
+        .team_item_overlay {
+          opacity: 1;
+        }
+        .title {
+          &:after {
+            opacity: 0.5;
+            transform: scale(1);
+          }
+        }
       }
     }
     margin-right: 0rem;

@@ -25,13 +25,13 @@ export async function getStaticProps({ locale }) {
 export default function AboutUs(props) {
   const { t: translate } = useTranslation("about-us");
   const { t: translateCommon } = useTranslation("common");
-  
+
   const matchesMedium = useMediaQuery(
     json2mq({
       minWidth: 768,
     })
   );
-  const valuesBlocks =  translate('value.valuesBlocks', { returnObjects: true });
+  const valuesBlocks = translate("value.valuesBlocks", { returnObjects: true });
   return (
     <Fragment className="about_us">
       <section className={"hero_section"}>
@@ -47,32 +47,35 @@ export default function AboutUs(props) {
                   {translate("hero.header.description")}
                 </p>
                 <Button
-                style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }} 
-                size="large"
-                variant="contained"
-              >
-                {translateCommon("button_more_services")}
-              </Button>
+                  style={
+                    matchesMedium
+                      ? { width: 220, marginTop: "2rem" }
+                      : { width: 180, marginTop: "2rem" }
+                  }
+                  size="large"
+                  variant="contained"
+                >
+                  {translateCommon("button_more_services")}
+                </Button>
               </Box>
             </Grid>
             <Grid item lg={6}>
               {" "}
             </Grid>
           </Grid>{" "}
-         
-        </Container>{" "} {matchesMedium && (
-            <Box className="hero__right">
-              <Image
-                width={650}
-                height={500}
-        
-                alt="about img"
-                // height={1000}
-                src={"/about-us-bg-1.jpg"}
-                className={"home_img"}
-              ></Image>
-            </Box>
-          )}
+        </Container>{" "}
+        {matchesMedium && (
+          <Box className="hero__right">
+            <Image
+              width={650}
+              height={500}
+              alt="about img"
+              // height={1000}
+              src={"/about-us-bg-1.jpg"}
+              className={"home_img"}
+            ></Image>
+          </Box>
+        )}
       </section>
       <section className="value">
         <Container>
@@ -110,8 +113,14 @@ export default function AboutUs(props) {
                   width={350}
                   height={350}
                   alt="back"
+                  className="team_item_img"
                   src="/team/back.jpeg"
                 ></Image>
+                <Box className="team_item_overlay">
+                  {" "}
+                  <h3 class="title">Max Demeduk</h3>
+                  <span class="post">Back end Developer</span>
+                </Box>
               </Box>
               <Box sx={{ gridArea: "block2" }} className="team_item">
                 <Image
@@ -120,6 +129,10 @@ export default function AboutUs(props) {
                   alt="design"
                   src="/team/design.jpeg"
                 ></Image>
+                <Box className="team_item_overlay">
+                  <h3 class="title">Arthur Dubinskiy</h3>
+                  <span class="post">Web designer</span>
+                </Box>
               </Box>
               <Box sx={{ gridArea: "block3" }} className="team_item">
                 <Image
@@ -128,7 +141,11 @@ export default function AboutUs(props) {
                   alt="front"
                   src="/team/front.jpg"
                 ></Image>
-                <Box className="team_item_overlay"></Box>
+                <Box className="team_item_overlay">
+                  {" "}
+                  <h3 class="title">Andrey Ilyukhin</h3>
+                  <span class="post">Frond end Developer</span>
+                </Box>
               </Box>
             </Grid>
             <Grid order={{ xs: 1, sm: 2 }} md="12" xs={12} item lg="4">
@@ -137,9 +154,7 @@ export default function AboutUs(props) {
                 <h1>{translate("team.header.title")}</h1>
                 <h3>{translate("team.header.description")}</h3>
               </Box>
-              <p className="team_text">
-              {translate("team.text")}
-              </p>
+              <p className="team_text">{translate("team.text")}</p>
             </Grid>
           </Grid>
         </Container>

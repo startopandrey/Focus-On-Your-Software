@@ -42,7 +42,7 @@ const Header = (props) => {
     {
       key: "2",
       path: "about-us",
-      display: "About",
+      display: "About Us",
     },
     { key: "3", path: "service", display: "Services" },
     { key: "4", path: "demo", display: "Demo" },
