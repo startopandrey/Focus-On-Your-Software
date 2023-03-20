@@ -17,11 +17,12 @@
   }
   .footer_nav_container {
     height: 280px;
+
     .header {
       margin-bottom: 1.5rem;
     }
     .footer_nav {
-      display: block;
+      display: block;    padding-left: 0;
       .nav_link {
         margin-bottom: 1.5rem;
         a {

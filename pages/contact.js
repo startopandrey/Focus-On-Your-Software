@@ -47,7 +47,7 @@ const Contact = (props) => {
       message.company != ""
     ) {
       return false;
-    }
+  }
     return true;
   };
   const submitForm = async () => {
