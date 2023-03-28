@@ -266,7 +266,7 @@ const Service = (props) => {
                   width={500}
                   height={500}
                   alt="data-development"
-                  src={"/data scraping.png"}
+                  src={"/data-scraping.png"}
                 ></Image>
               </Box>
             </Grid>{" "}
