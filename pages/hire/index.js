@@ -233,6 +233,7 @@ const Hire = (props) => {
               width={matchesMedium ? "120" : "70"}
               style={{ cursor: "pointer" }}
               src="/foys_logo.png"
+              alt="logo"
             ></Image>
           </div>
           <Box className="header">
@@ -310,8 +311,9 @@ const Hire = (props) => {
                   name="radio-buttons-group"
                   className="row_radio_group"
                 >
-                  {questionsKind.options.map((option) => (
+                  {questionsKind.options.map((option, i) => (
                     <FormControlLabel
+                    key={i}
                       value={option.option}
                       className="radio_group"
                       control={
@@ -342,10 +344,11 @@ const Hire = (props) => {
                   name="radio-buttons-group"
                   className="row_radio_group"
                 >
-                  {questionsStart.options.map((option) => (
+                  {questionsStart.options.map((option, i) => (
                     <FormControlLabel
                       value={option.option}
                       className="radio_group"
+                      key={i}
                       control={
                         <Radio
                           onChange={() => {
