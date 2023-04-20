@@ -60,7 +60,7 @@ const Hero = (props) => {
             <Image
               width={700}
               height={380}
-    
+              priority
               alt="home_1"
               src={"/home_1.jpg"}
               className={"home_img"}

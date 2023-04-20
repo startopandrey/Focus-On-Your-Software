@@ -5,6 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import json2mq from "json2mq";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
+import Layout from "../../components/Layout/Layout";
 const Service = (props) => {
   const { t: translate } = useTranslation("service");
   const { t: translateCommon } = useTranslation("common");
@@ -18,6 +19,7 @@ const Service = (props) => {
   });
   const services = translate("services", { returnObjects: true });
   return (
+    <Layout>
     <div className="service">
       {" "}
       <section className={"hero_section"}>
@@ -54,6 +56,7 @@ const Service = (props) => {
                   <Image
                     alt="service_img"
                     width={650}
+                    priority
                     height={500}
                     src={"/service.png"}
                     className={"home_img"}
@@ -273,7 +276,7 @@ const Service = (props) => {
           </Grid>
         </Container>
       </section>
-    </div>
+    </div></Layout>
   );
 };
 

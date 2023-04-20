@@ -54,11 +54,11 @@ const Footer = () => {
                 size={"large"}
                 sx={{ width: 150 }}
                 onClick={() => {
-                  router.push("contact");
+                  router.push("hire");
                 }}
                 variant="outlined"
               >
-                Contact
+                Hire Foys
               </Button>
             </Box>
           </Grid>
@@ -104,6 +104,7 @@ const Footer = () => {
             /> */}
           </Grid>
         </Grid>
+        <p style={{marginTop: "4rem", color: "rgb(100, 100, 100)",textAlign: 'center'}}>©2022 FOYS, All rights reserved</p>
       </Container>
     </footer>
   );

@@ -13,6 +13,7 @@ import json2mq from "json2mq";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import Image from "next/image";
+import Layout from "../components/Layout/Layout";
 export async function getStaticProps({ locale }) {
   console.log(locale);
   return {
@@ -33,6 +34,7 @@ export default function AboutUs(props) {
   );
   const valuesBlocks = translate("value.valuesBlocks", { returnObjects: true });
   return (
+    <Layout>
     <Fragment className="about_us">
       <section className={"hero_section"}>
         {" "}
@@ -70,6 +72,7 @@ export default function AboutUs(props) {
               width={650}
               height={500}
               alt="about img"
+              priority
               // height={1000}
               src={"/about-us-bg-1.jpg"}
               className={"home_img"}
@@ -159,6 +162,6 @@ export default function AboutUs(props) {
           </Grid>
         </Container>
       </section>
-    </Fragment>
+    </Fragment></Layout>
   );
 }

@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 
 import Link from "next/link";
-
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Button, Container } from "@mui/material";
 import style from "../../styles/header.module.scss";
 import { useRouter } from "next/router";
@@ -148,10 +148,11 @@ const Header = (props) => {
                     size={matchesMedium ? "large" : "small"}
                     variant="outlined"
                     onClick={()=> {
-                      router.push("/contact")
+                      router.push("/hire")
                     }}
+                    endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
                   >
-                    Get Started
+                    Hire Foys
                   </Button>
                 </p>
               </div>

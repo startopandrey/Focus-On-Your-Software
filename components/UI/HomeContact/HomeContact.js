@@ -49,7 +49,10 @@ const HomeContact = () => {
       message: "",
       company: "",
     });
-    const data = await axios.post('https://foys.herokuapp.com/send/sendEmail', message)
+    const data = await axios.post(
+      'https://foys.herokuapp.com/send/email',
+      // "http://localhost:4000/send/email",
+      message)
 
     if (data) {
       setOpen(true);
