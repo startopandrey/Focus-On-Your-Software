@@ -102,6 +102,7 @@ const Header = (props) => {
                       onClick={() => {
                         setOpenMenu(false);
                       }}
+                      className="nav__item"
                     >
                       <Link href={item.path} key={index}>
                         {item.display}
@@ -152,7 +153,7 @@ const Header = (props) => {
                     }}
                     endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
                   >
-                    Hire Foys
+                    Hire
                   </Button>
                 </p>
               </div>

@@ -44,7 +44,7 @@ const HomeServices = () => {
               <p>{translate("home.services.left.header2.text")}</p>
             </Box>
             <Button
-              style={{ width: 180, marginTop: "1rem" }}
+              style={{  marginTop: "1rem" }}
               size="large"
               variant="outlined"
               onClick={() => router.push("service")}

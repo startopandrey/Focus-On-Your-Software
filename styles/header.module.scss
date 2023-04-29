@@ -93,8 +93,6 @@
   }
 }
 
-
-
 .nav__menu {
   display: flex;
   align-items: center;
@@ -109,9 +107,64 @@
   color: $dark;
   cursor: pointer;
 }
+.nav__item  {
 
+  a {
+    position: relative;
+    letter-spacing: 2px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      bottom: -5px;
+      width: 0px !important;
+      height: 2px;
+      display: inline-block;
+      background-color: $primary;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+    }
+    &:hover{
+         color: $primary !important;
+         &:before {
+          content: "";
+          position: absolute;
+          left: 10px;
+          bottom: -5px;
+          width: 20px !important;
+          height: 2px;
+          display: inline-block;
+          background-color: $primary;
+          -webkit-transition: all 0.3s ease-out 0s;
+          -moz-transition: all 0.3s ease-out 0s;
+          -ms-transition: all 0.3s ease-out 0s;
+          -o-transition: all 0.3s ease-out 0s;
+          transition: all 0.3s ease-out 0s;
+        }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      bottom: -5px;
+      width: 20px;
+      height: 2px;
+      display: inline-block;
+      background-color: $primary;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+}
 .nav__menu a:hover {
   font-weight: 600;
+
   /* color: #01d293; */
 }
 
@@ -132,8 +185,6 @@
 }
 .MuiButton-root {
   transition: 0.25s;
-  text-transform: capitalize !important;
-  font-weight: 600;
 }
 .nav__right p::before {
   content: "";
@@ -216,4 +267,3 @@
     font-size: 1.3rem !important;
   }
 }
-
