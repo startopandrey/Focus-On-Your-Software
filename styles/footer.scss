@@ -97,6 +97,7 @@
       }
     }
     .footer_subscribe_container {
+      // width: fit-content;
       .header {
         margin-bottom: 1rem;
       }
@@ -115,7 +116,7 @@
           border-radius: 4px 0 0 4px;
           background: $white;
           color: $dark;
-
+width: 100%;
           &::placeholder {
           }
         }

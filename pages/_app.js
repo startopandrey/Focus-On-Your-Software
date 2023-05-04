@@ -91,13 +91,13 @@ function MyApp({ Component, pageProps }) {
   const [mainAnimation, setMainAnimation] = useState(false);
 
   const handleWindowClose = () => {
-    localStorage.removeItem("mainAnimation");
+    sessionStorage.removeItem("mainAnimation");
   };
   useEffect(() => {
-    // localStorage.setItem("mainAnimation", true);
-    if (!localStorage.getItem("mainAnimation")) {
+    // sessionStorage.setItem("mainAnimation", true);
+    if (!sessionStorage.getItem("mainAnimation")) {
       setMainAnimation(true);
-      localStorage.setItem("mainAnimation", true);
+      sessionStorage.setItem("mainAnimation", true);
       setTimeout(() => {
         setMainAnimation(false);
       }, 5500);
