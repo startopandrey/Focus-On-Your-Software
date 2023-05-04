@@ -16,10 +16,12 @@ export const theme = createTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           textTransform: "uppercase",
+          fontWeight: 700,
           ...(ownerState.variant === 'outlined' &&
             ownerState.color === 'primary' && {
             textTransform: "uppercase !important",
             letterSpacing: "2px"
+            
             }),
         }),
       },

@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 
 import Link from "next/link";
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Button, Container } from "@mui/material";
 import style from "../../styles/header.module.scss";
 import { useRouter } from "next/router";
@@ -79,10 +79,17 @@ const Header = (props) => {
         <Container>
           <div className={`${style.nav__wrapper}`}>
             {/* ======== navigation logo ======== */}
-            <div className={`${style.logo}`} onClick={() => router.push("/")}>
+            <div
+              style={{
+                width: matchesMedium ? 130 : 100,
+                height: matchesMedium ? 70 : 70,
+              }}
+              className={`${style.logo}`}
+              onClick={() => router.push("/")}
+            >
               <Image
-                height={"50"}
-                width={matchesMedium ? "120" : "70"}
+                height={"100"}
+                width={ "200"}
                 style={{ cursor: "pointer" }}
                 src="/foys_logo.png"
               ></Image>
@@ -127,7 +134,7 @@ const Header = (props) => {
                     ].map((el) => (
                       <li
                         key={el.key}
-                        onClick={() => onToggleLanguageClick(changeTo)}
+                        onClick={() => onToggleLanguageClick(el.path)}
                         className="language_item"
                       >
                         <a
@@ -135,7 +142,7 @@ const Header = (props) => {
                             e.preventDefault();
                           }}
                           href=""
-                          locale={changeTo}
+                          locale={el.path}
                         >
                           {el.title}
                         </a>
@@ -148,8 +155,8 @@ const Header = (props) => {
                   <Button
                     size={matchesMedium ? "large" : "small"}
                     variant="outlined"
-                    onClick={()=> {
-                      router.push("/hire")
+                    onClick={() => {
+                      router.push("/hire");
                     }}
                     endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
                   >
