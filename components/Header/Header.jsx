@@ -74,8 +74,10 @@ const Header = (props) => {
     menuRef.current.classList.toggle(`${style.menu__active}`);
   };
   return (
-    <header className={`${style.header_container}`} ref={headerRef}>
-      <nav className="header_nav">
+    <header className={`${style.header_container}`}>
+      {" "}
+      <div className="header_top"><Container><p>Welcome to Focus On Your Software Company.</p></Container></div>
+      <nav className="header_nav" ref={headerRef}>
         <Container>
           <div className={`${style.nav__wrapper}`}>
             {/* ======== navigation logo ======== */}
@@ -89,7 +91,7 @@ const Header = (props) => {
             >
               <Image
                 height={"100"}
-                width={ "200"}
+                width={"200"}
                 style={{ cursor: "pointer" }}
                 src="/foys_logo.png"
               ></Image>
@@ -155,6 +157,11 @@ const Header = (props) => {
                   <Button
                     size={matchesMedium ? "large" : "small"}
                     variant="outlined"
+                    sx={{
+                      padding: '8px 20px',
+                      textTransform: "uppercase !important",
+                      letterSpacing: "2px",
+                    }}
                     onClick={() => {
                       router.push("/hire");
                     }}

@@ -37,22 +37,26 @@
         }
       }
     },
-    "steps": {
+    "solutions": {
       "header": {
-        "title": "Wie es funktioniert?",
-        "description": "Focus-On-Your-Business-Digitalagentur."
+        "title": "Our Special Solutions",
+        "description": "We Customize Your Software to The Smart Ways"
       },
       "step1": {
-        "title": "Senden Sie Ihre Designanfrage",
-        "text": "Wir benötigen Informationen über Ihr Unternehmen und Ihren bevorzugten Designstil, damit wir das beste Design für Sie erstellen können"
+        "title": "Track your Customers From your Website",
+        "text": "Allows you to gain a greater understanding of what your customer needs."
       },
       "step2": {
-        "title": "Wir beginnen mit der Arbeit",
-        "text": "Nachdem Sie mit dem Design einverstanden sind, beginnen wir mit der Entwicklung der Website. Sie können die Änderungen jeden Tag sehen, sodass Sie über den Fortschritt auf dem Laufenden bleiben."
+        "title": "Increase Business Performance",
+        "text": "Make your customers feel better about your business by improving business performance."
       },
       "step3": {
-        "title": "Bringen Sie Ihr Projekt zum Abschluss!",
-        "text": "Wir veröffentlichen Ihre Seite auf der bisherigen Domain oder auf einer neuen Domain. Sie erhalten alle Berechtigungen für die Site und ... Herzlichen Glückwunsch!"
+        "title": "Track Employees",
+        "text": "Monitoring employee work, performance, and work in progress is a growing practice that companies use digital tools to track."
+      },
+      "step4": {
+        "title": "Deep Dive Analysis",
+        "text": "When a business has a problem, a deep dive may be done to find out what's wrong and fix it in a cost-effective way."
       }
     },
     "reviews": {

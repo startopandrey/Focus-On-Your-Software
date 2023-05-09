@@ -17,14 +17,21 @@ export const theme = createTheme({
         root: ({ ownerState }) => ({
           textTransform: "uppercase",
           fontWeight: 700,
-          ...(ownerState.variant === 'outlined' &&
-            ownerState.color === 'primary' && {
-            textTransform: "uppercase !important",
-            letterSpacing: "2px"
-            
+          padding: "13px 30px",
+          ...(ownerState.variant === "outlined" &&
+            ownerState.color === "primary" && {
+          
             }),
         }),
       },
+    },
+  },
+  palette: {
+    primary: {
+      main: '#0049ff',
+    },
+    secondary: {
+      main: '#edf2ff',
     },
   },
 });

@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import { Button, Grid, Container } from "@mui/material";
 import json2mq from "json2mq";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 // import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // export async function getStaticProps({ locale }) {
 //   console.log(locale);
@@ -21,6 +22,7 @@ import Image from "next/image";
 const Hero = (props) => {
   // console.log(props);
   const { t: translate } = useTranslation("home");
+  const { t: translateCommon } = useTranslation("common");
   const matchesMedium = useMediaQuery(
     json2mq({
       minWidth: 768,
@@ -30,32 +32,46 @@ const Hero = (props) => {
   return (
     <section className={"hero_section"}>
       {" "}
-      <Container maxWidth="lg">
-        <Grid sx={{ height: "100%" }} container spacing={2}>
-          <Grid sx={{ height: "100%" }} item lg={6}>
-            <Box className="hero__left">
-              <h1 className="hero__left_title">
-                <span>{translate("home.hero.title.Unlock")}</span>{" "}
-                {translate("home.hero.title.main")}
-              </h1>
-              <p className="hero__left_description">
-                {translate("home.hero.description")}
-              </p>
-              
-              <Button
-                style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }} 
-                size="large"
-                variant="contained"
-              >
-                {translate("button_more_services")}
-              </Button>
-            </Box>
-          </Grid>
-          <Grid item lg={6}>
-            {" "}
-          </Grid>
-        </Grid>{" "}
-        {matchesMedium && (
+      <div className="hero_background_elements">
+        <div className="logo">
+          <Image width={500} height={200} src="/logo_for_bg.png"></Image>
+        </div>
+        <div className="left-circles"></div>
+        <div className="right-circles"></div>
+      </div>
+      <Container
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+        maxWidth="lg"
+      >
+        <Box className="hero">
+          <h1 className="hero__title">
+            <span>{translate("home.hero.title.Unlock")}</span>{" "}
+            {translate("home.hero.title.main")}
+          </h1>
+          <p className="hero__description">
+            {translate("home.hero.description")}
+          </p>
+          <div className="hero_buttons d-flex gap-4">
+            <Button
+              // style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }}
+              size="large"
+              variant="contained"
+              endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
+            >
+              {translateCommon("button_get_started")}
+            </Button>
+            <Button
+              variant="outlined"
+              size="large"
+              endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
+            >
+              {" "}
+              {translateCommon("button_learn_more")}
+            </Button>
+          </div>
+        </Box>
+
+        {/* {matchesMedium && (
           <Box className="hero__right">
             <Image
               width={700}
@@ -66,7 +82,7 @@ const Hero = (props) => {
               className={"home_img"}
             ></Image>
           </Box>
-        )}{" "}
+        )}{" "} */}
       </Container>
       {/* {!matchesMedium && (
         <Box className="hero__right">

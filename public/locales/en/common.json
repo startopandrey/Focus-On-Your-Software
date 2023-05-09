@@ -9,5 +9,8 @@
   },
   "button_more_services": "More Services",
   "button_active_demo": "Active Demo",
-  "button_contact": "Contact"
+  "button_contact": "Contact",
+  "button_get_started": "Get Started"
+  ,
+  "button_learn_more": "Learn More"
 }

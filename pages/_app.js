@@ -103,9 +103,9 @@ function MyApp({ Component, pageProps }) {
       }, 5500);
     }
 
-    window.addEventListener("beforeunload", handleWindowClose);
+    window.addEventListener("unload", handleWindowClose);
     return () => {
-      window.removeEventListener("beforeunload", handleWindowClose);
+      window.removeEventListener("unload", handleWindowClose);
     };
   }, []);
 
@@ -114,9 +114,9 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-        <Loading></Loading>
+        {/* <Loading></Loading>
 
-        {mainAnimation && <LoadingMain></LoadingMain>}
+        {mainAnimation && <LoadingMain></LoadingMain>} */}
         <Component {...pageProps} />
       </LocalizationProvider>
     </ThemeProvider>

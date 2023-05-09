@@ -3,7 +3,7 @@
     "hero": {
       "title": {
         "Unlock": "Unlock",
-        "main": "The Full Potential Of Your Business."
+        "main": "The Full Potential Of Your Business With Power Of IT."
       },
       "description": "For Small-To-Medium Sized Businesses"
     },
@@ -37,22 +37,26 @@
         }
       }
     },
-    "steps": {
+    "solutions": {
       "header": {
-        "title": "How It Works?",
-        "description": "Focus-On-Your-Business Digital Agency."
+        "title": "Our Special Solutions",
+        "description": "We Customize Your Software to The Smart Ways"
       },
       "step1": {
-        "title": "Submit Your Design Request",
-        "text": "We need information about your business and your preferred design style so we can create the best design for you"
+        "title": "Track your Customers From your Website",
+        "text": "Allows you to gain a greater understanding of what your customer needs."
       },
       "step2": {
-        "title": "We Start Working",
-        "text": "After you agree with the design, we start developing the website. You will be able to see the changes every day, so you will be up to date with the progress."
+        "title": "Increase Business Performance",
+        "text": "Make your customers feel better about your business by improving business performance."
       },
       "step3": {
-        "title": "Get Your Project Done!",
-        "text": "We publish your site on the previous domain or on a new domain. You will receive all permissions for the site and ... Congratulation !"
+        "title": "Track Employees",
+        "text": "Monitoring employee work, performance, and work in progress is a growing practice that companies use digital tools to track."
+      },
+      "step4": {
+        "title": "Deep Dive Analysis",
+        "text": "When a business has a problem, a deep dive may be done to find out what's wrong and fix it in a cost-effective way."
       }
     },
     "reviews": {
