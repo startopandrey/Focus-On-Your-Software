@@ -12,7 +12,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 import { theme } from "../theme";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 const Loading = () => {
@@ -37,6 +37,10 @@ const Loading = () => {
   );
 };
 const LoadingMain = () => {
+  const vidRef=useRef();
+
+useEffect(() => { vidRef.current.play(); },[]);
+
   return (
     <div className="loading__container">
       <motion.div
@@ -49,7 +53,7 @@ const LoadingMain = () => {
         }}
       >
         <div className="loading__wrapper">
-          <video autoPlay playsinline muted className="logo_animation">
+          <video   ref={ vidRef } autoPlay={true} playsinline muted controls = '' className="logo_animation">
             {" "}
             <source  src="logo-animation.mp4" type="video/mp4"></source>{" "}
           </video>
