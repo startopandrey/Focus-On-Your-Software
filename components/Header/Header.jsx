@@ -102,6 +102,7 @@ const Header = (props) => {
                 height={"100"}
                 width={"200"}
                 style={{ cursor: "pointer" }}
+                alt="foys logo"
                 src="/foys_logo.png"
               ></Image>
             </div>

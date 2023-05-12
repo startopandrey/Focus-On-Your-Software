@@ -26,7 +26,7 @@ const Gap = () => {
     <section className="gap">
       <Container className="gap_container">
         <div className="gap_image">
-          <Image width={1000} height={500} src="/demoAdmin.png"></Image>
+          <Image alt="demo admin" width={1000} height={500} src="/demoAdmin.png"></Image>
         </div>
         <div>
           <h3 className="gap__title">{translate("home.gap.title")}</h3>

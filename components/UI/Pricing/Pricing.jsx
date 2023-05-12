@@ -87,7 +87,7 @@ const Pricing = () => {
     <div className="pricing">
       <div className="pricing_background_elements">
         <div className="logo">
-          <Image width={500} height={200} src="/logo_for_bg.png"></Image>
+          <Image alt="logo" width={500} height={200} src="/logo_for_bg.png"></Image>
         </div>
         <div className="left-circles"></div>
         <div className="right-circles"></div>
@@ -101,6 +101,7 @@ const Pricing = () => {
         <div className="pricing_list">
           {pricingBlocks.map((el, i) => (
             <motion.div
+            key={el.title}
               ref={ref}
               variants={{
                 visible: {
@@ -131,7 +132,7 @@ const Pricing = () => {
               </Button>
               <div className="pricing__rows">
                 {el.rows.map((el) => (
-                  <div className="pricing_row">
+                  <div key={el} className="pricing_row">
                     <CheckCircleIcon color="primary"></CheckCircleIcon>
                     <h6>{el}</h6>
                   </div>

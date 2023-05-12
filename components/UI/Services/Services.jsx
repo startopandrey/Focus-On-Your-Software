@@ -72,6 +72,7 @@ const Services = () => {
               <Grid lg={4} sm="12" md={4} className="services_tabs" item>
                 {serviceBlocks.map((el) => (
                   <div
+                  key={el.id}
                     onClick={() => {
                       const newState = serviceBlocks.map((obj) =>
                         obj.id === el.id
@@ -104,6 +105,7 @@ const Services = () => {
                   <Image
                     width={1920}
                     height={1440}
+                    alt="Service Image"
                     src={activeImage.image}
                   ></Image>
                 </motion.div>

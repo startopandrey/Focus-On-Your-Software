@@ -29,7 +29,7 @@ const Loading = () => {
       >
         <div className="loading__wrapper">
           <div className={"common_logo"} onClick={() => router.push("/")}>
-            <Image height={"100"} width={"200"} src="/foys_logo.png"></Image>
+            <Image alt="logo" height={"100"} width={"200"} src="/foys_logo.png"></Image>
           </div>
         </div>
       </motion.div>
@@ -118,6 +118,6 @@ function MyApp({ Component, pageProps }) {
       </LocalizationProvider>
     </ThemeProvider>
   );
-}
+} 
 
 export default appWithTranslation(MyApp);

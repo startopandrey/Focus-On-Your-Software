@@ -38,7 +38,7 @@ const Content = () => {
             initial="hidden"
             className="content_banner"
           >
-            <Image src="/foys_banner.png" width={2000} height={1000}></Image>
+            <Image alt="foys_banner" src="/foys_banner.png" width={2000} height={1000}></Image>
           </motion.div>
         </div>
       </Container>

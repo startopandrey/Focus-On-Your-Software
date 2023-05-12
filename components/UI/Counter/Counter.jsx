@@ -31,7 +31,7 @@ const Counter = () => {
         <div className="counter_container ">
           <div className="success_container">
             {counterBlocks.map((el) => (
-              <div className="success_item">
+              <div key={el.title} className="success_item">
                 <div className="success_icon">
                   <Image
                     style={{
@@ -41,6 +41,7 @@ const Counter = () => {
                     width="55"
                     height={"55"}
                     src={el.image}
+                    alt="success icon"
                   ></Image>
                 </div>{" "}
                 <h1>{el.number}</h1>
@@ -49,7 +50,7 @@ const Counter = () => {
             ))}
           </div>
           <div className="white_circle">
-            <Image width={20} height={20} src="/white_circle.png"></Image>
+            <Image alt="Bg white circle" width={20} height={20} src="/white_circle.png"></Image>
           </div>
         </div>
       </Container>
