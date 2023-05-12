@@ -29,7 +29,12 @@ const Loading = () => {
       >
         <div className="loading__wrapper">
           <div className={"common_logo"} onClick={() => router.push("/")}>
-            <Image alt="logo" height={"100"} width={"200"} src="/foys_logo.png"></Image>
+            <Image
+              alt="logo"
+              height={"100"}
+              width={"200"}
+              src="/foys_logo.png"
+            ></Image>
           </div>
         </div>
       </motion.div>
@@ -37,9 +42,11 @@ const Loading = () => {
   );
 };
 const LoadingMain = () => {
-  const vidRef=useRef();
+  const vidRef = useRef();
 
-useEffect(() => { vidRef.current.play(); },[]);
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
 
   return (
     <div className="loading__container">
@@ -53,9 +60,16 @@ useEffect(() => { vidRef.current.play(); },[]);
         }}
       >
         <div className="loading__wrapper">
-          <video   ref={ vidRef } autoPlay={true} playsinline muted controls = '' className="logo_animation">
+          <video
+            ref={vidRef}
+            autoPlay={true}
+            playsinline
+            muted
+            controls=""
+            className="logo_animation"
+          >
             {" "}
-            <source  src="logo-animation.mp4" type="video/mp4"></source>{" "}
+            <source src="/logo-animation.mp4" type="video/mp4"></source>{" "}
           </video>
         </div>
       </motion.div>
@@ -97,7 +111,7 @@ function MyApp({ Component, pageProps }) {
 
       setTimeout(() => {
         setMainAnimation(false);
-    sessionStorage.setItem("mainAnimation", true);
+        sessionStorage.setItem("mainAnimation", true);
       }, 5500);
     }
 
@@ -113,9 +127,8 @@ function MyApp({ Component, pageProps }) {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
 
-        
         {/* {mainAnimation ? ( */}
-          <LoadingMain></LoadingMain>
+        <LoadingMain></LoadingMain>
         {/* ) : (
           loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
         )}  */}
@@ -123,6 +136,6 @@ function MyApp({ Component, pageProps }) {
       </LocalizationProvider>
     </ThemeProvider>
   );
-} 
+}
 
 export default appWithTranslation(MyApp);
