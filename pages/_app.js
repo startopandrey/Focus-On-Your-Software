@@ -50,7 +50,6 @@ const LoadingMain = () => {
 
   return (
     <div className="loading__container">
-      
       <motion.div
         initial={{ x: 0, opacity: 1 }}
         animate={{ x: "-100%", opacity: 1 }}
@@ -68,10 +67,10 @@ const LoadingMain = () => {
             muted
             controls=""
             className="logo_animation"
-            src="/logo-animation.mp4"
+            width={"100vw"}
+            height={"100vh"}
           >
-            {" "}
-        
+            <source src="/logo-animation.mp4" type="video/mp4"></source>
           </video>
         </div>
       </motion.div>
