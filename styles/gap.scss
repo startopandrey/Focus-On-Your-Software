@@ -84,6 +84,7 @@
   .gap {
     margin-bottom: 3rem;
     padding-top: 45px;
+    position: relative;
     margin-top: 15rem;
     .gap_container {
       .gap__title {
@@ -118,6 +119,7 @@
 @media only screen and (max-width: 480px) {
   .gap {
     margin-bottom: 3rem;
+    position: relative;
     margin-top: 13rem;
     .gap_container {
       .gap__title {

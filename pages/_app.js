@@ -49,9 +49,9 @@ const LoadingMain = () => {
         }}
       >
         <div className="loading__wrapper">
-          <video autoPlay muted className="logo_animation">
+          <video autoPlay playsinline muted className="logo_animation">
             {" "}
-            <source src="logo-animation.mp4" type="video/mp4"></source>{" "}
+            <source  src="logo-animation.mp4" type="video/mp4"></source>{" "}
           </video>
         </div>
       </motion.div>
@@ -108,14 +108,14 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-{/* 
+
         
         {mainAnimation ? (
           <LoadingMain></LoadingMain>
         ) : (
           loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
-        )} */}
-        <Component {...pageProps}></Component>
+        )} 
+        {/* <Component {...pageProps}></Component> */}
       </LocalizationProvider>
     </ThemeProvider>
   );
