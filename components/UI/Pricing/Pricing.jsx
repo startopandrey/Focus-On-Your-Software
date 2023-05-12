@@ -87,22 +87,26 @@ const Pricing = () => {
     <div className="pricing">
       <div className="pricing_background_elements">
         <div className="logo">
-          <Image alt="logo" width={500} height={200} src="/logo_for_bg.png"></Image>
+          <Image
+            alt="logo"
+            width={500}
+            height={200}
+            src="/logo_for_bg.png"
+          ></Image>
         </div>
         <div className="left-circles"></div>
         <div className="right-circles"></div>
       </div>
 
       <div className="pricing_container">
-        <div className="header">
+        <div className="header" ref={ref}>
           <h1>Make The Wise Decision For Software Solutions</h1>
           <p>The pricing methodology appears to lack sufficient precision.</p>
         </div>
         <div className="pricing_list">
           {pricingBlocks.map((el, i) => (
             <motion.div
-            key={el.title}
-              ref={ref}
+              key={el.title}
               variants={{
                 visible: {
                   opacity: 1,

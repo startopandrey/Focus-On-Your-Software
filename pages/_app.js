@@ -110,12 +110,12 @@ function MyApp({ Component, pageProps }) {
         <CssBaseline></CssBaseline>
 
         
-        {mainAnimation ? (
+        {/* {mainAnimation ? ( */}
           <LoadingMain></LoadingMain>
-        ) : (
+        {/* ) : (
           loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
-        )} 
-        <Component {...pageProps}></Component>
+        )}  */}
+        {/* <Component {...pageProps}></Component> */}
       </LocalizationProvider>
     </ThemeProvider>
   );
