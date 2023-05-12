@@ -1,0 +1,19 @@
+@import "../styles/theme.scss";
+.compare {
+    margin-top: 8rem;
+  .compare_container {
+    .header {
+      h3 {
+        color: $primary !important;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+      h1 {
+        color: $dark;
+      }
+
+      margin-bottom: 3rem;
+    }
+  }
+}

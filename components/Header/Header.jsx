@@ -21,6 +21,7 @@ const Header = (props) => {
     })
   );
   const headerRef = useRef(null);
+  const headerTopRef = useRef(null)
   const [languageToggle, setlanguageToggle] = useState(false);
   const menuRef = useRef(null);
   const { locale, locales, push } = useRouter();
@@ -54,8 +55,11 @@ const Header = (props) => {
       document.documentElement.scrollTop > 80
     ) {
       headerRef.current.classList.add(`${style.header__shrink}`);
+
+      
     } else {
       headerRef.current.classList.remove(`${style.header__shrink}`);
+   
     }
   };
   const onToggleLanguageClick = (newLocale) => {
@@ -72,11 +76,16 @@ const Header = (props) => {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
     menuRef.current.classList.toggle(`${style.menu__active}`);
+    headerTopRef.current.classList.toggle(`${style.header__top}`);
   };
   return (
     <header className={`${style.header_container}`}>
       {" "}
-      <div className="header_top"><Container><p>Welcome to Focus On Your Software Company.</p></Container></div>
+      <div ref={headerTopRef} className="header_top">
+        <Container>
+          <p>Welcome to Focus On Your Software Company.</p>
+        </Container>
+      </div>
       <nav className="header_nav" ref={headerRef}>
         <Container>
           <div className={`${style.nav__wrapper}`}>
@@ -118,6 +127,25 @@ const Header = (props) => {
                       </Link>
                     </div>
                   ))}
+                  {!matchesMedium && (
+                    <div className=" d-flex align-items-center gap-2 mb-0">
+                      <Button
+                        size={"large"}
+                        variant="outlined"
+                        sx={{
+                          padding: "8px 20px",
+                          textTransform: "uppercase !important",
+                          letterSpacing: "2px",
+                        }}
+                        onClick={() => {
+                          router.push("/hire");
+                        }}
+                        endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
+                      >
+                        Hire
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className={`${style.nav__right}`}>
@@ -153,23 +181,25 @@ const Header = (props) => {
                     ))}
                   </ul>
                 </div>
-                <p className=" d-flex align-items-center gap-2 mb-0">
-                  <Button
-                    size={matchesMedium ? "large" : "small"}
-                    variant="outlined"
-                    sx={{
-                      padding: '8px 20px',
-                      textTransform: "uppercase !important",
-                      letterSpacing: "2px",
-                    }}
-                    onClick={() => {
-                      router.push("/hire");
-                    }}
-                    endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
-                  >
-                    Hire
-                  </Button>
-                </p>
+                {matchesMedium && (
+                  <p className=" d-flex align-items-center gap-2 mb-0">
+                    <Button
+                      size={matchesMedium ? "large" : "small"}
+                      variant="outlined"
+                      sx={{
+                        padding: "8px 20px",
+                        textTransform: "uppercase !important",
+                        letterSpacing: "2px",
+                      }}
+                      onClick={() => {
+                        router.push("/hire");
+                      }}
+                      endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
+                    >
+                      Hire
+                    </Button>
+                  </p>
+                )}
               </div>
 
               <span

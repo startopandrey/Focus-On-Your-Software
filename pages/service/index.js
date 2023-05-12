@@ -6,6 +6,7 @@ import json2mq from "json2mq";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
 import Layout from "../../components/Layout/Layout";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 const Service = (props) => {
   const { t: translate } = useTranslation("service");
   const { t: translateCommon } = useTranslation("common");
@@ -38,16 +39,17 @@ const Service = (props) => {
                   {translate("header.description")}
                 </p>
                 <Button
-                  style={
-                    matchesMedium
-                      ? { width: 220, marginTop: "2rem" }
-                      : { width: 180, marginTop: "2rem" }
-                  }
-                  size="large"
-                  variant="contained"
-                >
-                  {translateCommon("button_more_services")}
-                </Button>
+                    style={
+                      matchesMedium
+                        ? { width: 220, marginTop: "2rem" }
+                        : { width: 180, marginTop: "2rem" }
+                    }
+                    size="large"
+                    variant="outlined"
+                    endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
+                  >
+                    {translateCommon("button_get_started")}
+                  </Button>
               </Box>
             </Grid>
             <Grid item lg={6}>

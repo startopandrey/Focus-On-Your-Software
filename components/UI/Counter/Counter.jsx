@@ -11,7 +11,7 @@ const Counter = () => {
     },
     {
       image: "/icons/apps.svg",
-      number: "10+",
+      number: "7+",
       title: "Apps Developed",
     },
     {
@@ -21,7 +21,7 @@ const Counter = () => {
     },
     {
       image: "/icons/members.svg",
-      number: "10+",
+      number: "5+",
       title: "Team Members",
     },
   ];

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 // import Hero from "../components/UI/Hero";
 // import Services from "../components/UI/Services";
 // import About from "../components/UI/About";
@@ -18,28 +18,36 @@ import Solutions from "../components/UI/Solutions/Solutions.jsx";
 import Content from "../components/UI/Content/Content.jsx";
 import Counter from "../components/UI/Counter/Counter.jsx";
 import Services from "../components/UI/Services/Services.jsx";
+import Pricing from "../components/UI/Pricing/Pricing.jsx";
+import { useState } from "react";
+import Compare from "../components/UI/Compare/Compare.jsx";
 
 export async function getStaticProps({ locale }) {
   console.log(locale);
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["home", "common"], null, ["en", "de"])),
+      ...(await serverSideTranslations(locale, ["home", "common"], null, [
+        "en",
+        "de",
+      ])),
       // Will be passed to the page component as props
     },
   };
 }
 export default function Home(props) {
+
   return (
     <Layout>
       <Fragment>
-        <Hero></Hero>
+        <Hero ></Hero>
         <Gap></Gap>
         <Solutions></Solutions>
         <Content></Content>
         <Counter></Counter>
+        <Compare></Compare>
         <Services></Services>
-        <HomeServices></HomeServices>
-        <HomeSteps></HomeSteps>
+        <Pricing></Pricing>
+
         <ReviewsSlider></ReviewsSlider>
         <HomeContact></HomeContact>
       </Fragment>

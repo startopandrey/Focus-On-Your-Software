@@ -7,7 +7,6 @@ export const theme = createTheme({
       // '"Helvetica Neue"',
       // "Arial",
       "sans-serif",
-
       '"Poppins"',
     ].join(","),
   },
@@ -16,11 +15,16 @@ export const theme = createTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           textTransform: "uppercase",
+          whiteSpace: "nowrap",
           fontWeight: 700,
           padding: "13px 30px",
+          ...(ownerState.size === "small" &&
+          {     padding: "10px 20px",}),
+
           ...(ownerState.variant === "outlined" &&
-            ownerState.color === "primary" && {
-          
+            ownerState.color === "dark" && {
+              color: "",
+              borderColor: "#edebfd",
             }),
         }),
       },
@@ -28,10 +32,13 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#0049ff',
+      main: "#0049ff",
     },
     secondary: {
-      main: '#edf2ff',
+      main: "#edf2ff",
+    },
+    dark: {
+      main: "#000",
     },
   },
 });

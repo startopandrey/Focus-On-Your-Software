@@ -1,30 +1,40 @@
 import { Box, Container, Grid } from "@mui/material";
-import React from "react";
+import React, {useEffect} from "react";
 import { useTranslation } from "next-i18next";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Solutions = () => {
   const { t: translate } = useTranslation("home");
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   const solutionsArr = [
     {
       title: translate("home.solutions.step1.title"),
       description: translate("home.solutions.step1.text"),
-      color: "#0049ff"
+      color: "#0049ff",
     },
     {
       title: translate("home.solutions.step2.title"),
       description: translate("home.solutions.step2.text"),
-      color: "#ffc800"
+      color: "#ffc800",
     },
     {
       title: translate("home.solutions.step3.title"),
       description: translate("home.solutions.step3.text"),
-      color: "#ff6101"
+      color: "#ff6101",
     },
     {
-        title: translate("home.solutions.step4.title"),
-        description: translate("home.solutions.step4.text"),
-        color: "#f001ff"
-      },
+      title: translate("home.solutions.step4.title"),
+      description: translate("home.solutions.step4.text"),
+      color: "#f001ff",
+    },
   ];
   return (
     <div className="solutions_section">
@@ -34,9 +44,25 @@ const Solutions = () => {
           <h3>{translate("home.solutions.header.title")}</h3>
           <h1>{translate("home.solutions.header.description")}</h1>
         </Box>
-        <Grid className="solutions__container" container>
+        <div className="solutions__container" >
           {solutionsArr.map((el, i) => (
-            <Grid key={i} className="step" item lg={12 / solutionsArr.length}>
+            <motion.div
+              ref={ref}
+              variants={{
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.75, delay: i / 5 + 0.1 },
+                },
+                hidden: { opacity: 0, y: 10 },
+              }}
+              animate={controls}
+              initial="hidden"
+              key={i}
+              className="step"
+             
+
+            >
               <Box className="step_text">
                 {" "}
                 <h1 className="step_number">{`0${i + 1}/`}</h1>{" "}
@@ -45,9 +71,9 @@ const Solutions = () => {
                 ></CheckCircleIcon>
                 <h4>{el.title}</h4> <p>{el.description}</p>
               </Box>
-            </Grid>
+            </motion.div>
           ))}
-        </Grid>
+        </div>
       </Container>
     </div>
   );

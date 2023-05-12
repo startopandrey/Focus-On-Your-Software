@@ -1,6 +1,14 @@
 .service {
+  .hero_section{
+ height: 500px;
+ display: flex;
+ align-items: center;
+ margin-top: 0;
+  }
   .gap {
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    padding-top: 5rem;
     .gap_container {
       display: flex;
       flex-direction: column;

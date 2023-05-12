@@ -1,10 +1,19 @@
 import { Container } from "@mui/material";
 import Image from "next/image";
-import React from "react";
-
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Content = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    <div className="content">
+    <section className="content">
       <Container>
         <div className="content_container">
           <div className="header">
@@ -15,12 +24,25 @@ const Content = () => {
               tools, workflows, and processes you need.
             </p>
           </div>
-          <div className="content_banner">
+          <motion.div
+            ref={ref}
+            variants={{
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.5, delay:  0.4 },
+              },
+              hidden: { opacity: 0, scale: 0.9 },
+            }}
+            animate={controls}
+            initial="hidden"
+            className="content_banner"
+          >
             <Image src="/foys_banner.png" width={2000} height={1000}></Image>
-          </div>
+          </motion.div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

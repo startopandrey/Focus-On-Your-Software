@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import "../../styles/hero.scss";
 
 import Box from "@mui/material/Box";
@@ -6,6 +6,7 @@ import { Button, Grid, Container } from "@mui/material";
 import json2mq from "json2mq";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { motion } from "framer-motion";
 // import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // export async function getStaticProps({ locale }) {
 //   console.log(locale);
@@ -19,16 +20,26 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-const Hero = (props) => {
+const Hero = ({}) => {
   // console.log(props);
   const { t: translate } = useTranslation("home");
   const { t: translateCommon } = useTranslation("common");
+
   const matchesMedium = useMediaQuery(
     json2mq({
       minWidth: 768,
     })
   );
-  console.log(matchesMedium);
+  const [mainAnimation, setMainAnimation] = useState();
+
+  useEffect(() => {
+    console.log(sessionStorage.getItem("mainAnimation"));
+    if (typeof window != undefined) {
+      setMainAnimation(Boolean(sessionStorage.getItem("mainAnimation")));
+    }
+  }, []);
+
+  console.log(mainAnimation);
   return (
     <section className={"hero_section"}>
       {" "}
@@ -44,17 +55,32 @@ const Hero = (props) => {
         maxWidth="lg"
       >
         <Box className="hero">
-          <h1 className="hero__title">
+          <motion.h1
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0 }}
+            transition={{ delay: 0, duration: 0.75 }}
+            className="hero__title"
+          >
             <span>{translate("home.hero.title.Unlock")}</span>{" "}
             {translate("home.hero.title.main")}
-          </h1>
-          <p className="hero__description">
+          </motion.h1>
+          <motion.p
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0 }}
+            transition={{ delay: 0.15, duration: 0.75 }}
+            className="hero__description"
+          >
             {translate("home.hero.description")}
-          </p>
-          <div className="hero_buttons d-flex gap-4">
+          </motion.p>
+          <motion.div
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0 }}
+            transition={{ delay: 0.3, duration: 0.75 }}
+            className="hero_buttons d-flex gap-4"
+          >
             <Button
               // style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }}
-              size="large"
+              size={!matchesMedium ? "small": "large"}
               variant="contained"
               endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
             >
@@ -62,13 +88,13 @@ const Hero = (props) => {
             </Button>
             <Button
               variant="outlined"
-              size="large"
+              size={!matchesMedium ? "small": "large"}
               endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
             >
               {" "}
               {translateCommon("button_learn_more")}
             </Button>
-          </div>
+          </motion.div>
         </Box>
 
         {/* {matchesMedium && (

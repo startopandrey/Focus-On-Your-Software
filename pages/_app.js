@@ -16,51 +16,24 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 const Loading = () => {
-  const router = useRouter();
-
-  const [loadingCommon, setLoadingCommon] = useState(false);
-  const handleStart = (url) => {
-
-    setLoadingCommon(true);
-  };
-  const handleComplete = (url) => {
-
-    setTimeout(() => {
-      setLoadingCommon(false);
-    }, 1300);
-  };
-  useEffect(() => {
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleComplete);
-    router.events.on("routeChangeError", handleComplete);
-
-    return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleComplete);
-      router.events.off("routeChangeError", handleComplete);
-    };
-  });
-
   return (
-    loadingCommon && (
-      <div className="loading__container">
-        <motion.div
-          initial={{ x: 0, opacity: 1 }}
-          animate={{ x: "-100%", opacity: 0 }}
-          transition={{
-            delay: 1,
-            ease: "anticipate",
-            duration: 0.75,
-          }}
-        >
-          <div className="loading__wrapper">
-            <div className={"common_logo"} onClick={() => router.push("/")}>
-              <Image height={"100"} width={"200"} src="/foys_logo.png"></Image>
-            </div>
+    <div className="loading__container">
+      <motion.div
+        initial={{ x: 0, opacity: 1 }}
+        animate={{ x: "-100%", opacity: 0 }}
+        transition={{
+          delay: 1,
+          ease: "anticipate",
+          duration: 0.75,
+        }}
+      >
+        <div className="loading__wrapper">
+          <div className={"common_logo"} onClick={() => router.push("/")}>
+            <Image height={"100"} width={"200"} src="/foys_logo.png"></Image>
           </div>
-        </motion.div>
-      </div>
-    )
+        </div>
+      </motion.div>
+    </div>
   );
 };
 const LoadingMain = () => {
@@ -90,6 +63,26 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [mainAnimation, setMainAnimation] = useState(false);
 
+  const [loadingCommon, setLoadingCommon] = useState(false);
+  const handleStart = (url) => {
+    setLoadingCommon(true);
+  };
+  const handleComplete = (url) => {
+    setTimeout(() => {
+      setLoadingCommon(false);
+    }, 1300);
+  };
+  useEffect(() => {
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  });
   const handleWindowClose = () => {
     sessionStorage.removeItem("mainAnimation");
   };
@@ -97,9 +90,10 @@ function MyApp({ Component, pageProps }) {
     // sessionStorage.setItem("mainAnimation", true);
     if (!sessionStorage.getItem("mainAnimation")) {
       setMainAnimation(true);
-      sessionStorage.setItem("mainAnimation", true);
+
       setTimeout(() => {
         setMainAnimation(false);
+        sessionStorage.setItem("mainAnimation", true);
       }, 5500);
     }
 
@@ -114,10 +108,13 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-        {/* <Loading></Loading>
 
-        {mainAnimation && <LoadingMain></LoadingMain>} */}
-        <Component {...pageProps} />
+        
+        {mainAnimation ? (
+          <LoadingMain></LoadingMain>
+        ) : (
+          loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
+        )}
       </LocalizationProvider>
     </ThemeProvider>
   );

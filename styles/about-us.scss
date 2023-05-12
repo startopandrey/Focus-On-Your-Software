@@ -1,10 +1,14 @@
 @import "../styles/theme.scss";
 .about_us {
   .hero_section {
-    margin-bottom: 5rem;
-    height: 500px;
+
     position: relative;
-    margin-top: 1rem;
+
+      height: 500px;
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+       
     .hero__left {
       display: flex;
       flex-direction: column;
