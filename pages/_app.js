@@ -93,7 +93,7 @@ function MyApp({ Component, pageProps }) {
 
       setTimeout(() => {
         setMainAnimation(false);
-        sessionStorage.setItem("mainAnimation", true);
+    sessionStorage.setItem("mainAnimation", true);
       }, 5500);
     }
 
@@ -108,13 +108,14 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-
+{/* 
         
         {mainAnimation ? (
           <LoadingMain></LoadingMain>
         ) : (
           loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
-        )}
+        )} */}
+        <Component {...pageProps}></Component>
       </LocalizationProvider>
     </ThemeProvider>
   );

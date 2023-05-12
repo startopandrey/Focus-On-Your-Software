@@ -7,6 +7,14 @@ const nextConfig = {
   },
   images: {
     domains: ['www.warketolog.com', "static.tildacdn.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 's3.amazonaws.com',
+        port: '',
+        pathname: '/my-bucket/**',
+      },
+    ],
   },
   i18n,
 };
