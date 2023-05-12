@@ -295,8 +295,43 @@
   }
 }
 @media only screen and (max-width: 768px) {
+
   .header_language {
+    .language_container {
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%),
+        0 4px 6px -2px rgb(0 0 0 / 5%);
+      // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      // transition-duration: 0.2s;
+      // transform: translateY(-100%);
+  
+      // visibility: hidden;
+  
+      position: absolute;
+      display: none;
+  
+      padding: 1rem;
+      background: $white;
+      width: 185px;
+      border-right: 1px solid $lightest-gray;
+      border-bottom: 1px solid $lightest-gray;
+      border-left: 1px solid $lightest-gray;
+      border-radius: 0px 0px 5px 5px;
+      visibility: hidden;
+  
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        line-height: 1.7;
+        a {
+          // color: #2375d8;
+          line-height: 2rem;
+        }
+      }
+    }
+    // display: none;
     .activeMenu {
+      display: block !important;
 right: -50%;
 z-index: 100;
     }

@@ -14,7 +14,7 @@ export const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: ({ ownerState }) => ({
-          textTransform: "uppercase",
+ 
           whiteSpace: "nowrap",
           fontWeight: 700,
           padding: "13px 30px",

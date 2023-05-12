@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 
@@ -101,6 +102,8 @@ const Header = (props) => {
               <Image
                 height={"100"}
                 width={"200"}
+                priority
+
                 style={{ cursor: "pointer" }}
                 alt="foys logo"
                 src="/foys_logo.png"

@@ -11,7 +11,7 @@ const Layout = (props) => {
         <title>FOYS.</title>
       </Head>
       <Header />
-      <div>{props.children}</div>
+      <div style={{overflowX: 'hidden'}}>{props.children}</div>
       <Footer />
     </Fragment>
   );

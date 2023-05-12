@@ -115,7 +115,7 @@ function MyApp({ Component, pageProps }) {
         ) : (
           loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
         )} 
-        {/* <Component {...pageProps}></Component> */}
+        <Component {...pageProps}></Component>
       </LocalizationProvider>
     </ThemeProvider>
   );

@@ -6,7 +6,7 @@ import {
   ReactCompareSliderImage,
 } from "react-compare-slider";
 import { useTranslation } from "next-i18next";
-import { useAnimation, motion} from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const Compare = () => {
   const { t: translate } = useTranslation("home");
@@ -14,7 +14,8 @@ const Compare = () => {
   const handlePositionChange = useCallback(
     (position) => console.log("[CustomHandle]", position),
     []
-  );  const [ref, inView] = useInView();
+  );
+  const [ref, inView] = useInView();
   const controls = useAnimation();
 
   useEffect(() => {
@@ -58,16 +59,11 @@ const Compare = () => {
               itemOne={
                 <ReactCompareSliderImage
                   src="/before.png"
-                  style={{ }}
+                  style={{}}
                   alt="one"
                 />
               }
-              itemTwo={
-                <ReactCompareSliderImage
-                  src="/after.png"
-                  alt="two"
-                />
-              }
+              itemTwo={<ReactCompareSliderImage src="/after.png" alt="two" />}
               onPositionChange={handlePositionChange}
               style={{
                 display: "flex",

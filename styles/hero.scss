@@ -4,12 +4,15 @@
   position: relative;
   margin-top: 1rem;
   .hero_background_elements {
+    top: 0;
+    right: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     opacity: 1;
+    z-index: 2;
     .logo {
       position: absolute;
       display: flex;
@@ -162,77 +165,8 @@
     // height: 500px;
     position: relative;
     margin-top: 2rem;
-    .hero_background_elements {
 
-      .logo {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        bottom: 0%;
-        z-index: 0;
-  
-        img {
-          object-fit: contain;
-        }
-      }
-      .left-circles {
-        left: -10%;
-        position: absolute;
-        height: 200px;
-        width: 200px;
-        z-index: -1;
-        position: absolute;
-        border-radius: 50%;
-        border: 1px solid #f0f0f0;
-        animation: slideUpDown 4s infinite linear;
-        &::after {
-          content: "";
-          left: -10%;
-          top: 50%;
-          position: absolute;
-          height: 200px;
-          width: 200px;
-          z-index: -1;
-          position: absolute;
-          border-radius: 50%;
-          border: 1px solid #f0f0f0;
-          animation: slideUpDown 4s infinite linear;
-        }
-        @keyframes slideUpDown {
-          0% {
-            -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-          }
-          50% {
-            -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-          }
-          100% {
-            -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-          }
-        }
-      }
-    }
-    .right-circles {
-      right: -10%;
-      position: absolute;
-      height: 200px;
-      width: 200px;
-
-      &::after {
-        content: "";
-        left: -10%;
-        top: 50%;
-
-        height: 200px;
-        width: 200px;
-
-      }
-   
-    }
+    
     .hero {
       display: flex;
       flex-direction: column;

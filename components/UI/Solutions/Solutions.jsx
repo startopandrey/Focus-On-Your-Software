@@ -40,14 +40,14 @@ const Solutions = () => {
     <div className="solutions_section">
       <Container>
         {" "}
-        <Box className="header">
+        <Box  ref={ref} className="header">
           <h3>{translate("home.solutions.header.title")}</h3>
           <h1>{translate("home.solutions.header.description")}</h1>
         </Box>
         <div className="solutions__container" >
           {solutionsArr.map((el, i) => (
             <motion.div
-              ref={ref}
+            
               variants={{
                 visible: {
                   opacity: 1,
