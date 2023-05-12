@@ -50,6 +50,7 @@ const LoadingMain = () => {
 
   return (
     <div className="loading__container">
+      
       <motion.div
         initial={{ x: 0, opacity: 1 }}
         animate={{ x: "-100%", opacity: 1 }}

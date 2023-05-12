@@ -65,7 +65,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+border: 1px solid #000;
+background-color: #000;
   // overflow-y: hidden !important;
   .common_logo {
     width: 170px;
