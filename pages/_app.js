@@ -130,17 +130,17 @@ function MyApp({ Component, pageProps }) {
 
         {/* {mainAnimation ? ( */}
         <video
-
-            autoPlay={true}
-            playsinline
-            muted
-            controls=""
-            className="logo_animation"
-            width={"100vw"}
-            height={"100vh"}
-          >
-            <source src="/logo-animation.mp4" type="video/mp4"></source>
-          </video>
+          loop={true}
+          muted={true}
+          autoplay={true}
+          playsinline={true}
+          controls=""
+          className="logo_animation"
+          width={"100vw"}
+          height={"100vh"}
+        >
+          <source src="logo-animation.mp4" type="video/mp4"></source>
+        </video>
         {/* ) : (
           loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
         )}  */}
