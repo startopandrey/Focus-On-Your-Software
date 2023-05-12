@@ -67,9 +67,10 @@ const LoadingMain = () => {
             muted
             controls=""
             className="logo_animation"
+            src="/logo-animation.mp4"
           >
             {" "}
-            <source src="/logo-animation.mp4" type="video/mp4"></source>{" "}
+        
           </video>
         </div>
       </motion.div>
