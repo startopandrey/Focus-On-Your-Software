@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
   const handleComplete = (url) => {
     setTimeout(() => {
       setLoadingCommon(false);
-    }, 1300);
+    }, 1750);
   };
   useEffect(() => {
     router.events.on("routeChangeStart", handleStart);
@@ -112,7 +112,7 @@ function MyApp({ Component, pageProps }) {
       setTimeout(() => {
         setMainAnimation(false);
         sessionStorage.setItem("mainAnimation", true);
-      }, 6000);
+      }, 6750);
     }
 
     window.addEventListener("unload", handleWindowClose);
