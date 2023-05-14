@@ -42,11 +42,6 @@ const Loading = () => {
   );
 };
 const LoadingMain = () => {
-  const vidRef = useRef();
-
-  useEffect(() => {
-    vidRef.current.play();
-  }, []);
 
   return (
     <div className="loading__container">
@@ -102,6 +97,12 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeError", handleComplete);
     };
   });
+  const vidRef = useRef();
+
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
+
   const handleWindowClose = () => {
     sessionStorage.removeItem("mainAnimation");
   };
@@ -130,17 +131,17 @@ function MyApp({ Component, pageProps }) {
 
         {/* {mainAnimation ? ( */}x
         <video
-          loop={true}
+        ref={vidRef}
           muted={true}
           autoPlay={true}
-          playsinline={true}
+          playsInline={true}
 
           className="logo_animation"
           width={"300px"}
           height={"300px"}
         >
           <source src="/logo-animation.mp4" type="video/mp4"></source>
-       
+          <source src="movie.ogg" type="video/ogg"></source>
         </video>
         {/* ) : (
           loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
