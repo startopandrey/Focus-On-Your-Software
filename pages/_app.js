@@ -54,7 +54,7 @@ const LoadingMain = () => {
         initial={{ x: 0, opacity: 1 }}
         animate={{ x: "-100%", opacity: 1 }}
         transition={{
-          delay: 5,
+          delay: 6,
           ease: "anticipate",
           duration: 0.75,
         }}
@@ -112,7 +112,7 @@ function MyApp({ Component, pageProps }) {
       setTimeout(() => {
         setMainAnimation(false);
         sessionStorage.setItem("mainAnimation", true);
-      }, 6500);
+      }, 6000);
     }
 
     window.addEventListener("unload", handleWindowClose);
