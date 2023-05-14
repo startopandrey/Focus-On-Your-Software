@@ -14,12 +14,11 @@ export const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: ({ ownerState }) => ({
- 
+          textTransform: "capitalize",
           whiteSpace: "nowrap",
           fontWeight: 700,
           padding: "13px 30px",
-          ...(ownerState.size === "small" &&
-          {     padding: "10px 20px",}),
+          ...(ownerState.size === "small" && { padding: "10px 20px" }),
 
           ...(ownerState.variant === "outlined" &&
             ownerState.color === "dark" && {

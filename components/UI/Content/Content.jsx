@@ -3,7 +3,11 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "next-i18next";
 const Content = () => {
+  const { t: translate } = useTranslation("home");
+  const { t: translateCommon } = useTranslation("common");
+
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -17,12 +21,8 @@ const Content = () => {
       <Container>
         <div className="content_container">
           <div className="header">
-            <h1>We build software that gives you complete control.</h1>
-            <p>
-              Connect or build a new platform with all of your product
-              information and workflows. This central platform has all the
-              tools, workflows, and processes you need.
-            </p>
+            <h1>{translate("home.content.header.title")}</h1>
+            <p>{translate("home.content.header.description")}</p>
           </div>
           <motion.div
             ref={ref}
@@ -30,7 +30,7 @@ const Content = () => {
               visible: {
                 opacity: 1,
                 scale: 1,
-                transition: { duration: 0.5, delay:  0.4 },
+                transition: { duration: 0.5, delay: 0.4 },
               },
               hidden: { opacity: 0, scale: 0.9 },
             }}
@@ -38,7 +38,12 @@ const Content = () => {
             initial="hidden"
             className="content_banner"
           >
-            <Image alt="foys_banner" src="/foys_banner.png" width={2000} height={1000}></Image>
+            <Image
+              alt="foys_banner"
+              src="/foys_banner.png"
+              width={2000}
+              height={1000}
+            ></Image>
           </motion.div>
         </div>
       </Container>

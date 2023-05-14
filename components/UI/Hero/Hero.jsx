@@ -20,11 +20,12 @@ import { motion } from "framer-motion";
 
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import { useRouter } from "next/router";
 const Hero = ({}) => {
   // console.log(props);
   const { t: translate } = useTranslation("home");
   const { t: translateCommon } = useTranslation("common");
-
+const router = useRouter()
   const matchesMedium = useMediaQuery(
     json2mq({
       minWidth: 768,
@@ -83,6 +84,7 @@ const Hero = ({}) => {
               // style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }}
               size={!matchesMedium ? "small": "large"}
               variant="contained"
+              onClick={()=> router.push("hire")}
               endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
             >
               {translateCommon("button_get_started")}
@@ -90,6 +92,7 @@ const Hero = ({}) => {
             <Button
               variant="outlined"
               size={!matchesMedium ? "small": "large"}
+              onClick={()=> router.push("service")}
               endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
             >
               {" "}

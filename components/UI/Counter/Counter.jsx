@@ -1,28 +1,31 @@
 import { Container } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-
+import { useTranslation } from "next-i18next"
 const Counter = () => {
+  const { t: translate } = useTranslation("home");
+  const { t: translateCommon } = useTranslation("common");
+
   const counterBlocks = [
     {
       image: "/icons/happy_clients.svg",
       number: "50+",
-      title: "Happy Clients",
+      title: translate("home.counter.block1.text"),
     },
     {
       image: "/icons/apps.svg",
       number: "7+",
-      title: "Apps Developed",
+      title: translate("home.counter.block2.text"),
     },
     {
       image: "/icons/awards.svg",
       number: "5+",
-      title: "Awards Winning",
+      title: translate("home.counter.block3.text"),
     },
     {
       image: "/icons/members.svg",
       number: "5+",
-      title: "Team Members",
+      title: translate("home.counter.block4.text"),
     },
   ];
   return (

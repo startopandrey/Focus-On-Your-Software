@@ -42,7 +42,7 @@ export default function AboutUs(props) {
           {" "}
           <Container>
             <Grid sx={{ height: "100%" }} container spacing={2}>
-              <Grid sx={{ height: "100%" }} item lg={6}>
+              <Grid sx={{ height: "100%" }} item md={6} lg={6}>
                 <Box className="hero__left">
                   <h1 className="hero__left_title">
                     {translate("hero.header.title")}
@@ -64,7 +64,7 @@ export default function AboutUs(props) {
                   </Button>
                 </Box>
               </Grid>
-              <Grid item lg={6}>
+              <Grid md={6} item lg={6}>
                 {" "}
               </Grid>
             </Grid>{" "}
@@ -104,24 +104,25 @@ export default function AboutUs(props) {
         </section>
         <section className="team">
           <Container>
-            <Grid className="team_items_container" container>
+            <Grid className="team_items_container" spacing={3} container>
               {" "}
               <Grid
                 order={{ xs: 2, sm: 1 }}
                 className="team_items"
                 xs={12}
                 item
-                md="12"
+                
                 lg="8"
               >
                 <Box sx={{ gridArea: "block1" }} className="team_item">
-                  <Image
-                    width={350}
-                    height={350}
-                    alt="back"
-                    className="team_item_img"
-                    src="/team/back.jpeg"
-                  ></Image>
+                  <div className="team_image">
+                    <Image
+                      alt="back"
+                      width={350}
+                      height={350}
+                      src="/team/back.jpeg"
+                    ></Image>
+                  </div>
                   <Box className="team_item_overlay">
                     {" "}
                     <h3 className="title">Max Demeduk</h3>
@@ -129,24 +130,28 @@ export default function AboutUs(props) {
                   </Box>
                 </Box>
                 <Box sx={{ gridArea: "block2" }} className="team_item">
-                  <Image
-                    width={350}
-                    height={350}
-                    alt="design"
-                    src="/team/design.jpeg"
-                  ></Image>
+                  <div className="team_image">
+                    <Image
+                      width={350}
+                      height={350}
+                      alt="design"
+                      src="/team/design.jpeg"
+                    ></Image>
+                  </div>
                   <Box className="team_item_overlay">
                     <h3 className="title">Arthur Dubinskiy</h3>
                     <span className="post">Web designer</span>
                   </Box>
                 </Box>
                 <Box sx={{ gridArea: "block3" }} className="team_item">
-                  <Image
-                    width={350}
-                    height={350}
-                    alt="front"
-                    src="/team/front.jpg"
-                  ></Image>
+                  <div className="team_image">
+                    <Image
+                      width={350}
+                      height={350}
+                      alt="front"
+                      src="/team/front.jpg"
+                    ></Image>
+                  </div>
                   <Box className="team_item_overlay">
                     {" "}
                     <h3 className="title">Andrey Ilyukhin</h3>
@@ -154,7 +159,7 @@ export default function AboutUs(props) {
                   </Box>
                 </Box>
               </Grid>
-              <Grid order={{ xs: 1, sm: 2 }} md="12" xs={12} item lg="4">
+              <Grid order={{ xs: 1, sm: 2 }}  xs={12} item lg="4">
                 {" "}
                 <Box className="header">
                   <h1>{translate("team.header.title")}</h1>

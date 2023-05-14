@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
   const handleComplete = (url) => {
     setTimeout(() => {
       setLoadingCommon(false);
-    }, 1750);
+    }, 1300);
   };
   useEffect(() => {
     router.events.on("routeChangeStart", handleStart);
@@ -112,7 +112,7 @@ function MyApp({ Component, pageProps }) {
       setTimeout(() => {
         setMainAnimation(false);
         sessionStorage.setItem("mainAnimation", true);
-      }, 6750);
+      }, 6500);
     }
 
     window.addEventListener("unload", handleWindowClose);
@@ -126,14 +126,14 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-        {mainAnimation ? (
+        {/* {mainAnimation ? (
           <LoadingMain></LoadingMain>
         ) : loadingCommon ? (
           <Loading></Loading>
         ) : (
           <Component {...pageProps} />
-        )}
-        {/* <Component {...pageProps}></Component> */}
+        )} */}
+        <Component {...pageProps}></Component>
       </LocalizationProvider>
     </ThemeProvider>
   );

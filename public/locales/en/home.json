@@ -59,13 +59,70 @@
         "text": "When a business has a problem, a deep dive may be done to find out what's wrong and fix it in a cost-effective way."
       }
     },
+    "content": {
+      "header": {
+        "title": "We build software that gives you complete control.",
+        "description": "Connect or build a new platform with all of your product information and workflows. This central platform has all the tools, workflows, and processes you need."
+      }
+    },
+    "counter": {
+      "block1": {
+        "text": "Happy Clients"
+      },
+      "block2": {
+        "text": "Apps Developed"
+      },
+      "block3": {
+        "text": "Awards Winning"
+      },
+      "block4": {
+        "text": "Team Members"
+      }
+    },
+    "compare": {
+      "header": {
+        "title": "COMPARE OUR WORK",
+        "description": "Before & After"
+      }
+    },
+    "services": {
+      "header": {
+        "title": "OUR SPECIAL SOLUTIONS",
+        "description": "We can customize your business with the power of IT."
+      }
+    },
+    "pricing": {
+      "header": {
+        "title": "Make The Wise Decision For Software Solutions",
+        "description": "The pricing methodology appears to lack sufficient precision."
+      },
+      "block1": {
+        "title": "Basic Software",
+        "price": "$700+",
+        "description": "The best choice for small and medium-sized businesses who are looking for a web-site with the ability to change data."
+      },
+      "block2": {
+        "title": "Standard Software",
+        "price": "$1500+",
+        "description": "If you are looking for a website with the ability to pay online, it is the best choice."
+      },
+      "block3": {
+        "title": "Advence Software",
+        "price": "$5000+",
+        "description": "An advanced plan is used for automatic processes in the company and allows you to have full control of business from one place."
+      },
+      "block4": {
+        "title": "Custom Software",
+        "price": "Let's Talk",
+        "description": "We can arrange a brief phone conversation to gain a deeper understanding of the issue and determine the best possible solution."
+      }
+    },
     "reviews": {
       "header": {
         "title": "Why Partner With Us?",
         "description": "What Our Clients Said About FOYS"
       },
       "clientsReviews": [
-       
         {
           "key": "1",
           "name": "Joe Preston",

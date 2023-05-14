@@ -112,7 +112,7 @@
 
     width: 80%;
     z-index: 10;
-    button{
+    button {
       text-transform: capitalize !important;
     }
     .hero__description {
@@ -145,8 +145,9 @@
     position: absolute;
     right: 0;
     top: 0;
-    height: 500px !important;
+    height: 500px;
     // width: 504 !important;
+    width: 50vw !important;
     display: flex;
     .home_img {
       object-fit: cover !important;
@@ -154,11 +155,34 @@
       // position: relative !important;
       // height: unset !important;
       vertical-align: middle;
-      width: 50vw !important;
+
       right: 0;
       position: absolute;
       // object-fit: cover;
       // height: 500px !important;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .hero_section {
+    .hero__right {
+
+      height: 500px;
+      // width: 504 !important;
+      width: 50vw !important;
+      display: flex;
+      .home_img {
+        object-fit: cover !important;
+        // width: 100% !important;
+        // position: relative !important;x
+        // height: unset !important;
+        vertical-align: middle;
+
+        right: 0;
+        position: absolute;
+        // object-fit: cover;
+        // height: 500px !important;
+      }
     }
   }
 }
@@ -169,7 +193,6 @@
     position: relative;
     margin-top: 2rem;
 
-    
     .hero {
       display: flex;
       flex-direction: column;
@@ -178,7 +201,6 @@
       height: 350px;
 
       .hero__description {
-      
         margin: 0.5rem 0;
 
         font-size: 1rem;
@@ -226,16 +248,16 @@
   }
 }
 @media only screen and (max-width: 480px) {
+  
   .hero_section {
     margin-bottom: 5rem;
     // height: 500px;
     position: relative;
     margin-top: 2rem;
-    .MuiContainer-root{
+    .MuiContainer-root {
       padding: 0;
     }
     .hero_background_elements {
-
       .logo {
         position: absolute;
         display: flex;
@@ -244,7 +266,7 @@
         width: 80%;
         bottom: 0%;
         z-index: 0;
-  
+
         img {
           object-fit: contain;
         }
@@ -301,9 +323,7 @@
 
         height: 200px;
         width: 200px;
-
       }
-   
     }
     .hero {
       display: flex;
@@ -313,7 +333,6 @@
       height: 350px;
 
       .hero__description {
-    
         margin: 0.5rem 0;
 
         font-size: 1rem;

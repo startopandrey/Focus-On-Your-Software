@@ -8,7 +8,11 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 const Pricing = () => {
+  const { t: translate } = useTranslation("home");
+  const { t: translateCommon } = useTranslation("common");
+
   const router = useRouter();
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -19,10 +23,9 @@ const Pricing = () => {
   }, [controls, inView]);
   const pricingBlocks = [
     {
-      title: "Basic Software",
-      price: "$700+",
-      description:
-        "The best choice for small and medium-sized businesses who are looking for a web-site with the ability to change data.",
+      title: translate("home.pricing.block1.title"),
+      price: translate("home.pricing.block1.price"),
+      description: translate("home.pricing.block1.description"),
       rows: [
         "Re/New Design",
 
@@ -32,10 +35,9 @@ const Pricing = () => {
       ],
     },
     {
-      title: "Basic Software",
-      price: "$1500+",
-      description:
-        "If you are looking for a website with the ability to pay online, it is the best choice.",
+      title: translate("home.pricing.block2.title"),
+      price: translate("home.pricing.block2.price"),
+      description: translate("home.pricing.block2.description"),
       rows: [
         "Re/New Design",
         "Client Supports",
@@ -48,10 +50,9 @@ const Pricing = () => {
       ],
     },
     {
-      title: "Advence Software",
-      price: "$5000+",
-      description:
-        "An advanced plan is used for automatic processes in the company and allows you to have full control of business from one place.",
+      title: translate("home.pricing.block3.title"),
+      price: translate("home.pricing.block3.price"),
+      description: translate("home.pricing.block3.description"),
       rows: [
         "Re/New Design",
         "24/7 Supports",
@@ -66,10 +67,9 @@ const Pricing = () => {
     },
     ,
     {
-      title: "Custom Software",
-      price: "Let's Talk",
-      description:
-        "We can arrange a brief phone conversation to gain a deeper understanding of the issue and determine the best possible solution.",
+      title: translate("home.pricing.block4.title"),
+      price: translate("home.pricing.block4.price"),
+      description: translate("home.pricing.block4.description"),
       rows: [
         "Re/New Design",
         "24/7 Supports",

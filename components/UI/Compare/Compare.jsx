@@ -29,8 +29,8 @@ const Compare = () => {
       <Container>
         <div className="compare_container">
           <Box className="header">
-            <h3>Compare Our Work</h3>
-            <h1>Before & After</h1>
+            <h3>{translate("home.compare.header.title")}</h3>
+            <h1>{translate("home.compare.header.description")}</h1>
           </Box>
           <motion.div
             ref={ref}

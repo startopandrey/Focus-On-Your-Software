@@ -20,6 +20,8 @@
   background: $primary;
   color: $white;
   p {
+    display: flex;
+    align-items: center;
     height: 100%;
     text-align: center;
     line-height: 100%;

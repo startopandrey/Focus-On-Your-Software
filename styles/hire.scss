@@ -56,7 +56,62 @@
     margin-top: 3rem;
     .hire_container {
       margin-bottom: 3rem;
+      width: 70%;
+      .logo {
+        text-align: center;
+  width: 100px;
+    height: 70px;
+        img {
+          object-fit: contain;
+        }
+      }
+      padding: 0rem 1rem;
+      .header {
+        h3 {
+          color: $primary !important;
+          margin-bottom: 1rem;
 
+        }
+        h1 {
+          color: $dark;
+        }
+        p{
+          font-size: 1rem;
+        }
+        margin-bottom: 3rem;
+      }
+      .home_contact_address {
+        .address_item {
+          .address_item_title {
+            margin-bottom: 1rem;
+          }
+          .address_item_content {
+            color: $light-gray;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hire {
+    margin-top: 3rem;
+    .hire_container {
+      margin-bottom: 3rem;
+      width: 100%;
+      .logo {
+        text-align: center;
+  width: 100px;
+    height: 70px;
+        img {
+          object-fit: contain;
+        }
+      }
+      padding: 0rem 1rem;
       .header {
         h3 {
           color: $primary !important;

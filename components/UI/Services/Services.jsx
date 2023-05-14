@@ -5,7 +5,11 @@ import { useState, useEffect } from "react";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "next-i18next";
 const Services = () => {
+  const { t: translate } = useTranslation("home");
+  const { t: translateCommon } = useTranslation("common");
+
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -51,8 +55,8 @@ const Services = () => {
       <Container>
         <div className="services_container">
           <div className="header">
-            <h3 className="">Our Special Solutions</h3>
-            <h1>We can customize your business with the power of IT.</h1>
+            <h3 className="">{translate("home.services1.header.title")}</h3>
+            <h1>{translate("home.services1.header.description")}.</h1>
           </div>
           <motion.div
             ref={ref}

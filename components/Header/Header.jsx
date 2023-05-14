@@ -83,9 +83,9 @@ const Header = (props) => {
     <header className={`${style.header_container}`}>
       {" "}
       <div ref={headerTopRef} className="header_top">
-        <Container>
-          <p>Welcome to Focus On Your Software Company.</p>
-        </Container>
+       
+          <p>Welcome to Focus On Your Software IT Company.</p>
+     
       </div>
       <nav className="header_nav" ref={headerRef}>
         <Container>

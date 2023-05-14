@@ -213,7 +213,7 @@ const Hire = (props) => {
   console.log(formatMessage());
   return (
     <div className="hire">
-      {" "}
+    {" "}
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         open={open}
@@ -226,11 +226,19 @@ const Hire = (props) => {
       </Snackbar>
       <Box className="hire_container">
         {" "}
-        <Box sx={{}} spacing={4}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+          spacing={4}
+        >
           <div className={`logo`} onClick={() => router.push("/")}>
             <Image
               height={"50"}
-              width={matchesMedium ? "120" : "70"}
+              width={"120"}
               style={{ cursor: "pointer" }}
               src="/foys_logo.png"
               alt="logo"
@@ -246,6 +254,7 @@ const Hire = (props) => {
               flexDirection: "column",
               gap: "1rem",
               mb: "1rem",
+              width: !matchesMedium ? '100%' : 'fit-content'
             }}
           >
             <FormControl className="row_form_control">
@@ -313,7 +322,7 @@ const Hire = (props) => {
                 >
                   {questionsKind.options.map((option, i) => (
                     <FormControlLabel
-                    key={i}
+                      key={i}
                       value={option.option}
                       className="radio_group"
                       control={
@@ -418,12 +427,10 @@ const Hire = (props) => {
                 label="First Name*"
                 value={message.name}
                 onChange={(event) => {
-                  
-                    setMessage({
-                      ...message,
-                      name: event.target.value,
-                    });
-                  
+                  setMessage({
+                    ...message,
+                    name: event.target.value,
+                  });
                 }}
                 variant="outlined"
                 sx={{ background: "#fff", width: "100%" }}
@@ -435,12 +442,10 @@ const Hire = (props) => {
                 id="outlined-basic"
                 value={message.company}
                 onChange={(event) => {
-      
-                    setMessage({
-                      ...message,
-                      company: event.target.value,
-                    });
-                  
+                  setMessage({
+                    ...message,
+                    company: event.target.value,
+                  });
                 }}
                 label="Company Name*"
                 variant="outlined"

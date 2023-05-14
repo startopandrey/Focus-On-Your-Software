@@ -27,7 +27,7 @@ const Service = (props) => {
         {" "}
         <Container>
           <Grid sx={{ height: "100%" }} container spacing={2}>
-            <Grid sx={{ height: "100%" }} item lg={6}>
+            <Grid sx={{ height: "100%" }}  md={6} item lg={6}>
               <Box className="hero__left">
                 <h1 className="hero__left_title">
                   {translate("header.title.text1")} <br></br>{" "}
@@ -52,7 +52,7 @@ const Service = (props) => {
                   </Button>
               </Box>
             </Grid>
-            <Grid item lg={6}>
+            <Grid item  md={6} lg={6}>
               {matchesMedium && (
                 <Box className="hero__right">
                   <Image
@@ -141,7 +141,7 @@ const Service = (props) => {
           >
             <Grid
               className="services_info_img"
-              order={{ xs: 2, sm: 1 }}
+              order={{ xs: 2, md: 1 }}
               item
               md="6"
               lg={6}
@@ -158,7 +158,7 @@ const Service = (props) => {
             </Grid>
             <Grid
               md="6"
-              order={{ xs: 1, sm: 2 }}
+              order={{ xs: 1, md: 2 }}
               sx={{ height: "100%" }}
               item
               lg={6}
@@ -213,7 +213,7 @@ const Service = (props) => {
           >
             <Grid
               className="services_info_img"
-              order={{ xs: 2, sm: 1 }}
+              order={{ xs: 2, md: 1 }}
               md="6"
               item
               lg={6}
@@ -229,7 +229,7 @@ const Service = (props) => {
               </Box>
             </Grid>
             <Grid
-              order={{ xs: 1, sm: 2 }}
+              order={{ xs: 1, md: 2 }}
               md="6"
               sx={{ height: "100%" }}
               item
