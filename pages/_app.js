@@ -42,6 +42,11 @@ const Loading = () => {
   );
 };
 const LoadingMain = () => {
+  const vidRef = useRef();
+
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
 
   return (
     <div className="loading__container">
@@ -57,13 +62,10 @@ const LoadingMain = () => {
         <div className="loading__wrapper">
           <video
             ref={vidRef}
+            muted={true}
             autoPlay={true}
-            playsinline
-            muted
-            controls=""
+            playsInline={true}
             className="logo_animation"
-            width={"100vw"}
-            height={"100vh"}
           >
             <source src="/logo-animation.mp4" type="video/mp4"></source>
           </video>
@@ -97,11 +99,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeError", handleComplete);
     };
   });
-  const vidRef = useRef();
 
-  useEffect(() => {
-    vidRef.current.play();
-  }, []);
 
   const handleWindowClose = () => {
     sessionStorage.removeItem("mainAnimation");
@@ -128,24 +126,13 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-
-        {/* {mainAnimation ? ( */}x
-        <video
-        ref={vidRef}
-          muted={true}
-          autoPlay={true}
-          playsInline={true}
-
-          className="logo_animation"
-          width={"300px"}
-          height={"300px"}
-        >
-          <source src="/logo-animation.mp4" type="video/mp4"></source>
-          <source src="movie.ogg" type="video/ogg"></source>
-        </video>
-        {/* ) : (
-          loadingCommon ? <Loading></Loading> : <Component {...pageProps} />
-        )}  */}
+        {mainAnimation ? (
+          <LoadingMain></LoadingMain>
+        ) : loadingCommon ? (
+          <Loading></Loading>
+        ) : (
+          <Component {...pageProps} />
+        )}
         {/* <Component {...pageProps}></Component> */}
       </LocalizationProvider>
     </ThemeProvider>
