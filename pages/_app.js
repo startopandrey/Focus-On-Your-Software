@@ -126,14 +126,14 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-        {/* {mainAnimation ? (
+        {mainAnimation ? (
           <LoadingMain></LoadingMain>
         ) : loadingCommon ? (
           <Loading></Loading>
         ) : (
           <Component {...pageProps} />
-        )} */}
-        <Component {...pageProps}></Component>
+        )}
+        {/* <Component {...pageProps}></Component> */}
       </LocalizationProvider>
     </ThemeProvider>
   );
