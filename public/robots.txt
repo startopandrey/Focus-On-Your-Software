@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://focusonyoursoftware.com/api/my-sitemap
+# Host
+Host: https://focusonyoursoftware.com/
+
+# Sitemaps
+Sitemap: https://focusonyoursoftware.com/sitemap.xml

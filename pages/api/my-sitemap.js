@@ -2,6 +2,7 @@ import { Readable } from "nodemailer/lib/xoauth2";
 import { SitemapStream, streamToPromise } from "sitemap";
 
 export default async (req, res) => {
+    console.log(req.headers.host)
   const links = [
     {
       url: "/",
