@@ -56,7 +56,7 @@ const Services = () => {
         <div className="services_container">
           <div className="header">
             <h3 className="">{translate("home.services1.header.title")}</h3>
-            <h1>{translate("home.services1.header.description")}.</h1>
+            <h1>{translate("home.services1.header.description")}</h1>
           </div>
           <motion.div
             ref={ref}
