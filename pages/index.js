@@ -35,11 +35,13 @@ export async function getStaticProps({ locale }) {
   };
 }
 export default function Home(props) {
-
   return (
     <Layout>
       <Fragment>
-        <Hero ></Hero>
+        <Hero
+          mainAnimation={props.mainAnimation}
+          loadingAnimation={props.loadingAnimation}
+        ></Hero>
         <Gap></Gap>
         <Solutions></Solutions>
         <Content></Content>

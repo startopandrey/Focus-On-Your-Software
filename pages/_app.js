@@ -79,13 +79,13 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [mainAnimation, setMainAnimation] = useState(false);
 
-  const [loadingCommon, setLoadingCommon] = useState(false);
+  const [loadingAnimation, setLoadingAnimation] = useState(false);
   const handleStart = (url) => {
-    setLoadingCommon(true);
+    setLoadingAnimation(true);
   };
   const handleComplete = (url) => {
     setTimeout(() => {
-      setLoadingCommon(false);
+      setLoadingAnimation(false);
     }, 1300);
   };
   useEffect(() => {
@@ -99,7 +99,6 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeError", handleComplete);
     };
   });
-
 
   const handleWindowClose = () => {
     sessionStorage.removeItem("mainAnimation");
@@ -126,14 +125,17 @@ function MyApp({ Component, pageProps }) {
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
-        {mainAnimation ? (
-          <LoadingMain></LoadingMain>
-        ) : loadingCommon ? (
+        {mainAnimation && <LoadingMain></LoadingMain>}
+
+        {loadingAnimation &&     <Loading></Loading>}
+        {/* {mainAnimation ? (
+
+        ) : loadingAnimation ? (
           <Loading></Loading>
         ) : (
           <Component {...pageProps} />
-        )}
-        {/* <Component {...pageProps}></Component> */}
+        )} */}
+        <Component mainAnimation={mainAnimation} loadingAnimation={loadingAnimation} {...pageProps}></Component>
       </LocalizationProvider>
     </ThemeProvider>
   );

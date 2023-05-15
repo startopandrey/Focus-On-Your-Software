@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-const Hero = ({}) => {
+const Hero = ({mainAnimation, loadingAnimation}) => {
   // console.log(props);
   const { t: translate } = useTranslation("home");
   const { t: translateCommon } = useTranslation("common");
@@ -31,16 +31,10 @@ const router = useRouter()
       minWidth: 768,
     })
   );
-  const [mainAnimation, setMainAnimation] = useState();
 
-  useEffect(() => {
-    console.log(sessionStorage.getItem("mainAnimation"));
-    if (typeof window != undefined) {
-      setMainAnimation(Boolean(sessionStorage.getItem("mainAnimation")));
-    }
-  }, []);
 
-  console.log(mainAnimation);
+
+  console.log(loadingAnimation);
   return (
     <section className={"hero_section"}>
       {" "}
@@ -60,7 +54,7 @@ const router = useRouter()
           <motion.h1
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 20, opacity: 0 }}
-            transition={{ delay: 0, duration: 0.75 }}
+            transition={{ delay: !loadingAnimation ?  6.4 + 0 : 1.5 + 0, duration: 0.75 }}
             className="hero__title"
           >
             <span>{translate("home.hero.title.Unlock")}</span>{" "}
@@ -69,7 +63,7 @@ const router = useRouter()
           <motion.p
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 20, opacity: 0 }}
-            transition={{ delay: 0.15, duration: 0.75 }}
+            transition={{ delay: !loadingAnimation ?  6.4 + 0.15: 1.5 + 0.15, duration: 0.75 }}
             className="hero__description"
           >
             {translate("home.hero.description")}
@@ -77,7 +71,7 @@ const router = useRouter()
           <motion.div
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 20, opacity: 0 }}
-            transition={{ delay: 0.3, duration: 0.75 }}
+            transition={{ delay: !loadingAnimation ?  6.4 + 0.3 : 1.5 +  0.3, duration: 0.75 }}
             className="hero_buttons d-flex gap-4"
           >
             <Button

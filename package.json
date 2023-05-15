@@ -39,6 +39,7 @@
     "reactstrap": "^9.1.1",
     "remixicon": "^2.5.0",
     "sass": "^1.58.1",
+    "sitemap": "^7.1.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9",
     "tailwindcss": "^3.0.24",
