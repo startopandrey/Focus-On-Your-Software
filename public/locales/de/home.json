@@ -99,21 +99,25 @@
       },
       "block1": {
         "title": "Basic Software",
+        "newPrice": "$350+",
         "price": "$700+",
         "description": "Die beste Wahl für kleine und mittlere Unternehmen, die eine Website mit der Möglichkeit zur Datenänderung suchen."
       },
       "block2": {
         "title": "Standard Software",
+        "newPrice": "$750+",
         "price": "$1500+",
         "description": "Wenn Sie nach einer Website suchen, auf der Sie online bezahlen können, ist dies die beste Wahl."
       },
       "block3": {
         "title": "Advence Software",
+        "newPrice": "$2500+",
         "price": "$5000+",
         "description": "Ein erweiterter Plan wird für automatische Prozesse im Unternehmen verwendet und ermöglicht Ihnen die vollständige Kontrolle über das Geschäft von einem Ort aus."
       },
       "block4": {
         "title": "Custom Software",
+        "newPrice": "",
         "price": "Lass uns reden",
         "description": "Wir können ein kurzes Telefongespräch vereinbaren, um ein tieferes Verständnis des Problems zu erlangen und die bestmögliche Lösung zu ermitteln."
       }

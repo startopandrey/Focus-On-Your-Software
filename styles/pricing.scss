@@ -154,6 +154,17 @@ height: 400px;
           font-weight: 600;
           color: $dark;
         }
+        .pricing_item_oldprice{
+          font-size: 1.2rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-decoration: line-through;
+          color: $light-gray;
+          margin-left: 0.5rem;
+        }
+        .pricing_item_oldprice{
+
+        }
         .pricing_item_description {
           margin: 1rem 0;
           font-size: 0.9rem;    z-index: 10;
@@ -322,11 +333,13 @@ height: 400px;
               .pricing_item_price {
                 font-weight: 600;
                 color: $dark;
-              }
+              }       
+          
+   
               .pricing_item_description {
                 margin: 1rem 0;
                 font-size: 0.9rem;    z-index: 10;
-              }
+              }        
               .pricing__rows {
                 .pricing_row {
                   display: flex;
@@ -493,6 +506,14 @@ height: 400px;
             .pricing_item_price {
               font-weight: 600;
               color: $dark;
+            }
+            .pricing_item_oldprice{
+              font-size: 1rem;
+              font-weight: 700;
+              margin-bottom: 0.8rem;
+              text-decoration: line-through;
+              color: $light-gray;
+              margin-left: 0.5rem;
             }
             .pricing_item_description {
               margin: 1rem 0;

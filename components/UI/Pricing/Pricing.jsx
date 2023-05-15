@@ -25,6 +25,7 @@ const Pricing = () => {
     {
       title: translate("home.pricing.block1.title"),
       price: translate("home.pricing.block1.price"),
+      newPrice: translate("home.pricing.block1.newPrice"),
       description: translate("home.pricing.block1.description"),
       rows: [
         "Re/New Design",
@@ -37,6 +38,7 @@ const Pricing = () => {
     {
       title: translate("home.pricing.block2.title"),
       price: translate("home.pricing.block2.price"),
+      newPrice: translate("home.pricing.block2.newPrice"),
       description: translate("home.pricing.block2.description"),
       rows: [
         "Re/New Design",
@@ -52,6 +54,7 @@ const Pricing = () => {
     {
       title: translate("home.pricing.block3.title"),
       price: translate("home.pricing.block3.price"),
+      newPrice: translate("home.pricing.block3.newPrice"),
       description: translate("home.pricing.block3.description"),
       rows: [
         "Re/New Design",
@@ -69,6 +72,7 @@ const Pricing = () => {
     {
       title: translate("home.pricing.block4.title"),
       price: translate("home.pricing.block4.price"),
+
       description: translate("home.pricing.block4.description"),
       rows: [
         "Re/New Design",
@@ -101,7 +105,8 @@ const Pricing = () => {
       <div className="pricing_container">
         <div className="header" ref={ref}>
           <h1>Make The Wise Decision For Software Solutions</h1>
-          <p>The pricing methodology appears to lack sufficient precision.</p>
+          {/* <p>The pricing methodology appears to lack sufficient precision.</p> */}
+          <p>We are offering a 50% discount for the first 10 clients (7/10)</p>
         </div>
         <div className="pricing_list">
           {pricingBlocks.map((el, i) => (
@@ -120,7 +125,14 @@ const Pricing = () => {
               className="pricing_item"
             >
               <h5 className="pricing_item_title">{el.title}</h5>
-              <h1 className="pricing_item_price">{`${el.price}`}</h1>
+              {el.newPrice ? (
+                <div style={{display: "flex", alignItems: "flex-end"}}>
+                  {" "}
+                  <h1 className="pricing_item_price">{`${el.newPrice}`}</h1>
+                  <h4 className="pricing_item_oldprice">{`${el.price}`}</h4>
+                </div>
+              ): <div>   <h1 className="pricing_item_price">{`${el.price}`}</h1></div>}
+
               <p className="pricing_item_description">{el.description}</p>
 
               <Button
