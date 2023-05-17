@@ -42,11 +42,11 @@ const Loading = () => {
   );
 };
 const LoadingMain = () => {
-  // const vidRef = useRef();
+  const vidRef = useRef();
 
-  // useEffect(() => {
-  //   vidRef.current.play();
-  // }, []);
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
 
   return (
     <div className="loading__container">
@@ -61,18 +61,13 @@ const LoadingMain = () => {
       >
         <div className="loading__wrapper">
           <video
-            // ref={vidRef}
-            // muted={true}
-            // autoPlay={true}
-            // defaultMuted={true} 
-            // playsInline={true}
-            // loop={true}
-            // controls
+            ref={vidRef}
+            muted={true}
+            autoPlay={true}
+            defaultMuted={true} 
+            playsInline={true}
+            loop={true}
             controls
-            muted
-            autoPlay={"autoplay"}
-            preLoad="auto"
-            loop
             className="logo_animation"
           >
             <source src="/logo-animation.mp4" type="video/mp4"></source>
