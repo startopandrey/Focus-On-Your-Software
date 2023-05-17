@@ -90,7 +90,13 @@ const LoadingMain = () => {
 
   const AutoPlayVideo = () =>
     shouldUseImage ? (
-      <img src="logo-animation.mp4"  className="logo_animation_video" alt="Muted Video" />
+      <div className="loading__wrapper">
+        <img
+          src="logo-animation.mp4"
+          className="logo_animation_video"
+          alt="Muted Video"
+        />
+      </div>
     ) : (
       <div
         className="loading__wrapper"
