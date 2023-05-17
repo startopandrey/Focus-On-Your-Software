@@ -42,12 +42,26 @@ const Loading = () => {
   );
 };
 const LoadingMain = () => {
-  const vidRef = useRef();
+  // const vidRef = useRef();
 
-  useEffect(() => {
-    vidRef.current.play();
-  }, []);
-
+  // useEffect(() => {
+  //   vidRef.current.play();
+  // }, []);
+  const AutoPlayVideo = () => (
+    <div
+      className="loading__wrapper"
+      dangerouslySetInnerHTML={{
+        __html: ` <video
+     autoplay
+playsinline
+     muted
+            className="logo_animation_video"
+          >
+            <source src="/logo-animation.mp4" type="video/mp4"></source>
+          </video>`,
+      }}
+    ></div>
+  );
   return (
     <div className="loading__container">
       <motion.div
@@ -59,18 +73,7 @@ const LoadingMain = () => {
           duration: 0.75,
         }}
       >
-        <div className="loading__wrapper">
-          <video
-            ref={vidRef}
-            muted={true}
-            autoPlay={true}
-            defaultMuted={true} 
-            playsInline={true}
-            className="logo_animation"
-          >
-            <source src="/logo-animation.mp4" type="video/mp4"></source>
-          </video>
-        </div>
+        <AutoPlayVideo></AutoPlayVideo>
       </motion.div>
     </div>
   );
