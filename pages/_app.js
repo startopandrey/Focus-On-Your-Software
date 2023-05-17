@@ -90,9 +90,7 @@ const LoadingMain = () => {
 
   const AutoPlayVideo = () => {
     
-    return  shouldUseImage ? (
-      <img src="logo-animation.mp4" alt="Muted Video" />
-    ) : ( 
+    return  (
       <div
         className="loading__wrapper"
         ref={videoParentRef}
