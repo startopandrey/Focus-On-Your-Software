@@ -64,6 +64,7 @@ const LoadingMain = () => {
             ref={vidRef}
             muted={true}
             autoPlay={true}
+            defaultMuted={true} 
             playsInline={true}
             className="logo_animation"
           >
@@ -127,7 +128,7 @@ function MyApp({ Component, pageProps }) {
         <CssBaseline></CssBaseline>
         {mainAnimation && <LoadingMain></LoadingMain>}
 
-        {loadingAnimation &&     <Loading></Loading>}
+        {loadingAnimation && <Loading></Loading>}
         {/* {mainAnimation ? (
 
         ) : loadingAnimation ? (
@@ -135,7 +136,11 @@ function MyApp({ Component, pageProps }) {
         ) : (
           <Component {...pageProps} />
         )} */}
-        <Component mainAnimation={mainAnimation} loadingAnimation={loadingAnimation} {...pageProps}></Component>
+        <Component
+          mainAnimation={mainAnimation}
+          loadingAnimation={loadingAnimation}
+          {...pageProps}
+        ></Component>
       </LocalizationProvider>
     </ThemeProvider>
   );
