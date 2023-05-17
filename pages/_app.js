@@ -66,6 +66,8 @@ const LoadingMain = () => {
             autoPlay={true}
             defaultMuted={true} 
             playsInline={true}
+            loop={true}
+            controls
             className="logo_animation"
           >
             <source src="/logo-animation.mp4" type="video/mp4"></source>
