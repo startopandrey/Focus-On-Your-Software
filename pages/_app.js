@@ -88,9 +88,10 @@ const LoadingMain = () => {
     }
   }, []);
 
-  const AutoPlayVideo = () => {
-    
-    return  (
+  const AutoPlayVideo = () =>
+    shouldUseImage ? (
+      <img src="logo-animation.mp4"  className="logo_animation_video" alt="Muted Video" />
+    ) : (
       <div
         className="loading__wrapper"
         ref={videoParentRef}
@@ -108,7 +109,6 @@ const LoadingMain = () => {
         }}
       ></div>
     );
-  };
   return (
     <div className="loading__container">
       <motion.div

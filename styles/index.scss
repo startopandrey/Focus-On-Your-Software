@@ -77,7 +77,10 @@ body {
       object-fit: contain;
     }
   }
-
+.logo_animation_video{
+  width: 50vw;
+  height: auto;
+}
   video {
     width: 50vw;
     height: auto;
@@ -87,6 +90,10 @@ body {
 @media only screen and (max-width: 768px) {
   .loading__wrapper {
     video {
+      width: 100vw;
+      height: auto;
+    }
+    .logo_animation_video{
       width: 100vw;
       height: auto;
     }
