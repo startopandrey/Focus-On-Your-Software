@@ -11,7 +11,7 @@ const Layout = (props) => {
         <link rel="shortcut icon" href="/logo_small.png" />
         <title>FOYS.</title>
 
-    
+       
       </Head>
       <Header />
       <div style={{ overflowX: "hidden" }}>{props.children}</div>

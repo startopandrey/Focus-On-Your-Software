@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import GoogleAnalytics from "@bradgarropy/next-google-analytics"
 const Loading = () => {
   return (
     <div className="loading__container">
@@ -180,6 +181,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       {" "}
+   
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline></CssBaseline>
         {mainAnimation && <LoadingMain></LoadingMain>}
@@ -191,7 +193,7 @@ function MyApp({ Component, pageProps }) {
           <Loading></Loading>
         ) : (
           <Component {...pageProps} />
-        )} */}
+        )} */}   <GoogleAnalytics measurementId="G-B0X0RC2NZR" />
         <Component
           mainAnimation={mainAnimation}
           loadingAnimation={loadingAnimation}
