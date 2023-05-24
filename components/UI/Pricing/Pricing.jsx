@@ -28,9 +28,9 @@ const Pricing = () => {
       newPrice: translate("home.pricing.block1.newPrice"),
       description: translate("home.pricing.block1.description"),
       rows: [
+        "Pages 3-5",
         "Re/New Design",
 
-        "Business Site",
         "CMS Admin Panel",
         "500MB Hosting Free",
       ],
@@ -41,9 +41,9 @@ const Pricing = () => {
       newPrice: translate("home.pricing.block2.newPrice"),
       description: translate("home.pricing.block2.description"),
       rows: [
+        "Pages 5-10",
         "Re/New Design",
         "Client Supports",
-        "Business Site",
         "24/7 Supports",
         "Admin Panel",
         "500MB Hosting Free",
@@ -57,9 +57,10 @@ const Pricing = () => {
       newPrice: translate("home.pricing.block3.newPrice"),
       description: translate("home.pricing.block3.description"),
       rows: [
+        "Pages 10+",
         "Re/New Design",
         "24/7 Supports",
-        "Business Site",
+
         "Advanced Admin Panel",
         "1TB Hosting Free",
         "Payment System",
@@ -75,9 +76,10 @@ const Pricing = () => {
 
       description: translate("home.pricing.block4.description"),
       rows: [
+        "Pages 10+",
         "Re/New Design",
         "24/7 Supports",
-        "Business Site",
+
         "Advanced Admin Panel",
         "1TB Hosting Free",
         "Payment System",
@@ -126,12 +128,17 @@ const Pricing = () => {
             >
               <h5 className="pricing_item_title">{el.title}</h5>
               {el.newPrice ? (
-                <div style={{display: "flex", alignItems: "flex-end"}}>
+                <div style={{ display: "flex", alignItems: "flex-end" }}>
                   {" "}
                   <h1 className="pricing_item_price">{`${el.newPrice}`}</h1>
                   <h4 className="pricing_item_oldprice">{`${el.price}`}</h4>
                 </div>
-              ): <div>   <h1 className="pricing_item_price">{`${el.price}`}</h1></div>}
+              ) : (
+                <div>
+                  {" "}
+                  <h1 className="pricing_item_price">{`${el.price}`}</h1>
+                </div>
+              )}
 
               <p className="pricing_item_description">{el.description}</p>
 
