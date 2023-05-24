@@ -14,11 +14,7 @@ const Layout = (props) => {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-B0X0RC2NZR"
         ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-B0X0RC2NZR');
-        </script>
+        <script type="text/javascript" src="/static/script.js"></script>
       </Head>
       <Header />
       <div style={{ overflowX: "hidden" }}>{props.children}</div>
