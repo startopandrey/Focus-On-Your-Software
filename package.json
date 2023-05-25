@@ -34,6 +34,7 @@
     "prop-types": "latest",
     "react": "18.2.0",
     "react-compare-slider": "^2.2.0",
+    "react-curved-text": "^2.0.2",
     "react-dom": "18.2.0",
     "react-i18next": "^12.1.5",
     "react-intersection-observer": "^9.4.3",

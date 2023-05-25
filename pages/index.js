@@ -21,6 +21,7 @@ import Services from "../components/UI/Services/Services.jsx";
 import Pricing from "../components/UI/Pricing/Pricing.jsx";
 import { useState } from "react";
 import Compare from "../components/UI/Compare/Compare.jsx";
+import PromotionVideo from "../components/UI/PromotionVideo/PromotionVideo.jsx";
 
 export async function getStaticProps({ locale }) {
   console.log(locale);
@@ -44,6 +45,7 @@ export default function Home(props) {
         ></Hero>
         <Gap></Gap>
         <Solutions></Solutions>
+        <PromotionVideo></PromotionVideo>
         <Content></Content>
         <Counter></Counter>
         <Compare></Compare>
