@@ -135,6 +135,7 @@ export default function AboutUs(props) {
                       width={350}
                       height={350}
                       alt="design"
+                      //dfdfdfdf
                       src="/team/design.jpeg"
                     ></Image>
                   </div>
