@@ -40,8 +40,7 @@ const router = useRouter()
       {" "}
       <div className="hero_background_elements">
         <div className="logo">
-          <Image alt="logo bg
-          " width={500} height={200} src="/logo_for_bg.png"></Image>
+          <Image alt="logo bg" width={500} height={200} src="/logoForBg.png"></Image>
         </div>
         <div className="left-circles"></div>
         <div className="right-circles"></div>

@@ -97,7 +97,7 @@ const Pricing = () => {
             alt="logo"
             width={500}
             height={200}
-            src="/logo_for_bg.png"
+            src="/logoForBg.png"
           ></Image>
         </div>
         <div className="left-circles"></div>

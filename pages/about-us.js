@@ -120,7 +120,7 @@ export default function AboutUs(props) {
                       alt="back"
                       width={350}
                       height={350}
-                      src="/team/back.jpeg"
+                      src="/team/back_dem.jpeg"
                     ></Image>
                   </div>
                   <Box className="team_item_overlay">
