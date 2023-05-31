@@ -169,7 +169,7 @@ function MyApp({ Component, pageProps }) {
       setTimeout(() => {
         setMainAnimation(false);
         sessionStorage.setItem("mainAnimation", true);
-      }, 6500);
+      }, 7000);
     }
 
     window.addEventListener("unload", handleWindowClose);

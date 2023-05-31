@@ -166,7 +166,8 @@ export default function AboutUs(props) {
                   <h1>{translate("team.header.title")}</h1>
                   <h3>{translate("team.header.description")}</h3>
                 </Box>
-                <p className="team_text">{translate("team.text")}</p>
+                <p className="team_text">{translate("team.text1")}</p>
+                <p className="team_text">{translate("team.text2")}</p>
               </Grid>
             </Grid>
           </Container>
