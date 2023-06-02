@@ -53,7 +53,7 @@ const router = useRouter()
           <motion.h1
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 20, opacity: 0 }}
-            transition={{ delay: !loadingAnimation ?  6.9 + 0 : 1.5 + 0, duration: 0.75 }}
+            transition={{ delay: !loadingAnimation ?  1.5 + 0 : 1.5 + 0, duration: 0.75 }}
             className="hero__title"
           >
             <span>{translate("home.hero.title.Unlock")}</span>{" "}
@@ -62,7 +62,7 @@ const router = useRouter()
           <motion.p
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 20, opacity: 0 }}
-            transition={{ delay: !loadingAnimation ?  6.9 + 0.15: 1.5 + 0.15, duration: 0.75 }}
+            transition={{ delay: !loadingAnimation ?  1.5 + 0.15: 1.5 + 0.15, duration: 0.75 }}
             className="hero__description"
           >
             {translate("home.hero.description")}
@@ -70,7 +70,7 @@ const router = useRouter()
           <motion.div
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 20, opacity: 0 }}
-            transition={{ delay: !loadingAnimation ?  6.9 + 0.3 : 1.5 +  0.3, duration: 0.75 }}
+            transition={{ delay: !loadingAnimation ?  1.5 + 0.3 : 1.5 +  0.3, duration: 0.75 }}
             className="hero_buttons d-flex gap-4"
           >
             <Button
