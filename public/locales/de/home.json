@@ -39,30 +39,30 @@
     },
     "content": {
       "header": {
-        "title": "Wir entwickeln Software, die Ihnen die vollständige Kontrolle gibt.",
+        "title": "Wir entwickeln website, die Ihnen die vollständige Kontrolle gibt.",
         "description": "Verbinden oder erstellen Sie eine neue Plattform mit all Ihren Produktinformationen und Arbeitsabläufen. Diese zentrale Plattform verfügt über alle Tools, Workflows und Prozesse, die Sie benötigen."
       }
     },
     "solutions": {
       "header": {
         "title": "Unsere Speziallösungen",
-        "description": "Wir passen Ihre Software auf intelligente Weise an"
+        "description": "Wir passen Ihre Website auf intelligente Weise an"
       },
       "step1": {
-        "title": "Verfolgen Sie Ihre Kunden über Ihre Website",
-        "text": "Ermöglicht Ihnen ein besseres Verständnis für die Bedürfnisse Ihrer Kunden."
+        "title": "Einzigartiges Web Design",
+        "text": "Wir sind auf Webdesign-Lösungen spezialisiert, die auf Ihre spezifischen Geschäftsanforderungen zugeschnitten sind."
       },
       "step2": {
-        "title": "Steigern Sie die Geschäftsleistung",
-        "text": "Geben Sie Ihren Kunden ein besseres Gefühl für Ihr Unternehmen, indem Sie die Geschäftsleistung verbessern."
+        "title": "Besseres Geschäft Marketing",
+        "text": "Eine einzigartige SEO Strategie, die auf manuellem Code basiert, wird Ihr Unternehmen mehr Kunden präsentieren."
       },
       "step3": {
-        "title": "Verfolgen Sie Mitarbeiter",
-        "text": "Die Überwachung der Arbeit, der Leistung und der laufenden Arbeiten der Mitarbeiter ist eine zunehmende Praxis, die Unternehmen mithilfe digitaler Tools nachverfolgen."
+        "title": "Admin Panel & CMS",
+        "text": "Steuern Sie Ihre Produkte und Kunden über ein ansprechendes Admin-Panel, mit dem Sie Informationen ändern und analysieren können."
       },
       "step4": {
-        "title": "Deep-Dive-Analyse",
-        "text": "Wenn ein Unternehmen ein Problem hat, kann eine umfassende Untersuchung durchgeführt werden, um herauszufinden, was falsch ist, und es auf kostengünstige Weise zu beheben."
+        "title": "Kundendienst",
+        "text": "Das Admin-Panel bietet Ihnen die Möglichkeit, Ihrem Kunden ein schnelles Feedback zu geben und im Gegenzug gutes Feedback zu erhalten."
       }
     },
 
@@ -71,7 +71,7 @@
         "text": "Zufriedene Kunden"
       },
       "block2": {
-        "text": "Apps entwickelt"
+        "text": "Websites entwickelt"
       },
       "block3": {
         "text": "Preisgekrönt"

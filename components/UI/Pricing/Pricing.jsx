@@ -108,7 +108,7 @@ const Pricing = () => {
         <div className="header" ref={ref}>
           <h1>Make The Wise Decision For Software Solutions</h1>
           {/* <p>The pricing methodology appears to lack sufficient precision.</p> */}
-          <p>We are offering a 50% discount for the first 10 clients (7/10)</p>
+          <p>We are offering a 30% discount for the first 10 clients (7/10)</p>
         </div>
         <div className="pricing_list">
           {pricingBlocks.map((el, i) => (

@@ -8,6 +8,7 @@ import {
 import { useTranslation } from "next-i18next";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 const Compare = () => {
   const { t: translate } = useTranslation("home");
 
@@ -57,13 +58,16 @@ const Compare = () => {
                 />
               }
               itemOne={
-                <ReactCompareSliderImage
+                <Image
                   src="/before.png"
+                  width={1152}
+                  height={776}
                   style={{}}
-                  alt="one"
+                  alt="website before"
                 />
               }
-              itemTwo={<ReactCompareSliderImage src="/after.png" alt="two" />}
+              itemTwo={<Image        width={1152}
+              height={776} src="/after.png" alt="website after" />}
               onPositionChange={handlePositionChange}
               style={{
                 display: "flex",

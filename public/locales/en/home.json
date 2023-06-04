@@ -40,28 +40,28 @@
     "solutions": {
       "header": {
         "title": "Our Special Solutions",
-        "description": "We Customize Your Software to The Smart Ways"
+        "description": "We Customize Your Website to The Smart Ways"
       },
       "step1": {
-        "title": "Track your Customers From your Website",
-        "text": "Allows you to gain a greater understanding of what your customer needs."
+        "title": "Unique Web Design",
+        "text": "We specialize in web design solutions that are tailored to your specific business needs."
       },
       "step2": {
-        "title": "Increase Business Performance",
-        "text": "Make your customers feel better about your business by improving business performance."
+        "title": "Better Business Marketing",
+        "text": "A unique SEO strategy, which is based on manual code, will show your business to more customers."
       },
       "step3": {
-        "title": "Track Employees",
-        "text": "Monitoring employee work, performance, and work in progress is a growing practice that companies use digital tools to track."
+        "title": "Admin Panel & CMS",
+        "text": "Control your products and customers from a beautiful admin panel that allows you to change and analyze information."
       },
       "step4": {
-        "title": "Deep Dive Analysis",
-        "text": "When a business has a problem, a deep dive may be done to find out what's wrong and fix it in a cost-effective way."
+        "title": "Customer Service",
+        "text": "The admin panel gives you the opportunity to provide a quick feedback to your client and receive good feedback in return."
       }
     },
     "content": {
       "header": {
-        "title": "We build software that gives you complete control.",
+        "title": "We create website that gives you complete control.",
         "description": "Connect or build a new platform with all of your product information and workflows. This central platform has all the tools, workflows, and processes you need."
       }
     },
@@ -70,7 +70,7 @@
         "text": "Happy Clients"
       },
       "block2": {
-        "text": "Apps Developed"
+        "text": "Websites Developed"
       },
       "block3": {
         "text": "Awards Winning"

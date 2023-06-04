@@ -84,7 +84,7 @@ const Header = (props) => {
       {" "}
       <div ref={headerTopRef} className="header_top">
        
-          <p>Welcome to Focus On Your Software IT Company.</p>
+          <p>Create Unique Website for Your Business </p>
      
       </div>
       <nav className="header_nav" ref={headerRef}>
