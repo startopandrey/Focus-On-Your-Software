@@ -186,6 +186,7 @@ const Marketing = () => {
                 width={2087}
                 height={1014}
                 src="/solution/marketing/marketing_banner1.png"
+                alt="marketing banner"
               ></Image>
             </Box>
           </Container>

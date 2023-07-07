@@ -59,6 +59,7 @@ const CustomerSupport = () => {
                   width={100}
                   height={100}
                   src={"/solution/website/memodji.png"}
+                  alt="review"
                 ></Image>
               </div>
               <h3>Rikert Weimann</h3>

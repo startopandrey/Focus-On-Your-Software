@@ -46,6 +46,7 @@ const CustomCarousel = ({ type, blocks, visibleSlides }) => {
                       width={800}
                       height={480}
                       // objectPosition={"20%"}
+                      alt={el.image}
                       src={el.image}
                     ></Image>
                   </div>
@@ -68,6 +69,7 @@ const CustomCarousel = ({ type, blocks, visibleSlides }) => {
                           <Image
                             width={"300"}
                             height={"300"}
+                            alt="service background image"
                             src={el.image}
                           ></Image>
                         </div>

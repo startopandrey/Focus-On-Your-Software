@@ -241,7 +241,7 @@ const Hire = (props) => {
               width={"120"}
               style={{ cursor: "pointer" }}
               src="/foys_logo.png"
-              alt="logo"
+              alt="foys logo"
             ></Image>
           </div>
           <Box className={styles.header}>

@@ -18,6 +18,7 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import { usePathname } from "next/navigation";
 import { withRouter } from "next/router";
 import json2mq from "json2mq";
+import Head from "next/head";
 const Post = (props) => {
   const postData = props.postData;
   const matchesMedium = useMediaQuery(
@@ -41,13 +42,15 @@ const Post = (props) => {
       Blog
     </Link>,
     <Typography
-      sx={ !matchesMedium && {
-        textOverflow: "ellipsis",
-        overflow: "hidden",
-        width: "160px",
-        height: "1.5rem",
-        whiteSpace: "nowrap",
-      }}
+      sx={
+        !matchesMedium && {
+          textOverflow: "ellipsis",
+          overflow: "hidden",
+          width: "160px",
+          height: "1.5rem",
+          whiteSpace: "nowrap",
+        }
+      }
       key="3"
       color="text.primary"
     >
@@ -57,6 +60,18 @@ const Post = (props) => {
 
   return (
     <Layout>
+      <Head>
+        <link rel="shortcut icon" href="/logo_small.png" />
+        <title>{postData.title}</title>
+        <meta name="description" content={postData.title} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        ></meta>
+
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta property="og:title" content={postData.title} />
+      </Head>
       <main className={styles.post}>
         <section className={styles.post_hero}>
           <div className={styles.hero_header}>
@@ -80,7 +95,6 @@ const Post = (props) => {
           </div>
           <Container>
             <div className={styles.post_author}>
-              
               <div className={styles.post_author_image}>
                 <Image
                   width={50}
