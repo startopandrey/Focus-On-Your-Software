@@ -1,0 +1,125 @@
+@import "../styles/theme.scss";
+@import "./mixins.scss";
+.website {
+  .portfolio {
+    .header {
+      margin-bottom: 4rem;
+      text-align: center;
+      h3 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      p {
+        font-size: 1.2rem;
+        color: $light-gray;
+      }
+    }
+  }
+  .faq {
+    margin: 5rem 0;
+    .MuiPaper-root {
+      &:last-child {
+        border-bottom: none !important;
+      }
+      margin-bottom: 0;
+      box-shadow: none;
+      &::before {
+        display: none;
+      }
+      border-bottom: 1px solid $lightest-gray;
+      border-radius: 0;
+      padding: 0.5rem 0;
+    }
+    .faq_title {
+      font-size: 3rem;
+      text-align: center;
+
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  }
+}
+@include tablet() {
+  .website {
+    .portfolio {
+      .header {
+        margin-bottom: 4rem;
+        text-align: center;
+        h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+        p {
+          font-size: 1.2rem;
+          color: $light-gray;
+        }
+      }
+    }
+    .faq {
+      margin: 5rem 0;
+  
+      .MuiPaper-root {
+        &:last-child {
+          border-bottom: none !important;
+        }
+        margin-bottom: 0;
+        box-shadow: none;
+        &::before {
+          display: none;
+        }
+        border-bottom: 1px solid $lightest-gray;
+        border-radius: 0;
+        padding: 0.5rem 0;
+      }
+      .faq_title {
+        font-size: 2.5rem;
+        text-align: center;
+  
+        font-weight: 700;
+    
+      }
+    }
+  }
+}
+@include mobile() {
+  .website {
+    .portfolio {
+      .header {
+        margin-bottom: 2rem;
+        text-align: center;
+        h3 {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        p {
+          font-size: 1rem;
+          color: $light-gray;
+        }
+      }
+    }
+    .faq {
+      margin: 3rem 0 5rem 0;
+  
+      .MuiPaper-root {
+        &:last-child {
+          border-bottom: none !important;
+        }
+        margin-bottom: 0;
+        box-shadow: none;
+        &::before {
+          display: none;
+        }
+        border-bottom: 1px solid $lightest-gray;
+        border-radius: 0;
+        padding: 0.5rem 0;
+      }
+      .faq_title {
+        font-size: 2rem;
+        text-align: center;
+  
+        font-weight: 700;
+        margin-bottom: -2rem;
+      }
+    }
+  }
+}

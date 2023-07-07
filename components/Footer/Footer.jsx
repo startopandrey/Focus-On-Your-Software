@@ -4,23 +4,24 @@ import { Button, Grid, InputAdornment, TextField } from "@mui/material";
 import { Box, Container, width } from "@mui/system";
 import { AccountCircle } from "@mui/icons-material";
 import { useRouter } from "next/router";
-
+import style from "../../src/styles/footer.module.scss";
 const navLinks = [
   {
-    path: "/",
-    display: "Home",
+    path: "/solution/website",
+    display: "Create Website",
   },
   {
-    path: "/about",
-    display: "About Us",
+    path: "/solution/marketing",
+    display: "Marketing",
+  },
+
+  {
+    path: "/blog",
+    display: "Blog",
   },
   {
-    path: "/service",
-    display: "Services",
-  },
-  {
-    path: "/demo",
-    display: "Demo",
+    path: "/events",
+    display: "Events",
   },
   {
     path: "/contact",
@@ -29,12 +30,12 @@ const navLinks = [
 ];
 
 const Footer = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
-    <footer className="footer">
+    <footer className={style.footer}>
       <Container>
         <Grid container spacing={4}>
-          <Grid className="footer_header" lg={6} item>
+          <Grid className={style.footer_header} md={6} lg={6} item>
             <h1>
               Thank you for <br /> your time
             </h1>
@@ -45,10 +46,10 @@ const Footer = () => {
                 sx={{ width: 150, mr: 2 }}
                 variant="contained"
                 onClick={() => {
-                  router.push("demo");
+                  router.push("/solution/website");
                 }}
               >
-                Active Demo
+               Create Website
               </Button>
               <Button
                 size={"large"}
@@ -62,27 +63,30 @@ const Footer = () => {
               </Button>
             </Box>
           </Grid>
-          <Grid className="footer_nav_container" lg={3} item>
-            <h3 className="header">Additional Links</h3>
-            <ul className="footer_nav">
+          <Grid className={style.footer_nav_container} md={3} lg={3} item>
+            <h3 className={style.header}>Additional Links</h3>
+            <ul className={style.footer_nav}>
               {navLinks.map((link) => (
-                <li key={link.path} className="nav_link">
+                <li key={link.path} className={style.nav_link}>
                   <a href={link.path}>{link.display}</a>
                 </li>
               ))}
             </ul>
           </Grid>
-          <Grid className="footer_subscribe_container" lg={3} item>
+          <Grid className={style.footer_subscribe_container} md={3} lg={3} item>
             {" "}
-            <h3 className="header">Subscribe</h3>
-            <p>Get more information about FOYS</p>
-            <div className="subscribe_textfield_container">
-              <input className="subscribe_textfield" placeholder="Your Email" />
+            <h3 className={style.header}>Subscribe</h3>
+            <p>Get more information about Foys</p>
+            <div className={style.subscribe_textfield_container}>
+              <input
+                className={style.subscribe_textfield}
+                placeholder="Your Email"
+              />
 
               <Button
                 variant="contained"
                 sx={{ m: 0 }}
-                className="subscribe_button"
+                className={style.subscribe_button}
               >
                 GO
               </Button>
@@ -90,13 +94,13 @@ const Footer = () => {
             {/* <TextField
               id="input-with-icon-textfield"
               label="Your Email"
-              className="subscribe_textfield"
+              className={style.subscribe_textfield"
               color="neutral"
               
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="start">
-                    <Button variant="contained" className="subscribe_button">GO</Button>
+                    <Button variant="contained" className={style.subscribe_button">GO</Button>
                   </InputAdornment>
                 ),
               }}
@@ -104,7 +108,15 @@ const Footer = () => {
             /> */}
           </Grid>
         </Grid>
-        <p style={{marginTop: "4rem", color: "rgb(100, 100, 100)",textAlign: 'center'}}>©2022 FOYS, All rights reserved</p>
+        <p
+          style={{
+            marginTop: "4rem",
+            color: "rgb(100, 100, 100)",
+            textAlign: "center",
+          }}
+        >
+          ©2022 FOYS, All rights reserved
+        </p>
       </Container>
     </footer>
   );

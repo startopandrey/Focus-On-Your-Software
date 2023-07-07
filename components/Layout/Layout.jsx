@@ -14,7 +14,8 @@ const Layout = (props) => {
           name="description"
           content="Create your awesome website to increase sales."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta
           property="og:title"

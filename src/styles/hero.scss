@@ -1,0 +1,383 @@
+@import "../styles/theme.scss";
+@import "mixins";
+.hero_section {
+  margin-bottom: 5rem;
+  // height: 500px;
+  position: relative;
+  margin-top: 1rem;
+  .hero_background_elements {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    z-index: 2;
+    .logo {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      bottom: 0%;
+      z-index: 0;
+
+      img {
+        object-fit: contain;
+      }
+    }
+    .left-circles {
+      left: -10%;
+      position: absolute;
+      height: 500px;
+      width: 500px;
+      z-index: -1;
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid #f0f0f0;
+      animation: slideUpDown 4s infinite linear;
+      &::after {
+        content: "";
+        left: -10%;
+        top: 50%;
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        z-index: -1;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid #f0f0f0;
+        animation: slideUpDown 4s infinite linear;
+      }
+      @keyframes slideUpDown {
+        0% {
+          -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+        }
+        50% {
+          -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+        }
+        100% {
+          -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+        }
+      }
+    }
+  }
+  .right-circles {
+    right: -10%;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    z-index: -1;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+    animation: slideUpDown 4s infinite linear;
+    &::after {
+      content: "";
+      left: -10%;
+      top: 50%;
+      position: absolute;
+      height: 500px;
+      width: 500px;
+      z-index: -1;
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid #f0f0f0;
+      animation: slideUpDown 4s infinite linear;
+    }
+    @keyframes slideUpDown {
+      0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+      }
+      50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+      }
+      100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+
+    width: 80%;
+    z-index: 10;
+    button {
+      text-transform: capitalize !important;
+    }
+    .hero__description {
+      text-align: center;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      color: $light-gray;
+    }
+    .hero__title {
+      z-index: 10;
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+      span {
+        display: block;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          background-image: url("https://bslthemes.com/html/terio/assets/img/text-line-blu.png");
+          background-repeat: no-repeat;
+          width: 30%;
+          height: 100%;
+          bottom: -80%;
+        }
+      }
+    }
+  }
+  .hero__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 500px;
+    // width: 504 !important;
+    width: 50vw !important;
+    display: flex;
+    .home_img {
+      object-fit: cover !important;
+      // width: 100% !important;
+      // position: relative !important;
+      // height: unset !important;
+      vertical-align: middle;
+
+      right: 0;
+      position: absolute;
+      // object-fit: cover;
+      // height: 500px !important;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .hero_section {
+    .hero__right {
+
+      height: 500px;
+      // width: 504 !important;
+      width: 50vw !important;
+      display: flex;
+      .home_img {
+        object-fit: cover !important;
+        // width: 100% !important;
+        // position: relative !important;x
+        // height: unset !important;
+        vertical-align: middle;
+
+        right: 0;
+        position: absolute;
+        // object-fit: cover;
+        // height: 500px !important;
+      }
+    }
+  }
+}
+@include tablet(){
+  .hero_section {
+    margin-bottom: 5rem;
+    // height: 500px;
+    position: relative;
+    margin-top: 2rem;
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      height: 350px;
+
+      .hero__description {
+        margin: 0.5rem 0;
+
+        font-size: 1rem;
+        color: $light-gray;
+      }
+      .hero__title {
+        font-size: 35px;
+        line-height: 55px;
+        margin-bottom: 0;
+        span {
+          display: block;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            background-image: url("https://bslthemes.com/html/terio/assets/img/text-line-blu.png");
+            background-repeat: no-repeat;
+            width: 40%;
+            height: 100%;
+            bottom: -80%;
+          }
+        }
+      }
+    }
+    .hero__right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 500px !important;
+      // width: 504 !important;
+      display: flex;
+      .home_img {
+        object-fit: cover !important;
+        // width: 100% !important;
+        // position: relative !important;
+        // height: unset !important;
+        vertical-align: middle;
+        width: 50vw !important;
+        right: 0;
+        position: absolute;
+        // object-fit: cover;
+        // height: 500px !important;
+      }
+    }
+  }
+}
+@include mobile() {
+  
+  .hero_section {
+    margin-bottom: 5rem;
+    // height: 500px;
+    position: relative;
+    margin-top: 2rem;
+    .MuiContainer-root {
+      padding: 0;
+    }
+    .hero_background_elements {
+      .logo {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        bottom: 0%;
+        z-index: 0;
+
+        img {
+          object-fit: contain;
+        }
+      }
+      .left-circles {
+        left: -10%;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        z-index: -1;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid #f0f0f0;
+        animation: slideUpDown 4s infinite linear;
+        &::after {
+          content: "";
+          left: -10%;
+          top: 50%;
+          position: absolute;
+          height: 200px;
+          width: 200px;
+          z-index: -1;
+          position: absolute;
+          border-radius: 50%;
+          border: 1px solid #f0f0f0;
+          animation: slideUpDown 4s infinite linear;
+        }
+        @keyframes slideUpDown {
+          0% {
+            -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+          }
+          50% {
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+          }
+          100% {
+            -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+          }
+        }
+      }
+    }
+    .right-circles {
+      right: -10%;
+      position: absolute;
+      height: 200px;
+      width: 200px;
+
+      &::after {
+        content: "";
+        left: -10%;
+        top: 50%;
+
+        height: 200px;
+        width: 200px;
+      }
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      height: 350px;
+
+      .hero__description {
+        margin: 0.5rem 0;
+
+        font-size: 1rem;
+        color: $light-gray;
+      }
+      .hero__title {
+        font-size: 1.8rem;
+        line-height: 40px;
+        margin-bottom: 0;
+        span {
+          display: block;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            background-image: url("https://bslthemes.com/html/terio/assets/img/text-line-blu.png");
+            background-repeat: no-repeat;
+            width: 40%;
+            height: 100%;
+            bottom: -80%;
+          }
+        }
+      }
+    }
+    .hero__right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 500px !important;
+      // width: 504 !important;
+      display: flex;
+      .home_img {
+        object-fit: cover !important;
+        // width: 100% !important;
+        // position: relative !important;
+        // height: unset !important;
+        vertical-align: middle;
+        width: 50vw !important;
+        right: 0;
+        position: absolute;
+        // object-fit: cover;
+        // height: 500px !important;
+      }
+    }
+  }
+}

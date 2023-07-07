@@ -1,0 +1,142 @@
+@import "../styles/theme.scss";
+@import "mixins";
+.hire {
+  display: flex;
+  justify-content: center;
+  .hire_container {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: flex;
+
+    flex-direction: column;
+    width: 50%;
+
+    .logo {
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        object-fit: contain;
+      }
+    }
+    .header {
+      text-align: center;
+
+      h3 {
+        color: $primary !important;
+        margin: 1rem 0;
+
+      }
+
+      p {
+        padding: 2rem 1rem;
+        background-color: $bg-light-gray;
+        color: $dark;
+        font-size: 1.2rem;
+      }
+      margin-bottom: 3rem;
+    }
+    .row_form_control{
+        margin-bottom: 1rem;
+        .form_control_label{
+            font-size: 1.2rem;
+
+        }
+        .row_radio_group{
+            .radio_group{
+                font-size: 1.2rem;
+
+            }
+        }
+    }
+  }
+}
+
+@include tablet(){
+  .hire {
+    margin-top: 3rem;
+    .hire_container {
+      margin-bottom: 3rem;
+      width: 70%;
+      .logo {
+        text-align: center;
+  width: 100px;
+    height: 70px;
+        img {
+          object-fit: contain;
+        }
+      }
+      padding: 0rem 1rem;
+      .header {
+        h3 {
+          color: $primary !important;
+          margin-bottom: 1rem;
+
+        }
+        h1 {
+          color: $dark;
+        }
+        p{
+          font-size: 1rem;
+        }
+        margin-bottom: 3rem;
+      }
+      .home_contact_address {
+        .address_item {
+          .address_item_title {
+            margin-bottom: 1rem;
+          }
+          .address_item_content {
+            color: $light-gray;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .hire {
+    margin-top: 3rem;
+    .hire_container {
+      margin-bottom: 3rem;
+      width: 100%;
+      .logo {
+        text-align: center;
+  width: 100px;
+    height: 70px;
+        img {
+          object-fit: contain;
+        }
+      }
+      padding: 0rem 1rem;
+      .header {
+        h3 {
+          color: $primary !important;
+          margin-bottom: 1rem;
+        }
+        h1 {
+          color: $dark;
+        }
+        margin-bottom: 3rem;
+      }
+      .home_contact_address {
+        .address_item {
+          .address_item_title {
+            margin-bottom: 1rem;
+          }
+          .address_item_content {
+            color: $light-gray;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

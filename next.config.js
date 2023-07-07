@@ -6,7 +6,7 @@ const nextConfig = {
     responseLimit: false,
   },
   images: {
-    domains: ['www.warketolog.com', "static.tildacdn.com"],
+    domains: ['www.warketolog.com', "static.tildacdn.com", "unscrambl.com","img.freepik.com","www.censhare.com"],
     remotePatterns: [
       {
         protocol: 'https',

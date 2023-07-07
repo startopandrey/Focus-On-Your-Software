@@ -1,0 +1,23 @@
+.stepper{
+    .step_description{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    [class~="MuiStepper-root"]{
+        [class~="MuiSvgIcon-root"]{
+            width: 40px;
+            height: 40px;
+        }
+       [class~="MuiStepContent-root"], [class~="MuiStepConnector-root"]{
+            margin-left: 20px;
+        }
+        [class~="MuiStepLabel-label"]{
+            font-size: 1.2rem;
+            &[class~="Mui-active"]{
+                 font-weight: 600;
+            }
+           
+        }
+        
+    }
+}

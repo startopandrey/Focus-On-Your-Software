@@ -3,7 +3,7 @@ import { Container } from "@mui/system";
 import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import SaveIcon from "@mui/icons-material/Save";
-import axios from "axios"
+import axios from "axios";
 import LoadingButton from "@mui/lab/LoadingButton";
 const HomeContact = () => {
   const { t: translate } = useTranslation("home");
@@ -50,9 +50,10 @@ const HomeContact = () => {
       company: "",
     });
     const data = await axios.post(
-      'https://foys.herokuapp.com/send/email',
+      "https://foys.herokuapp.com/send/email",
       // "http://localhost:4000/send/email",
-      message)
+      message
+    );
 
     if (data) {
       setOpen(true);
@@ -63,7 +64,7 @@ const HomeContact = () => {
 
   return (
     <section className="home_contact">
-         <Snackbar
+      <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         open={open}
         autoHideDuration={6000}
@@ -95,7 +96,7 @@ const HomeContact = () => {
                 </Box>
 
                 <Grid container spacing={2}>
-                  <Grid item xs="6" sm="6" md="6" lg="6">
+                  <Grid item xs={6} sm={6} md={6} lg={6}>
                     <TextField
                       id="outlined-basic"
                       label="Your Name*"
@@ -109,7 +110,7 @@ const HomeContact = () => {
                       sx={{ background: "#fff", width: "100%" }}
                     />
                   </Grid>
-                  <Grid item xs="6" sm="6" md="6" lg="6">
+                  <Grid item xs={6} sm={6} md={6} lg={6}>
                     <TextField
                       sx={{ background: "#fff", width: "100%" }}
                       id="outlined-basic"
@@ -126,7 +127,7 @@ const HomeContact = () => {
                       variant="outlined"
                     />
                   </Grid>
-                  <Grid item xs="12" sm="12" md="12" lg="12">
+                  <Grid item xs={12} sm={12} md={12} lg={12}>
                     <TextField
                       sx={{ background: "#fff", width: "100%" }}
                       id="outlined-basic"
@@ -139,7 +140,7 @@ const HomeContact = () => {
                       fullWidth
                     />
                   </Grid>
-                  <Grid item xs="12" sm="12" md="12" lg="12">
+                  <Grid item xs={12} sm={12} md={12} lg={12}>
                     {" "}
                     <TextField
                       sx={{ background: "#fff" }}
@@ -190,7 +191,7 @@ const HomeContact = () => {
                 <Box className={"address_item"}>
                   <h3 className={"address_item_title"}>Address :</h3>
                   <h3 className={"address_item_content"}>
-                  Franz-Josef-pl. 10, 6330 Kufstein, Austia
+                    Franz-Josef-pl. 10, 6330 Kufstein, Austia
                   </h3>
                 </Box>
                 <Box className={"address_item"}>

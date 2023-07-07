@@ -1,0 +1,118 @@
+@import "../styles/theme.scss";
+@import "mixins";
+.promotion {
+    margin-bottom: 5rem;
+  .promotion_container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .promo_video_container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 300px;
+      z-index: -1;
+      img {
+        filter: brightness(60%);
+        object-fit: cover;
+      }
+    }
+    .promotion_video__play {
+        cursor: pointer;
+      z-index: 10;
+      position: relative;
+      .promotion_video__play_circle{
+        animation: textAnim 5s linear infinite;
+      }
+      tspan {
+        transform: rotate(18deg);
+        color: $white;
+        letter-spacing: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .promotion_video__play_icon {
+        width: 50px;
+        position: absolute;
+        top: calc(50% - 20px);
+right: calc(50% - 25px);
+        color: #fff;
+        height: 50px;
+      }
+    }
+  }
+  @keyframes textAnim {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+  }
+}
+@include tablet(){
+    .promotion {
+        margin-bottom: 5rem;
+      .promotion_container {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .promo_video_container {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 180px;
+          z-index: -1;
+          img {
+            filter: brightness(60%);
+            object-fit: cover;
+          }
+        }
+        .promotion_video__play {
+          z-index: 10;
+          position: relative;
+ 
+          .promotion_video__play_circle{
+
+            animation: textAnim 5s linear infinite;
+          }
+          tspan {
+            
+            // transform: rotate(18deg);
+            color: $white;
+            letter-spacing: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          .promotion_video__play_icon {
+            width: 50px;
+            position: absolute;
+            top: calc(50% - 20px);
+    right: calc(50% - 25px);
+            color: #fff;
+            height: 50px;
+          }
+        }
+      }
+      @keyframes textAnim {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+      }
+    }
+}

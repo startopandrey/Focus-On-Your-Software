@@ -1,0 +1,25 @@
+@import "../styles/theme.scss";
+.faq {
+  margin: 7rem 0;
+
+  [class~="MuiPaper-root"] {
+    &:last-child {
+      border-bottom: none !important;
+    }
+    margin-bottom: 0;
+    box-shadow: none;
+    &::before {
+      display: none;
+    }
+    border-bottom: 1px solid $lightest-gray;
+    border-radius: 0;
+    padding: 0.5rem 0;
+  }
+  [class~="faq_title"] {
+    font-size: 2rem;
+    text-align: center;
+
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "header": {
+      "title": "Marketing That Increases",
+      "description": "Fast.Affordable.Effective."
+    },
+    "typedWords": [
+      { "word": "Customers" },
+      { "word": "Income" },
+      { "word": "Sales" },
+      { "word": "Perfomance" }
+    ],
+
+    "portfolio": {
+      "header": {
+        "title": "Our Portfolio",
+        "description": "Websites with modern design & adaptation to any device"
+      }
+    }
+  },
+  "carousel": {
+    "blocks": [
+      {
+        "title": "Content Marketing",
+        "bgColor": "#e8ecfe",
+        "description": "Content marketing uses creative and original content for the purpose of generating brand awareness, traffic growth, lead generation and targeting customers",
+        "image": "/solution/marketing/carouselBg6.png"
+      },
+      {
+        "title": "Engaging Website",
+        "bgColor": "#fef3e8",
+        "description": "For maximum impact, a website should be responsive, up-to-date, and represent your company well.",
+        "image": "/solution/website/carouselBg2.png"
+      },
+      {
+        "title": "Email Marketing",
+        "bgColor": "#fde7e7",
+        "description": "Many businesses use email marketing as a way of communication with their audiences",
+        "image": "/solution/website/carouselBg4.png"
+      },
+
+      {
+        "title": "Search Engine Optimization",
+        "bgColor": "#E9FFF4",
+        "description": "SEO is the process of optimizing a website in order to rank higher in search engine results pages and drive traffic to your website.",
+        "image": "/solution/website/carouselBg3.png"
+      },
+      {
+        "title": "Technical support",
+        "bgColor": "#FFE9FB",
+        "description": "You can contact us by phone in English, by mail or messengers in any language - we are ready to help you 7 days a week.",
+        "image": "/solution/website/carouselBg5.png"
+      }
+    ]
+  },
+  "pricing": {
+    "header": {
+      "title": "Digital Marketing Monthly Package",
+      "description": "The pricing methodology appears to lack sufficient precision."
+    },
+    "block1": {
+      "title": "Basic Marketing",
+      "newPrice": "€399",
+      "price": "€649",
+      "description": "The best choice for small and medium-sized businesses who are looking for a marketing setup & registering."
+    },
+    "block2": {
+      "title": "Standard Marketing",
+      "newPrice": "€799",
+      "price": "€999",
+      "description": "If you want to be among the top 10 in your industry in your city by SE and get stable customer traffic, it is the best choice."
+    },
+    "block3": {
+      "title": "Advanced Marketing",
+      "newPrice": "€1999",
+      "price": "€2299",
+      "description": "If you have a advanced package that includes all kinds of digital marketing, you will be successful."
+    },
+    "block4": {
+      "title": "Custom Marketing",
+      "newPrice": "",
+      "price": "Let's Talk",
+      "description": "We can arrange a brief phone conversation to gain a deeper understanding of the issue and determine the best possible solution."
+    }
+  },
+  "faq": {
+    "header": {
+      "title": "Frequently asked questions"
+    },
+    "data": [
+      {
+        "question": " How does marketing without talking about or promoting our product/service help us create leads and sales?",
+        "answer": [
+          "Your current or future customer is not interested in your product, they are interested in solving a problem or challenge, usually both organizational and personal.",
+          "Through the use of inbound marketing tactics, companies can share content with the intention of inspiring their audiences.",
+          "Instead of just giving information about products, content should be different because it is real, thought-provoking, and has experience solving problems."
+        ]
+      },
+      {
+        "question": "What’s the difference between audience and traffic?",
+        "answer": [
+          "The question hints at where marketing is heading overall.",
+          "A synonym for traffic is “visitors,” which by definition are people who leave.",
+          "Content marketers today develop audiences. They focus on subscribers, not visitors; time spent, not views; holding attention, not merely acquiring it.",
+          "Traffic = People who visit your website",
+          "Audience = People who regularly look forward to consume your content"
+        ]
+      },
+
+      {
+        "question": "How can we make something go viral?",
+        "answer": [
+          "There’s no guaranteed formula.",
+          "But no matter the industry, you can increase your chances if your content presents a unique story, idea, or dataset in a way that directly addresses a pain point or creates an emotional response in your core audience and in an engaging format.",
+          "And that’s not enough. You need to make a lot of noise about it."
+        ]
+      }
+    ]
+  }
+}

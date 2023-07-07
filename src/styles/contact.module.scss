@@ -1,0 +1,73 @@
+@import "../styles/theme.scss";
+@import "mixins";
+.contact {
+  margin-top: 6rem;
+  .contact_container {
+    margin-bottom: 6rem;
+
+    .header {
+      h3 {
+        color: $primary !important;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 2rem;
+      }
+      h1 {
+        color: $dark;
+        font-size:3.5rem;
+      }
+      margin-bottom: 3rem;
+    }
+    .home_contact_address {
+      .address_item {
+        .address_item_title {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .address_item_content {
+          color: $light-gray;
+          font-weight: 500;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .contact {
+    margin-top: 3rem;
+    .contact_container {
+      margin-bottom: 3rem;
+  
+      .header {
+        h3 {
+          color: $primary !important;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          font-size: 1.5rem;
+        }
+        h1 {
+          color: $dark;
+          font-size:2.5rem;
+        }
+        margin-bottom: 3rem;
+      }
+      .home_contact_address {
+        .address_item {
+          .address_item_title {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+          }
+          .address_item_content {
+            color: $light-gray;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

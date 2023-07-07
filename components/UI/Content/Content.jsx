@@ -41,8 +41,8 @@ const Content = () => {
             <Image
               alt="foys_banner"
               src="/foys_banner.png"
-              width={2000}
-              height={1000}
+              width={800}
+              height={400}
             ></Image>
           </motion.div>
         </div>

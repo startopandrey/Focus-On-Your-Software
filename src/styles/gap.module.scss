@@ -1,0 +1,160 @@
+@import "../styles/theme.scss";
+@import "mixins";
+.gap {
+  margin-top: 22rem;
+  margin-bottom: 7rem;
+  position: relative;
+  padding-top: 200px;
+  background: #181818;
+  overflow: visible;
+  z-index: 10;
+  /* where the magic happens */
+
+  background-color: $bg-light-blue;
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg);
+  }
+
+  &::after {
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(3deg);
+  }
+  .gap_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .gap_image {
+      position: absolute;
+      display: flex;
+      top: -30%;
+      align-items: center;
+      img {
+        object-fit: contain;
+      }
+    }
+    /* displays the content inside, as these settings in the parent breaks the effect */
+    // div {
+    //   text-align: center;
+    //   font-size: 1.5em;
+    //   line-height: 1.5;
+    // }
+
+    .gap__title {
+      margin-bottom: 1rem;
+      text-align: center;
+      margin-top: 10rem;
+    }
+    .gap_description {
+      color: $light-gray;
+      text-align: center;
+    }
+    .clients {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0;
+      .client_item {
+        display: block;
+        width: 25%;
+        padding: 60px;
+        // border: 1px solid $white;
+        margin: -1px;
+        margin-bottom: 0px;
+        .client_img {
+          object-fit: contain;
+          width: 100%;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+@include tablet() {
+  .gap {
+    margin-bottom: 3rem;
+    padding-top: 45px;
+    position: relative;
+    margin-top: 15rem;
+    .gap_container {
+      .gap__title {
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-top: 10rem;
+      }
+      .gap_image {
+        position: absolute;
+        display: flex;
+        top: -200px;
+        align-items: center;
+        img {
+          object-fit: contain;
+        }
+      }
+      .clients {
+        .client_item {
+          width: 50%;
+          padding: 40px;
+          text-align: center;
+          .client_img {
+            object-fit: contain;
+            width: 100%;
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile() {
+  .gap {
+    margin-bottom: 3rem;
+    position: relative;
+    margin-top: 13rem;
+    .gap_container {
+      .gap__title {
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      .gap_image {
+        position: absolute;
+        display: flex;
+        top: -180px;
+        width: 110%;
+        align-items: center;
+        img {
+          object-fit: contain;
+        }
+      }
+
+      .gap_description {
+        margin-bottom: 2rem;
+        color: $light-gray;
+      }
+      .clients {
+        .client_item {
+          padding: 20px;
+
+          .client_img {
+            object-fit: contain;
+            width: 100%;
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+}

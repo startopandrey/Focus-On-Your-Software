@@ -73,7 +73,7 @@ const Services = () => {
             className="services_tabs_container"
           >
             <Grid container gap={4}>
-              <Grid lg={4} sm="12" md={4} className="services_tabs" item>
+              <Grid lg={4} sm={12} md={4} className="services_tabs" item>
                 {serviceBlocks.map((el) => (
                   <div
                   key={el.id}
@@ -92,7 +92,7 @@ const Services = () => {
                   </div>
                 ))}
               </Grid>
-              <Grid lg={7} md="7" sm="12" item>
+              <Grid lg={7} md={7} sm={12} item>
                 <motion.div
                 key={activeImage.image}
                   animate={{

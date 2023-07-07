@@ -7,16 +7,7 @@ import json2mq from "json2mq";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { motion } from "framer-motion";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-// export async function getStaticProps({ locale }) {
-//   console.log(locale);
-//   return {
-//     props: {
-//       ...(await serverSideTranslations(locale, ["home"])),
-//       // Will be passed to the page component as props
-//     },
-//   };
-// }
+
 
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
@@ -32,9 +23,6 @@ const router = useRouter()
     })
   );
 
-
-
-  console.log(loadingAnimation);
   return (
     <section className={"hero_section"}>
       {" "}
@@ -77,10 +65,10 @@ const router = useRouter()
               // style={matchesMedium ? { width: 220, marginTop: "2rem" } :{width: 180, marginTop: "2rem" }}
               size={!matchesMedium ? "small": "large"}
               variant="contained"
-              onClick={()=> router.push("hire")}
+              onClick={()=> router.push("/solution/website")}
               endIcon={<ArrowRightAltIcon></ArrowRightAltIcon>}
             >
-              {translateCommon("button_get_started")}
+              {"Create Website"}
             </Button>
             <Button
               variant="outlined"
@@ -94,40 +82,11 @@ const router = useRouter()
           </motion.div>
         </Box>
 
-        {/* {matchesMedium && (
-          <Box className="hero__right">
-            <Image
-              width={700}
-              height={380}
-              priority
-              alt="home_1"
-              src={"/home_1.jpg"}
-              className={"home_img"}
-            ></Image>
-          </Box>
-        )}{" "} */}
+
       </Container>
-      {/* {!matchesMedium && (
-        <Box className="hero__right">
-          // <img
-            layout="fill"
-            // width={1000}
-            // height={1000}
-            src={"/home_1.jpg"}
-            className={"home_img"}
-          ></img>
-        </Box>
-      )} */}
+
     </section>
   );
 };
-// export async function getStaticProps({ locale }) {
-//   console.log(locale);
-//   return {
-//     props: {
-//       ...(await serverSideTranslations(locale, ["home"])),
-//       // Will be passed to the page component as props
-//     },
-//   };
-// }
+
 export default Hero;

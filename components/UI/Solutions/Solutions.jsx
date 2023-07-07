@@ -18,7 +18,7 @@ const Solutions = () => {
     {
       title: translate("home.solutions.step1.title"),
       description: translate("home.solutions.step1.text"),
-      color: "#0049ff",
+      color: "#023fda",
     },
     {
       title: translate("home.solutions.step2.title"),

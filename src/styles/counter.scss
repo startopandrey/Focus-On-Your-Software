@@ -1,0 +1,268 @@
+@import "../styles/theme.scss";
+@import "mixins";
+.counter {
+  position: relative;
+  z-index: 2;
+  margin: 5rem 0;
+
+  .counter_container {
+    position: relative;
+    background-color: $primary;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 7px;
+    .success_container {
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      .success_item {
+        flex: 0 0 25%;
+        max-width: 25%;
+        display: block;
+        margin-bottom: 0;
+        padding: 75px 75px 70px;
+        border-right: 1px solid #4579ff;
+        .success_icon {
+          position: relative;
+          &::after {
+            left: -10px;
+            top: -20px;
+            z-index: -1;
+            content: "";
+            background: #4579ff;
+            position: absolute;
+            width: 80px;
+            border-radius: 50%;
+            height: 80px;
+          }
+          width: 55px;
+          height: 55px;
+          img {
+            object-fit: contain;
+          }
+        }
+        color: $white;
+        h1 {
+          font-weight: 700;
+          margin-top: 1rem;
+        }
+      }
+    }
+    .white_circle {
+      bottom: 10%;
+      left: 65%;
+      z-index: -1;
+      position: absolute;
+      animation: slideLeftRight 5s infinite linear;
+      img {
+        object-fit: contain;
+      }
+    }
+    @keyframes slideLeftRight {
+      0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+      }
+      50% {
+        -webkit-transform: translate(20px);
+        transform: translate(20px);
+      }
+      100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+      }
+    }
+  }
+  .bg_yellow {
+    position: absolute;
+    width: 120vw;
+    height: 250px;
+    top: 20%;
+    z-index: 2;
+    left: -10vw;
+
+    transform: rotate(5deg);
+    background: #f5ab5b;
+  }
+}
+
+@include tablet() {
+  .counter {
+    position: relative;
+    z-index: 2;
+    margin: 5rem 0;
+
+    .counter_container {
+      position: relative;
+      background-color: $primary;
+      z-index: 10;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 7px;
+      .success_container {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .success_item {
+          flex: 0 0 50%;
+          max-width: 50%;
+          display: block;
+          margin-bottom: 0;
+          padding: 30px 30px 30px;
+          border-right: 1px solid #4579ff;
+          .success_icon {
+            position: relative;
+            &::after {
+              left: -10px;
+              top: -20px;
+              z-index: -1;
+              content: "";
+              background: #4579ff;
+              position: absolute;
+              width: 50px;
+              border-radius: 50%;
+              height: 50px;
+            }
+            width: 55px;
+            height: 45px;
+            img {
+              object-fit: contain;
+            }
+          }
+          color: $white;
+          h1 {
+            font-weight: 700;
+            margin-top: 1rem;
+          }
+        }
+      }
+      .white_circle {
+        bottom: 10%;
+        left: 65%;
+        z-index: -1;
+        position: absolute;
+        animation: slideLeftRight 5s infinite linear;
+        img {
+          object-fit: contain;
+        }
+      }
+      @keyframes slideLeftRight {
+        0% {
+          -webkit-transform: translate(0);
+          transform: translate(0);
+        }
+        50% {
+          -webkit-transform: translate(20px);
+          transform: translate(20px);
+        }
+        100% {
+          -webkit-transform: translate(0);
+          transform: translate(0);
+        }
+      }
+    }
+    .bg_yellow {
+      position: absolute;
+      width: 120vw;
+      height: 250px;
+      top: 20%;
+      z-index: 2;
+      left: -10vw;
+
+      transform: rotate(5deg);
+      background: #f5ab5b;
+    }
+  }
+}
+@include mobile() {
+  .counter {
+    position: relative;
+    z-index: 2;
+    margin: 5rem 0;
+
+    .counter_container {
+      position: relative;
+      background-color: $primary;
+      z-index: 10;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 7px;
+      .success_container {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .success_item {
+          flex: 0 0 50%;
+          max-width: 50%;
+          display: block;
+          margin-bottom: 0;
+          padding: 30px 30px 15px;
+          border-right: 1px solid #4579ff;
+          .success_icon {
+            position: relative;
+            &::after {
+              left: -10px;
+              top: -20px;
+              z-index: -1;
+              content: "";
+              background: #4579ff;
+              position: absolute;
+              width: 50px;
+              border-radius: 50%;
+              height: 50px;
+            }
+            width: 55px;
+            height: 45px;
+            img {
+              object-fit: contain;
+            }
+          }
+          color: $white;
+          h1 {
+            font-weight: 700;
+            margin-top: 1rem;
+          }
+        }
+      }
+      .white_circle {
+        bottom: 10%;
+        left: 65%;
+        z-index: -1;
+        position: absolute;
+        animation: slideLeftRight 5s infinite linear;
+        img {
+          object-fit: contain;
+        }
+      }
+      @keyframes slideLeftRight {
+        0% {
+          -webkit-transform: translate(0);
+          transform: translate(0);
+        }
+        50% {
+          -webkit-transform: translate(20px);
+          transform: translate(20px);
+        }
+        100% {
+          -webkit-transform: translate(0);
+          transform: translate(0);
+        }
+      }
+    }
+    .bg_yellow {
+      position: absolute;
+      width: 120vw;
+      height: 250px;
+      top: 20%;
+      z-index: 2;
+      left: -10vw;
+
+      transform: rotate(5deg);
+      background: #f5ab5b;
+    }
+  }
+}

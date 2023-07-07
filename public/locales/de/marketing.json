@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "header": {
+        "title": "Create Website For Increasing",
+        "description": "Quick.Professional.CMS."
+      },
+    "typedWords": [
+      { "word": "Customers" },
+      { "word": "Income" },
+      { "word": "Sales" },
+      { "word": "Perfomance" }
+    ],
+
+    "portfolio": {
+      "header": {
+        "title": "Our Portfolio",
+        "description": "Websites with modern design & adaptation to any device"
+      }
+    }
+  },
+  "carousel": {
+    "blocks": [
+      {
+        "title": "Your Domain",
+        "bgColor": "#e8ecfe",
+        "description": "We will transfer your domain or help you choose and connect a new one.",
+        "image": "/solution/website/carouselBg1.png"
+      },
+      {
+        "title": "Easy CMS",
+        "bgColor": "#fef3e8",
+        "description": "Our management system allows you to easily make changes to the site yourself and does not require the involvement of third-party specialists.",
+        "image": "/solution/website/carouselBg2.png"
+      },
+      {
+        "title": "We will fill the site for you",
+        "bgColor": "#fde7e7",
+        "description": "Save your time: send the information - we will fill your site ourselves.",
+        "image": "/solution/website/carouselBg4.png"
+      },
+
+      {
+        "title": "Registration in search engines",
+        "bgColor": "#E9FFF4",
+        "description": "We will register your site in Google search engines and others - the first step to basic optimization",
+        "image": "/solution/website/carouselBg3.png"
+      },
+      {
+        "title": "Technical support",
+        "bgColor": "#FFE9FB",
+        "description": "You can contact us by phone in English, by mail or messengers in any language - we are ready to help you 7 days a week.",
+        "image": "/solution/website/carouselBg5.png"
+      }
+    ]
+  },
+  "pricing": {
+    "header": {
+        "title": "Make The Wise Decision For Building Website",
+        "description": "The pricing methodology appears to lack sufficient precision."
+      },
+    "block1": {
+      "title": "Basic Website",
+      "newPrice": "$499+",
+      "price": "$749+",
+      "description": "The best choice for small and medium-sized businesses who are looking for a web-site with the ability to change data."
+    },
+    "block2": {
+      "title": "Standard Website",
+      "newPrice": "$899+",
+      "price": "$1199+",
+      "description": "If you are looking for a multi-pages website with the ability to add new pages with your content, it is the best choice."
+    },
+    "block3": {
+      "title": "Advanced Website",
+      "newPrice": "$1999+",
+      "price": "$2499+",
+      "description": "An advanced plan is used for automatic processes in the company and allows you to have full control of business from one place."
+    },
+    "block4": {
+      "title": "Custom Website",
+      "newPrice": "",
+      "price": "Let's Talk",
+      "description": "We can arrange a brief phone conversation to gain a deeper understanding of the issue and determine the best possible solution."
+    }
+  },
+  "faq": {
+    "header": {
+      "title": "Frequently asked questions"
+    },
+    "data": [
+      {
+        "question": "When will the site be created?",
+        "answer": [
+          "The time it takes to make a website depends on the package you choose.",
+          "For instance, a landing page or a website constructed by a constructor can be completed within a span of one week.",
+          "The multipage site, which has the capability to add new pages in the admin panel, is written manually, resulting in a construction time of approximately 2 to 3 weeks.",
+          "A custom e-commerce site or software takes about 3+ weeks to build.",
+          "It is also important to consider the efficiency of the client (how much time it takes to agree on the developed design, prepare comments, and collect materials for the site)."
+        ]
+      },
+      {
+        "question": "Can I edit the site myself?",
+        "answer": [
+          "Yes, sure. You will have access to the CMS, which has a very easy-to-understand interface that doesn't require any special knowledge. For e-commerce sites, we use our admin panel, which you can customize to your needs. You can create new products, manage them, and analyze them."
+        ]
+      },
+
+      {
+        "question": "What distinguishes you from other website builders?",
+        "answer": [
+          "Foys is an IT company that specializes in digitalizing business. We develop a website for you while you organize your business. We launch the website, keep it up, watch its progress, give advice, and teach people how to use it. Furthermore, we are always in touch, you can call us by phone or write on a channel that is convenient for you.",
+          "The site is launched on a fully functional platform, with ample opportunities for site development and regular updates. You can edit the site independently as well."
+        ]
+      },
+      {
+        "question": "Who will be the owner of the site?",
+        "answer": [
+          "You will be the owner of the developed site design, site address (domain), graphic and textual information posted on the site."
+        ]
+      }
+    ]
+  }
+}
