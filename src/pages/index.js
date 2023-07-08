@@ -70,6 +70,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import PostBlock from "../../components/UI/PostBlock/PostBlock";
+import { LoadingButton } from "@mui/lab";
 export async function getStaticProps({ locale }) {
   console.log(locale);
   return {
@@ -1038,7 +1039,7 @@ export default function Home({ postsData }) {
                     <LoadingButton
                       loading
                       loadingPosition="start"
-                      startIcon={<SaveIcon />}
+                      // startIcon={<SaveIcon />}
                       sx={{ width: 150, mt: 2 }}
                       size="large"
                       variant="outlined"

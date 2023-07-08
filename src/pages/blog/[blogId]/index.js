@@ -121,7 +121,7 @@ const Post = (props) => {
             <div className={styles.post_articles_container}>
               {postData.articles.map((article) => {
                 return (
-                  <article className={styles.post_article}>
+                  <article key={article.title} className={styles.post_article}>
                     {article.title && (
                       <h1 className={styles.article_title}>{article.title}</h1>
                     )}
@@ -131,9 +131,9 @@ const Post = (props) => {
                       </p>
                     )}
                     {article.paragraphs &&
-                      article.paragraphs.map((paragraph) => {
+                      article.paragraphs.map((paragraph, i) => {
                         return (
-                          <p className={styles.article_paragraph}>
+                          <p key={paragraph} className={styles.article_paragraph}>
                             {paragraph.map((paragraphRow) => {
                               if (typeof paragraphRow == "string") {
                                 return paragraphRow;
@@ -141,6 +141,7 @@ const Post = (props) => {
                               if (paragraphRow.path) {
                                 return (
                                   <Link
+                                  key={paragraphRow.text}
                                     className={styles.article_paragraph_link}
                                     href={paragraphRow.path}
                                   >
@@ -151,7 +152,7 @@ const Post = (props) => {
                               }
                               if (paragraphRow.strong) {
                                 return (
-                                  <strong href={paragraphRow.path}>
+                                  <strong key={paragraphRow.text} href={paragraphRow.path}>
                                     {` ${paragraphRow.text} `}
                                   </strong>
                                 );
@@ -163,7 +164,7 @@ const Post = (props) => {
                     {article.enumerationList &&
                       article.enumerationList.map((paragraph, i) => {
                         return (
-                          <ul className={styles.article_enumeration}>
+                          <ul key={paragraph} className={styles.article_enumeration}>
                             <li className={styles.enumeration_item}>
                               <span
                                 style={{ background: colors[i] }}
@@ -179,6 +180,7 @@ const Post = (props) => {
                                   if (paragraphRow.path) {
                                     return (
                                       <Link
+                                      key={paragraphRow.text}
                                         className={styles.enumeration_item_link}
                                         href={paragraphRow.path}
                                       >
@@ -189,7 +191,7 @@ const Post = (props) => {
                                   }
                                   if (paragraphRow.strong) {
                                     return (
-                                      <strong href={paragraphRow.path}>
+                                      <strong key={paragraphRow.path} href={paragraphRow.path}>
                                         {` ${paragraphRow.text} `}
                                       </strong>
                                     );
@@ -202,7 +204,7 @@ const Post = (props) => {
                       })}
                     {article.videos &&
                       article.videos.map((videos) => (
-                        <div className={styles.article_video}>
+                        <div key={videos.url} className={styles.article_video}>
                           <iframe
                             width="100%"
                             height="100%"
@@ -216,7 +218,7 @@ const Post = (props) => {
                       ))}
                     {article.images &&
                       article.images.map((image) => (
-                        <div className={styles.article_image}>
+                        <div key={image.path} className={styles.article_image}>
                           <Image
                             width={1000}
                             height={500}

@@ -56,7 +56,7 @@ const CustomCarousel = ({ type, blocks, visibleSlides }) => {
             }
             if (type == "block") {
               return (
-                <Slide index={i}>
+                <Slide key={el.title} index={i}>
                   <div
                     style={{ background: el.bgColor }}
                     className={styles.carousel_card}

@@ -196,7 +196,7 @@ const QuestionForm = ({onClickLastQuestion, setQuestionsForm, questionsForm, for
   }, [activeQuestion]);
 
   return (
-    <div className={styles.question_form}>
+  <div className={styles.question_form}>
       {activeQuestion.type != "success" && (
         <h4 className={styles.form_title}>{formTitle}</h4>
       )}
@@ -227,6 +227,7 @@ const QuestionForm = ({onClickLastQuestion, setQuestionsForm, questionsForm, for
                 .find((el) => el.active == true)
                 ?.questions.map((el) => (
                   <FormControlLabel
+                  key={el.text}
                     control={
                       <Checkbox
                         sx={{ transition: " ease-in-out all 0.2s" }}
@@ -259,6 +260,7 @@ const QuestionForm = ({onClickLastQuestion, setQuestionsForm, questionsForm, for
                     .find((el) => el.active == true)
                     ?.questions.map((el) => (
                       <FormControlLabel
+                      key={el.text}
                         control={
                           <Checkbox
                             sx={{ transition: " ease-in-out all 0.2s" }}

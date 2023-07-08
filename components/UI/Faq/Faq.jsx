@@ -23,6 +23,7 @@ const Faq = ({ data }) => {
     <div className={styles.faq}>
       {data.map((el, i) => (
         <Accordion
+        key={el.question}
           expanded={expanded === `panel${i}`}
           onChange={handleChange(`panel${i}`)}
           sx={{ mb: 2, borderRadius: 0 }}
@@ -51,6 +52,7 @@ const Faq = ({ data }) => {
           <AccordionDetails sx={{ padding: "1.5rem" }}>
             {el.answer.map((text) => (
               <Typography
+              key={text}
                 sx={
                   matchesMedium
                     ? { fontSize: "1.2rem", color: "gray", mb: 2 }

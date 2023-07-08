@@ -65,10 +65,10 @@ const CustomerSupport = () => {
               <h3>Rikert Weimann</h3>
             </div>
             <p>
-              <strong>"</strong>The only company in the world where you can buy
+              <strong>&quot;</strong>The only company in the world where you can buy
               a website for such a price, launch it, and then torture technical
               support 7 days a week. If you are unfamiliar with this, they will
-              help you, prompt you, and teach you.<strong>"</strong>
+              help you, prompt you, and teach you.<strong>&quot;</strong>
             </p>
           </div>
         </div>

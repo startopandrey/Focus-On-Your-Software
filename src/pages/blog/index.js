@@ -71,6 +71,18 @@ const Blog = ({ postsData }) => {
   ];
   return (
     <Layout>
+            <Head>
+        <link rel="shortcut icon" href="/logo_small.png" />
+        <title>{"Create Website Blog"}</title>
+        <meta name="description" content={"Blog about all IT topics"} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        ></meta>
+
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta property="og:title" content={"Blog about all IT topics"} />
+      </Head>
       <div className={styles.blog}>
         <section className={styles.blog_teaser}>
           <Container>
@@ -87,6 +99,7 @@ const Blog = ({ postsData }) => {
                     <Image
                       width={450}
                       height={250}
+                      alt={'about us backgound image'}
                       src={"/about-us-bg-1.jpg"}
                     ></Image>
                   </div>
@@ -112,7 +125,7 @@ const Blog = ({ postsData }) => {
               <div item lg={6} md={6} sm={12} className={styles.teaser_aside}>
                 <ul className={styles.teaser_list}>
                   {[...data.slice(1)].map((post) => (
-                    <li>
+                    <li key={post.urlTitle}>
                       {" "}
                       <Link href={`/blog/${post.urlTitle}`}>
                         <article className={styles.teaser_item}>
@@ -173,7 +186,7 @@ const Blog = ({ postsData }) => {
             </header>
             <ul className={styles.blog_article_list}>
               {posts.map((post) => (
-                <li>
+                <li key={post}>
                   <PostBlock post={post}></PostBlock>
                 </li>
               ))}

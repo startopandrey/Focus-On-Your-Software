@@ -73,6 +73,7 @@ const SolutionHero = ({
               width={500}
               height={500}
               src={`/solution/${type}/${type}_hero.png`}
+              alt={`${type} banner`}
             ></Image>
           </div>
         </div>{" "}
@@ -103,7 +104,7 @@ const SolutionHero = ({
             // onSlideChanged={() => {}}
           >
             {sliderBlocks.map((el) => (
-              <div className={styles.alice_item}>
+              <div key={el.title} className={styles.alice_item}>
                 <div className={styles.background_image}>
                   <Image
                     layout="fill"

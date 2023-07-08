@@ -126,6 +126,7 @@ const Header = (props) => {
           ],
           image:
             "https://img.freepik.com/free-photo/rpa-concept-with-blurry-hand-touching-screen_23-2149311914.jpg?w=2000&t=st=1688637594~exp=1688638194~hmac=b64c40a1edd2062e3e78ca210c27205208609c41dae36f6538f651c9bab07497",
+            
           description:
             "Take control of your business with digital technologies.",
         },
@@ -310,6 +311,7 @@ const Header = (props) => {
                           width={150}
                           height={150}
                           src={`${block.image}`}
+                          alt={block.title}
                         ></Image>
                       </div>
 

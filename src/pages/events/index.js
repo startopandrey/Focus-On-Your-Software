@@ -83,6 +83,7 @@ const Events = () => {
                         width={300}
                         height={200}
                         src={event.image}
+                        alt={event.image}
                       ></Image>
                     </div>
                     <div className={styles.event_block_right}>

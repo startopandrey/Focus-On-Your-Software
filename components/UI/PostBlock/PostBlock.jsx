@@ -9,7 +9,7 @@ const PostBlock = ({post}) => {
     <Link href={`/blog/${post.urlTitle}`}>
       <article className={styles.blog_article_item}>
         <div className={styles.article_item_img}>
-          <Image width={450} height={300} src={post.image}></Image>
+        <Image width={450} height={300} alt={post.image} src={post.image}></Image>
         </div>
         <div className={styles.article_item_content}>
           {" "}
