@@ -78,7 +78,7 @@ const Post = (props) => {
             <Container className={styles.hero_header_conatainer}>
               <h1 className={styles.hero_header_title}>{postData.title}</h1>
               <div className={styles.hero_header_image}>
-                <Image height={380} width={680} src={postData.image}></Image>
+                <Image alt={"background image"}  height={380} width={680} src={postData.image}></Image>
               </div>
             </Container>
           </div>
@@ -100,6 +100,7 @@ const Post = (props) => {
                   width={50}
                   height={50}
                   src={postData.authorImage}
+                  alt={"author image"}
                 ></Image>
               </div>
               <div className={styles.post_author_content}>

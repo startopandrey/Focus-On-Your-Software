@@ -135,6 +135,7 @@ const Blog = ({ postsData }) => {
                               width={200}
                               height={200}
                               src={post.image}
+                  alt={"title blog"}
                             ></Image>
                           </div>
                           <div className={styles.teaser_item_info}>

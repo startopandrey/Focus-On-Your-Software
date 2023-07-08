@@ -110,6 +110,7 @@ const SolutionHero = ({
                     layout="fill"
                     objectFit="cover"
                     objectPosition={"20%"}
+                    alt={`${type} image`}
                     src={`/solution/${type}/${el.img}`}
                   ></Image>
                 </div>
