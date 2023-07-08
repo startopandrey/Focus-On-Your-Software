@@ -59,9 +59,9 @@
     "tailwindcss": "^3.0.24",
     "vite": "^2.9.2"
   },
-  "devDependencies": {
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6",
+    "devDependencies": {
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
     "react-alice-carousel": "^2.7.1"
   }
 }
