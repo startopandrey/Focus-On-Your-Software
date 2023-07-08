@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "sitemap": "next-sitemap --config next-sitemap-config.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -57,5 +58,10 @@
     "styled-components": "^5.3.9",
     "tailwindcss": "^3.0.24",
     "vite": "^2.9.2"
+  },
+  "devDependencies": {
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6",
+    "react-alice-carousel": "^2.7.1"
   }
 }
