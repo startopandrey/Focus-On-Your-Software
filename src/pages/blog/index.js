@@ -15,6 +15,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { data } from "../../../data";
 import useStateRef from "react-usestateref";
 import PostBlock from "../../../components/UI/PostBlock/PostBlock";
+import Head from "next/head";
 const Blog = ({ postsData }) => {
   const [posts, setPosts] = useState([]);
   const [checkboxListPosts, setCheckboxListPosts, currentCheckboxListPosts] =
